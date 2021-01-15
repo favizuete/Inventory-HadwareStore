@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ec.edu.espe.inventoryhadwarestore.model">
+  <ClassDiagramComponents>
+    <Class name="Category" package="ec.edu.espe.inventoryhadwarestore.model" visibility="public" xPosition="17.0" yPosition="143.0">
+      <Fields>
+        <Field name="idCategory" type="String" visibility="private"/>
+        <Field name="nameCategory" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="idCategory"/>
+          <Argument type="String" name="nameCategory"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getIdCategory" returnType="String" visibility="public"/>
+        <Method name="setIdCategory" returnType="String" visibility="public">
+          <Argument type="String" name="idCategory"/>
+        </Method>
+        <Method name="getNameCategory" returnType="String" visibility="public"/>
+        <Method name="setNameCategory" returnType="String" visibility="public">
+          <Argument type="String" name="nameCategory"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Customer" package="ec.edu.espe.inventoryhadwarestore.model" visibility="public" xPosition="1015.0" yPosition="496.0">
+      <Fields>
+        <Field name="nameCustomer" type="String" visibility="private"/>
+        <Field name="adress" type="String" visibility="private"/>
+        <Field name="phoneNumber" type="int" visibility="private"/>
+        <Field name="mail" type="String" visibility="private"/>
+        <Field name="id" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nameCustomer"/>
+          <Argument type="String" name="adress"/>
+          <Argument type="int" name="phoneNumber"/>
+          <Argument type="String" name="mail"/>
+          <Argument type="int" name="id"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getNameCustomer" returnType="String" visibility="public"/>
+        <Method name="setNameCustomer" returnType="String" visibility="public">
+          <Argument type="String" name="nameCustomer"/>
+        </Method>
+        <Method name="getAdress" returnType="String" visibility="public"/>
+        <Method name="setAdress" returnType="String" visibility="public">
+          <Argument type="String" name="adress"/>
+        </Method>
+        <Method name="getPhoneNumber" returnType="int" visibility="public"/>
+        <Method name="setPhoneNumber" returnType="int" visibility="public">
+          <Argument type="int" name="phoneNumber"/>
+        </Method>
+        <Method name="getMail" returnType="String" visibility="public"/>
+        <Method name="setMail" returnType="String" visibility="public">
+          <Argument type="String" name="mail"/>
+        </Method>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="int" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Depot" package="ec.edu.espe.inventoryhadwarestore.model" visibility="public" xPosition="585.0" yPosition="550.0">
+      <Fields>
+        <Field name="stocks" type="Stock[]" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getStocks" returnType="Stock[]" visibility="public"/>
+        <Method name="setStocks" returnType="Stock[]" visibility="public">
+          <Argument type="Stock[]" name="stocks"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Product" package="ec.edu.espe.inventoryhadwarestore.model" visibility="public" xPosition="1051.0" yPosition="57.0">
+      <Fields>
+        <Field name="idProduct" type="int" visibility="private"/>
+        <Field name="nameProduct" type="String" visibility="private"/>
+        <Field name="brand" type="String" visibility="private"/>
+        <Field name="quantity" type="int" visibility="private"/>
+        <Field name="price" type="float" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="idProduct"/>
+          <Argument type="String" name="nameProduct"/>
+          <Argument type="String" name="brand"/>
+          <Argument type="int" name="quantity"/>
+          <Argument type="float" name="price"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getIdProduct" returnType="int" visibility="public"/>
+        <Method name="setIdProduct" returnType="int" visibility="public">
+          <Argument type="int" name="idProduct"/>
+        </Method>
+        <Method name="getNameProduct" returnType="String" visibility="public"/>
+        <Method name="setNameProduct" returnType="String" visibility="public">
+          <Argument type="String" name="nameProduct"/>
+        </Method>
+        <Method name="getBrand" returnType="String" visibility="public"/>
+        <Method name="setBrand" returnType="String" visibility="public">
+          <Argument type="String" name="brand"/>
+        </Method>
+        <Method name="getQuantity" returnType="int" visibility="public"/>
+        <Method name="setQuantity" returnType="int" visibility="public">
+          <Argument type="int" name="quantity"/>
+        </Method>
+        <Method name="getPrice" returnType="float" visibility="public"/>
+        <Method name="setPrice" returnType="float" visibility="public">
+          <Argument type="float" name="price"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Stock" package="ec.edu.espe.inventoryhadwarestore.model" visibility="public" xPosition="453.0" yPosition="114.0">
+      <Fields>
+        <Field name="idStock" type="int" visibility="private"/>
+        <Field name="products" type="ArrayList&lt;Product&gt;" visibility="private"/>
+        <Field name="categorys" type="ArrayList&lt;Category&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="idStock"/>
+          <Argument type="ArrayList&lt;Product&gt;" name="products"/>
+          <Argument type="ArrayList&lt;Category&gt;" name="categorys"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getIdStock" returnType="int" visibility="public"/>
+        <Method name="setIdStock" returnType="int" visibility="public">
+          <Argument type="int" name="idStock"/>
+        </Method>
+        <Method name="getProducts" returnType="ArrayList&lt;Product&gt;" visibility="public"/>
+        <Method name="setProducts" returnType="ArrayList&lt;Product&gt;" visibility="public">
+          <Argument type="ArrayList&lt;Product&gt;" name="products"/>
+        </Method>
+        <Method name="getCategorys" returnType="ArrayList&lt;Category&gt;" visibility="public"/>
+        <Method name="setCategorys" returnType="ArrayList&lt;Category&gt;" visibility="public">
+          <Argument type="ArrayList&lt;Category&gt;" name="categorys"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Hardware Store" package="" visibility="public" xPosition="560.0" yPosition="959.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="User" package="" visibility="public" xPosition="1246.0" yPosition="947.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="products" source="ec.edu.espe.inventoryhadwarestore.model.Stock" target="ec.edu.espe.inventoryhadwarestore.model.Product" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Product&gt;"/>
+    <UseRelation source="ec.edu.espe.inventoryhadwarestore.model.Stock" target="ec.edu.espe.inventoryhadwarestore.model.Category" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="Has" source="Hardware Store" target="User" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="Has" source="User" target="ec.edu.espe.inventoryhadwarestore.model.Customer" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="categorys" source="ec.edu.espe.inventoryhadwarestore.model.Stock" target="ec.edu.espe.inventoryhadwarestore.model.Category" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Category&gt;"/>
+    <UseRelation source="ec.edu.espe.inventoryhadwarestore.model.Depot" target="ec.edu.espe.inventoryhadwarestore.model.Stock" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ec.edu.espe.inventoryhadwarestore.model.Stock" target="ec.edu.espe.inventoryhadwarestore.model.Product" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
