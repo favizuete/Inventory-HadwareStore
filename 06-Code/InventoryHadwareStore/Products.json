@@ -1,0 +1,26 @@
+[
+  {
+    "idProduct": 123.0,
+    "nameProduct": "martillo",
+    "brand": "FV",
+    "quantity": 5.0,
+    "price": 10.5,
+    "category": "Herramienta"
+  },
+  {
+    "idProduct": 321.0,
+    "nameProduct": "Pala",
+    "brand": "FV",
+    "quantity": 4.0,
+    "price": 25.5,
+    "category": "Herramienta"
+  },
+  {
+    "idProduct": 432,
+    "nameProduct": "Pintura",
+    "brand": "Condor",
+    "quantity": 3,
+    "price": 10.99,
+    "category": "Material"
+  }
+]
