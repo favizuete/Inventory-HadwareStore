@@ -1,0 +1,26 @@
+[
+  {
+    "idProduct": 1.0,
+    "nameProduct": "Martillo",
+    "brand": "fv",
+    "quantity": 5.0,
+    "price": 10.5,
+    "category": "herramienta"
+  },
+  {
+    "idProduct": 2.0,
+    "nameProduct": "Pala",
+    "brand": "FV",
+    "quantity": 5.0,
+    "price": 25.99,
+    "category": "herramienta"
+  },
+  {
+    "idProduct": 3,
+    "nameProduct": "Pico",
+    "brand": "FV",
+    "quantity": 5,
+    "price": 19.99,
+    "category": "herramienta"
+  }
+]
