@@ -5,14 +5,9 @@
  */
 package ec.edu.espe.inventoryhadwarestore.model;
 
-import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-
 /**
  *
- * @author Fausto Vizuete ESPE-DCCO
+ * @author Daniel Vizcarra MaxDev ESPE-DCCO
  */
 public class Product {
 
@@ -111,5 +106,5 @@ public class Product {
     public String getCategory() {
         return category;
     }
-
+    
 }

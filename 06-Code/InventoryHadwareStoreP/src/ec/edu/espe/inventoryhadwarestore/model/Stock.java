@@ -9,22 +9,35 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Fausto Vizuete ESPE-DCCO
+ * @author Daniel Vizcarra MaxDev ESPE-DCCO
  */
 public class Stock {
 
+    private int idStock;
     private ArrayList<Product> products;
 
-    public Stock() {
-    }
-
-    public Stock(ArrayList<Product> products) {
+    public Stock(int idStock, ArrayList<Product> products) {
+        this.idStock = idStock;
         this.products = products;
     }
 
     @Override
     public String toString() {
-        return "Stock { products=" + products + "}";
+        return "Stock{" + "idStock=" + idStock + ", products=" + products;
+    }
+
+    /**
+     * @return the idStock
+     */
+    public int getIdStock() {
+        return idStock;
+    }
+
+    /**
+     * @param idStock the idStock to set
+     */
+    public void setIdStock(int idStock) {
+        this.idStock = idStock;
     }
 
     /**

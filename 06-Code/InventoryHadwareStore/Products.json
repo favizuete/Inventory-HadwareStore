@@ -1,26 +1,50 @@
 [
   {
-    "idProduct": 123.0,
-    "nameProduct": "martillo",
-    "brand": "FV",
+    "idProduct": 1.0,
+    "nameProduct": "Martillo",
+    "brand": "fv",
     "quantity": 5.0,
     "price": 10.5,
-    "category": "Herramienta"
+    "category": "herramienta"
   },
   {
-    "idProduct": 321.0,
+    "idProduct": 2.0,
     "nameProduct": "Pala",
     "brand": "FV",
-    "quantity": 4.0,
-    "price": 25.5,
-    "category": "Herramienta"
+    "quantity": 5.0,
+    "price": 25.99,
+    "category": "herramienta"
   },
   {
-    "idProduct": 432,
-    "nameProduct": "Pintura",
-    "brand": "Condor",
-    "quantity": 3,
-    "price": 10.99,
-    "category": "Material"
+    "idProduct": 3.0,
+    "nameProduct": "Pico",
+    "brand": "FV",
+    "quantity": 5.0,
+    "price": 19.99,
+    "category": "herramienta"
+  },
+  {
+    "idProduct": 121.0,
+    "nameProduct": "pala",
+    "brand": "",
+    "quantity": 20.0,
+    "price": 15.2,
+    "category": ""
+  },
+  {
+    "idProduct": 125.0,
+    "nameProduct": "martillo",
+    "brand": "",
+    "quantity": 20.0,
+    "price": 7.5,
+    "category": ""
+  },
+  {
+    "idProduct": 123,
+    "nameProduct": "Pala",
+    "brand": "Fv",
+    "quantity": 200,
+    "price": 17.0,
+    "category": "Herramienta"
   }
 ]

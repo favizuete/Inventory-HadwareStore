@@ -5,21 +5,21 @@
  */
 package ec.edu.espe.inventoryhadwarestore.view;
 
-import ec.edu.espe.inventoryhadwarestore.model.CustomerRegistry;
+import com.google.gson.Gson;
+import com.google.gson.stream.JsonReader;
 import ec.edu.espe.inventoryhadwarestore.model.ProductRegistry;
 import java.io.IOException;
 import java.util.Scanner;
 
 /**
  *
- * @author Fausto Vizuete ESPE-DCCO
+ * @author Daniel Vizcarra MaxDev ESPE-DCCO
  */
 public class InventoryHadwareStore {
 
     public static void main(String[] args) throws IOException {
 
         ProductRegistry product = new ProductRegistry();
-        CustomerRegistry customer = new CustomerRegistry();
         Scanner scan = new Scanner(System.in);
 
         int opc;
@@ -28,7 +28,6 @@ public class InventoryHadwareStore {
             System.out.println("\t****INVENTARIO FERRETERIA****");
             System.out.println("1. INGRESAR PRODUCTO");
             System.out.println("2. VER STOCK");
-            System.out.println("3. GENERAR FACTURA");
             System.out.println("0. SALIR");
             System.out.print("ESCOJA UNA OPCION: ");
             opc = scan.nextInt();
@@ -38,10 +37,6 @@ public class InventoryHadwareStore {
                     product.enterAProduct();
                     break;
                 case 2:
-                    product.showProducts();
-                    break;
-                case 3:
-                    customer.enterCustomer();
                     break;
                 case 0:
                     System.out.println("\t**GRACIAS POR USAR MI PROGRAMA....!!**0"

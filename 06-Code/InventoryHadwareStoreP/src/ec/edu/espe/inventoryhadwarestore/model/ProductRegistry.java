@@ -8,7 +8,6 @@ package ec.edu.espe.inventoryhadwarestore.model;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import espe.edu.ec.filemanagerlibrary.FileManager;
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -19,28 +18,16 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author David
+ * @author Daniel Vizcarra MaxDev ESPE-DCCO
  */
 public class ProductRegistry {
 
-    ArrayList<Product> products = new ArrayList<>();
     Gson gson = new GsonBuilder().setPrettyPrinting().create();
     Validation validate = new Validation();
 
-    Stock stock;
-    Scanner scan = new Scanner(System.in);
-
-    public void showProducts() throws IOException {
-
-        File f = new File("Products.json");
-        if (f.length() == 0) {
-            System.out.println("No se han registrado productos");
-        } else {
-            String productsJson = new String(Files.readAllBytes(Paths.get("Products.json")));
-            System.out.println(productsJson);
-        }
-
-    }
+    Scanner string = new Scanner(System.in);
+    Scanner integer = new Scanner(System.in);
+    Scanner prices = new Scanner(System.in);
 
     public void enterAProduct() throws IOException {
 
@@ -51,24 +38,22 @@ public class ProductRegistry {
         do {
 
             System.out.println("Ingrese el nombre del producto: ");
-            name = scan.nextLine();
+            name = string.nextLine();
 
             System.out.println("Ingrese el id del producto: ");
-            id = scan.nextInt();
-            scan.nextLine();
+            id = integer.nextInt();
 
             System.out.println("Ingrese la marca del producto: ");
-            brand = scan.nextLine();
+            brand = string.nextLine();
 
             System.out.println("Ingrese la cantidad: ");
-            quantity = scan.nextInt();
+            quantity = integer.nextInt();
 
             System.out.println("Ingrese el precio por unidad: ");
-            price = scan.nextFloat();
-            scan.nextLine();
+            price = prices.nextFloat();
 
             System.out.println("Ingrese la categoria del producto: ");
-            category = scan.nextLine();
+            category = string.nextLine();
 
             Product product = new Product(id, name, brand, quantity, price, category);
 
@@ -89,6 +74,7 @@ public class ProductRegistry {
 
     public boolean recordProduct(String fileName, Product product) throws IOException {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        ArrayList<Product> products = new ArrayList<>();
         FileManager.createFile(fileName);
         String productsJson = new String(Files.readAllBytes(Paths.get(fileName)));
         if (gson.fromJson(productsJson, ArrayList.class) != null) {
@@ -98,4 +84,5 @@ public class ProductRegistry {
         saveRecord(fileName, gson, products);
         return true;
     }
+
 }

@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Fausto Vizuete ESPE-DCCO
+ * @author Daniel Vizcarra MaxDev ESPE-DCCO
  */
 public class Customer {
 
@@ -18,18 +18,13 @@ public class Customer {
     private int phoneNumber;
     private String mail;
     private int id;
-    private String purchasedProduct;
-    private float totalDebt;
 
-    public Customer(String nameCustomer, String adress, int phoneNumber, String mail, int id,
-            String purchasedProduct, float totalDebt) {
+    public Customer(String nameCustomer, String adress, int phoneNumber, String mail, int id) {
         this.customerName = nameCustomer;
         this.address = adress;
         this.phoneNumber = phoneNumber;
         this.mail = mail;
         this.id = id;
-        this.purchasedProduct = purchasedProduct;
-        this.totalDebt = totalDebt;
     }
 
     @Override
@@ -105,6 +100,38 @@ public class Customer {
      */
     public void setId(int id) {
         this.id = id;
+    }
+
+    public Customer enterCustomer() {
+        Scanner scanner = new Scanner(System.in);
+
+        String nameCustomer;
+        String adress;
+        int phoneNumber;
+        String mail;
+        int id;
+
+        System.out.println("Ingrese el nombre del cliente: ");
+        nameCustomer = scanner.nextLine();
+
+        System.out.println("Ingrese dirección: ");
+        adress = scanner.nextLine();
+
+        System.out.println("Ingrese la marca del producto: ");
+        phoneNumber = scanner.nextInt();
+        scanner.nextLine();
+
+        System.out.println("Ingrese email del cliente: ");
+        mail = scanner.nextLine();
+
+        System.out.println("Ingrese la cantidad existente del producto (numero entero): ");
+        id = scanner.nextInt();
+        scanner.nextLine();
+
+        Customer customer = new Customer(nameCustomer, adress, phoneNumber, mail, id);
+
+        return customer;
+
     }
 
 }
