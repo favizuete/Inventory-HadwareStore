@@ -40,11 +40,19 @@
     "category": ""
   },
   {
-    "idProduct": 123,
+    "idProduct": 123.0,
     "nameProduct": "Pala",
     "brand": "Fv",
-    "quantity": 200,
+    "quantity": 200.0,
     "price": 17.0,
     "category": "Herramienta"
+  },
+  {
+    "idProduct": 1244,
+    "nameProduct": "clavos",
+    "brand": "phillips",
+    "quantity": 3,
+    "price": 12.23,
+    "category": "metales"
   }
 ]
