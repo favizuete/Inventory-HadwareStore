@@ -16,7 +16,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author David
+ * @author Fausto Vizuete
  */
 public class CustomerRegistry {
 

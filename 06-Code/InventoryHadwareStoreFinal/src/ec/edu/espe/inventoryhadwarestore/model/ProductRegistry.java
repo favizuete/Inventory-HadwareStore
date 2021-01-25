@@ -19,7 +19,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author David
+ * @author Fausto Vizuete
  */
 public class ProductRegistry {
 
