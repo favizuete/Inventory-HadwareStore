@@ -40,11 +40,19 @@
     "category": ""
   },
   {
-    "idProduct": 123,
+    "idProduct": 123.0,
     "nameProduct": "Pala",
     "brand": "Fv",
-    "quantity": 200,
+    "quantity": 200.0,
     "price": 17.0,
     "category": "Herramienta"
+  },
+  {
+    "idProduct": 14895,
+    "nameProduct": "martillo ",
+    "brand": "fv",
+    "quantity": 2,
+    "price": 4.0,
+    "category": "herramienta"
   }
 ]

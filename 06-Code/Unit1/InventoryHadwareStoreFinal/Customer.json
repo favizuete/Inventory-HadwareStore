@@ -2,10 +2,19 @@
   {
     "customerName": "Fausto V",
     "address": "quito",
-    "phoneNumber": 995884538,
+    "phoneNumber": 9.95884538E8,
     "mail": "",
-    "id": 1,
+    "id": 1.0,
     "purchasedProduct": "",
     "totalDebt": 10.1
+  },
+  {
+    "customerName": "vanessa",
+    "address": "chillogallo ",
+    "phoneNumber": 997789322,
+    "mail": "vnzurita@espe.edu.ec",
+    "id": 175199161,
+    "purchasedProduct": "martillo ",
+    "totalDebt": 2.0
   }
 ]
