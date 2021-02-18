@@ -5,10 +5,12 @@
  */
 package ec.edu.espe.inventoryhadwarestore.model;
 
+import java.util.Date;
+
 /**
  *
  * @author Fausto Vizuete ESPE-DCCO
  */
 public class SellRegistry {
-    
+     
 }

@@ -48,11 +48,19 @@
     "category": "Herramienta"
   },
   {
-    "idProduct": 14895,
+    "idProduct": 14895.0,
+    "nameProduct": "martillo ",
+    "brand": "fv",
+    "quantity": 2.0,
+    "price": 4.0,
+    "category": "herramienta"
+  },
+  {
+    "idProduct": 2569,
     "nameProduct": "martillo ",
     "brand": "fv",
     "quantity": 2,
-    "price": 4.0,
+    "price": 2.0,
     "category": "herramienta"
   }
 ]

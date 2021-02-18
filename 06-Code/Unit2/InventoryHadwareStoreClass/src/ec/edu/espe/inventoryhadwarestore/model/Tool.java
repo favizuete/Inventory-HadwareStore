@@ -8,7 +8,30 @@ package ec.edu.espe.inventoryhadwarestore.model;
 /**
  *
  * @author Fausto Vizuete ESPE-DCCO
+ * @author Vanessa Zurita ESPE-DCCO
  */
 public class Tool {
+    
+    private String quality;
+
+    public Tool(String quality) {
+        this.quality = quality;
+    }
+    /**
+     * @return the quality
+     */
+    public String getQuality() {
+        return quality;
+    }
+
+    /**
+     * @param quality the quality to set
+     */
+    public void setQuality(String quality) {
+        this.quality = quality;
+    }
+    
+    
+    
     
 }

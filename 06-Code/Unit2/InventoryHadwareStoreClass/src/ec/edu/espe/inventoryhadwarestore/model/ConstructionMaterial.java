@@ -11,4 +11,6 @@ package ec.edu.espe.inventoryhadwarestore.model;
  */
 public class ConstructionMaterial {
     
+    
+    
 }
