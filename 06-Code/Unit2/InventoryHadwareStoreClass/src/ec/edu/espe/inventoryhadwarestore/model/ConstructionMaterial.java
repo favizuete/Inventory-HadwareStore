@@ -8,6 +8,7 @@ package ec.edu.espe.inventoryhadwarestore.model;
 /**
  *
  * @author Fausto Vizuete ESPE-DCCO
+ * @author Pablo Yánez ESPE-DCCO
  */
 public class ConstructionMaterial {
     
