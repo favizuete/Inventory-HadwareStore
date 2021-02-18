@@ -9,6 +9,7 @@ package ec.edu.espe.inventoryhadwarestore.model;
  *
  * @author Fausto Vizuete ESPE-DCCO
  * @author Vanessa Zurita ESPE-DCCO
+ * @author Christopher Yépez ESPE-DCCO
  */
 public class Tool {
     
@@ -29,6 +30,11 @@ public class Tool {
      */
     public void setQuality(String quality) {
         this.quality = quality;
+    }
+
+    @Override
+    public String toString() {
+        return "Tool{" + "quality=" + quality + '}';
     }
     
     
