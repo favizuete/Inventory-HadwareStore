@@ -9,6 +9,7 @@ package ec.edu.espe.inventoryhadwarestore.model;
  *
  * @author Fausto Vizuete ESPE-DCCO
  * @author Vanessa Zurita ESPE-DCCO
+ * @author Christopher Yépez ESPE-DCCO
  */
 public class Admin {
     
@@ -20,6 +21,11 @@ public class Admin {
         this.name = name;
         this.password = password;
         this.user = user;
+    }
+
+    @Override
+    public String toString() {
+        return "Admin{" + "name=" + name + ", password=" + password + ", user=" + user + '}';
     }
     
     
