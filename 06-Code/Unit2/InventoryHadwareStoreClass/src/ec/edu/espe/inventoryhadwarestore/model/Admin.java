@@ -28,6 +28,7 @@ public class Admin {
         return "Admin{" + "name=" + name + ", password=" + password + ", user=" + user + '}';
     }
     
+    
     /**
      * @return the name
      */
