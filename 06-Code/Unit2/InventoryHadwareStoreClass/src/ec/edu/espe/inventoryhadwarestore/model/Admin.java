@@ -22,6 +22,7 @@ public class Admin {
         this.user = user;
     }
     
+    
     /**
      * @return the name
      */
