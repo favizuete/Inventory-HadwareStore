@@ -11,6 +11,26 @@ package ec.edu.espe.inventoryhadwarestore.model;
  */
 public class ConstructionMaterial {
     
-    
-    
+      private float wegith;
+
+    @Override
+    public String toString() {
+        return "ConstructionMaterial{" + "wegith=" + wegith + '}';
+    }
+
+    /**
+     * @return the wegith
+     */
+    public float getWegith() {
+        return wegith;
+    }
+
+    /**
+     * @param wegith the wegith to set
+     */
+    public void setWegith(float wegith) {
+        this.wegith = wegith;
+    }
 }
+
+   
