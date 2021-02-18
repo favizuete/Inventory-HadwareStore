@@ -16,55 +16,69 @@ import java.nio.file.Paths;
  */
 public class Product {
 
-    private int idProduct;
-    private String nameProduct;
+    private int id;
+    private String name;
     private String brand;
     private int quantity;
     private float price;
     private String category;
 
-    public Product(int idProduct, String nameProduct, String brand, int quantity, float price,
-            String category) {
-        this.idProduct = idProduct;
-        this.nameProduct = nameProduct;
+    public Product(int id, String name, String brand, int quantity, float price, String category) {
+        this.id = id;
+        this.name = name;
         this.brand = brand;
         this.quantity = quantity;
         this.price = price;
         this.category = category;
     }
 
+    public Product() {
+    }
+
+   
+    public void add(int quantityToAdd){
+        int quantity = getQuantity();
+        int totalquantity= quantity + quantityToAdd;
+        setQuantity(totalquantity);
+       
+    }
+    public void sell(int quantityToSell){
+        int quantity = getQuantity();
+        int totalquantity = quantity - quantityToSell;
+        if(totalquantity<0){
+            System.out.println("No hay stock suficiente para la cantidad solicitada");
+ 
+        }
+        else{
+            setQuantity(totalquantity);
+        }
+        
+    }
+    public void modify(){
+       
+    }
+
     @Override
     public String toString() {
-        return "Product{" + "idProduct=" + idProduct + ", nameProduct=" + nameProduct + ", brand=" + brand + ", quantity=" + quantity + ", price=" + price + ", category=" + category + '}';
+        return "Product{" + "id=" + id + ", name=" + name + ", brand=" + brand + ", quantity=" + quantity + ", price=" + price + ", category=" + category + '}';
     }
 
-    /**
-     * @return the idProduct
-     */
-    public int getIdProduct() {
-        return idProduct;
+    public int getId() {
+        return id;
     }
 
-    /**
-     * @param idProduct the idProduct to set
-     */
-    public void setIdProduct(int idProduct) {
-        this.idProduct = idProduct;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    /**
-     * @return the nameProduct
-     */
-    public String getNameProduct() {
-        return nameProduct;
+    public String getName() {
+        return name;
     }
 
-    /**
-     * @param nameProduct the nameProduct to set
-     */
-    public void setNameProduct(String nameProduct) {
-        this.nameProduct = nameProduct;
+    public void setName(String name) {
+        this.name = name;
     }
+
 
     /**
      * @return the brand

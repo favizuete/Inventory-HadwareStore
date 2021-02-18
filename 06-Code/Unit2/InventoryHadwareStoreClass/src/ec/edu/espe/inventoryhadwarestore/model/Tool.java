@@ -11,13 +11,19 @@ package ec.edu.espe.inventoryhadwarestore.model;
  * @author Vanessa Zurita ESPE-DCCO
  * @author Christopher Yépez ESPE-DCCO
  */
-public class Tool {
+public class Tool extends Product{
     
     private String quality;
 
-    public Tool(String quality) {
+    public Tool(String quality, int id, String name, String brand, int quantity, float price, String category) {
+        super(id, name, brand, quantity, price, category);
         this.quality = quality;
     }
+
+
+
+
+
     /**
      * @return the quality
      */

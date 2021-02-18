@@ -10,7 +10,7 @@ package ec.edu.espe.inventoryhadwarestore.model;
  * @author Fausto Vizuete ESPE-DCCO
  * @author Pablo Yánez ESPE-DCCO
  */
-public class ElectricTool {
+public class ElectricTool extends Product{
     private String quality;
     private String energySource;
 
@@ -19,6 +19,20 @@ public class ElectricTool {
         return "ElectricTool{" + "quality=" + quality + ", energySource=" + energySource + '}';
     }
 
+    public ElectricTool(String quality, String energySource, int id, String name, String brand, int quantity, float price, String category) {
+        super(id, name, brand, quantity, price, category);
+        this.quality = quality;
+        this.energySource = energySource;
+    }
+
+    public ElectricTool(String quality, String energySource) {
+        this.quality = quality;
+        this.energySource = energySource;
+    }
+
+
+
+    
     /**
      * @return the quality
      */

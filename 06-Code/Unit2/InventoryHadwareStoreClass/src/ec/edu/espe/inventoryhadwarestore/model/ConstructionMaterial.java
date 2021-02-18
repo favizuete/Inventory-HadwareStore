@@ -10,27 +10,28 @@ package ec.edu.espe.inventoryhadwarestore.model;
  * @author Fausto Vizuete ESPE-DCCO
  * @author Pablo Yánez ESPE-DCCO
  */
-public class ConstructionMaterial {
+public class ConstructionMaterial extends Product{
     
-      private float wegith;
+      private float weight;
+
+    public ConstructionMaterial(int id, String name, String brand, int quantity, float price, String category) {
+        super(id, name, brand, quantity, price, category);
+    }
+
+    public ConstructionMaterial() {
+    }
 
     @Override
     public String toString() {
-        return "ConstructionMaterial{" + "wegith=" + wegith + '}';
+        return "ConstructionMaterial{" + "wegith=" + weight + '}';
     }
 
-    /**
-     * @return the wegith
-     */
-    public float getWegith() {
-        return wegith;
+    public float getWeight() {
+        return weight;
     }
 
-    /**
-     * @param wegith the wegith to set
-     */
-    public void setWegith(float wegith) {
-        this.wegith = wegith;
+    public void setWeight(float weight) {
+        this.weight = weight;
     }
 }
 
