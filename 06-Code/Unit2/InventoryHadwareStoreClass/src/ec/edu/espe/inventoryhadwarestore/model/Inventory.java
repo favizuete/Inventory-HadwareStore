@@ -46,13 +46,13 @@ public class Inventory {
 
             }
         } else {
-            System.out.println("Usuario incorrecto, ingrese más tardexd");
+            System.out.println("Usuario incorrecto, ingrese más tarde..!!");
             System.exit(0);
         }
 
     }
 
-    public void reedProducts() {
+    public void readProducts() {
 
         Gson gson = new Gson();
         ArrayList<Product> productList = new ArrayList<>();
