@@ -30,13 +30,12 @@ public class InventoryHadwareStore {
 
         do {
             System.out.println("\t****INVENTARIO FERRETERIA****");
-            System.out.println("1. INGRESAR PRODUCTO A LA lISTA");
-            System.out.println("2. INGRESAR PRODUCTO AL INVENTARIO ");
-            System.out.println("3. VENDER PRODCUTO");
-            System.out.println("4. MODIFICAR PRODUCTO");
-            System.out.println("5. ELIMINAR PRODUCTO DE LA LISTA");
-            System.out.println("6. MOSTRAR INVENTARIO");
-            System.out.println("7. MOSTRAR REGISTRO DE VENTA");
+            System.out.println("1. INGRESAR PRODUCTO AL INVENTARIO ");
+            System.out.println("2. VENDER PRODCUTO");
+            System.out.println("3. MODIFICAR PRODUCTO");
+            System.out.println("4. ELIMINAR PRODUCTO");
+            System.out.println("5. MOSTRAR INVENTARIO");
+            System.out.println("6. MOSTRAR REGISTRO DE VENTA");
             System.out.println("0. SALIR");
             System.out.print("ESCOJA UNA OPCION: ");
             opc = scan.nextInt();
