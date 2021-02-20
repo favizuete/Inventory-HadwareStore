@@ -5,13 +5,18 @@
  */
 package ec.edu.espe.inventoryhadwarestore.view;
 
+import com.google.gson.Gson;
 import ec.edu.espe.inventoryhadwarestore.model.Admin;
 import ec.edu.espe.inventoryhadwarestore.model.ConstructionMaterial;
 import ec.edu.espe.inventoryhadwarestore.model.ElectricTool;
 import ec.edu.espe.inventoryhadwarestore.model.Inventory;
 import ec.edu.espe.inventoryhadwarestore.model.Product;
+import ec.edu.espe.inventoryhadwarestore.model.SalesRegistry;
 import ec.edu.espe.inventoryhadwarestore.model.Tool;
+import espe.edu.ec.filemanagerlibrary.FileManager;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.Scanner;
 
 /**
@@ -21,12 +26,13 @@ import java.util.Scanner;
 public class InventoryHadwareStore {
 
     public static void main(String[] args) throws IOException {
-
+        Gson gson = new Gson();
         Inventory inventory = new Inventory();
         Admin admin = new Admin("Richard", "richard123", "richard123");
         inventory.login(admin);
         Scanner scan = new Scanner(System.in);
         int opc;
+        int option;
 
         do {
             System.out.println("\t****INVENTARIO FERRETERIA****");
@@ -47,7 +53,54 @@ public class InventoryHadwareStore {
                     System.out.println("Inventario -->" + inventory);
                     break;
                 case 2:
-
+                    do{
+                    System.out.println("Ingrese el producto que desea ingresar:");
+                    String readedproduct = scan.nextLine();
+                    for(Product product : inventory.getProducts())
+                    {
+                        if(readedproduct.equals(product.getName())){
+                            System.out.println("Producto encontrado..");
+                            System.out.println("Ingrese la cantidad que desea añadir a ese producto:");
+                            int quantityToAdd = scan.nextInt();
+                            scan.nextLine();
+                            product.add(quantityToAdd);
+                        }
+                    }
+                    System.out.println("Ingrese 1 para ingresar un nuevo producto");
+                    System.out.println("Ingrese 2 para salir");
+                    option = scan.nextInt();
+                    scan.nextLine();
+                    }while(option!=2);
+                    break;
+                case 3:
+                    ArrayList<Product> productsToSell = new ArrayList<>();
+                    System.out.println("Buen dia cliente, proporcione su nombre para continuar:");
+                    System.out.println("Ingrese su nombre");
+                    String name = scan.nextLine();                    
+                    do{
+                        System.out.println("Ingrese el producto que desea vender:");
+                        String readedproduct = scan.nextLine();
+                        for(Product product : inventory.getProducts()){
+                            if(readedproduct.equals(product.getName())){
+                                System.out.println("Producto encontrado..");
+                                System.out.println("Ingrese la cantidad que desea vender de este producto:");
+                                int quantityToSell = scan.nextInt();
+                                scan.nextLine();
+                                product.sell(quantityToSell);
+                                productsToSell.add(product);
+                                }
+                        }
+                        System.out.println("Ingrese 1 para vender otro producto");
+                        System.out.println("Ingrese 2 para continuar al registro");
+                        option = scan.nextInt();
+                        scan.nextLine();
+                    }while(option!=2);
+                    Date date = new Date();
+                    String id = "";
+                    SalesRegistry registry = new SalesRegistry(name,date,id,productsToSell);
+                    registry.generateId();
+                    String registryString = gson.toJson(registry);
+                    FileManager.writeFile("RegistroDeVentas.json", registryString);                    
                     break;
                 case 0:
                     System.out.println("\t**GRACIAS POR USAR MI PROGRAMA....!!**0"
@@ -84,18 +137,18 @@ public class InventoryHadwareStore {
         if ("Herramienta".equals(category)) {
             System.out.println("Ingrese la calidad de la herramienta:");
             String qualityh = reader.nextLine();
-            Tool tool = new Tool(qualityh, id, name, brand, quantity, price, category);
+            Product tool = new Tool(qualityh, id, name, brand, quantity, price, category);
             return tool;
 
         } else if ("Herramienta electrica".equals(category)) {
             System.out.println("Ingrese la calidad de la herramienta electrica:");
             String qualityh = reader.nextLine();
-            ElectricTool electricTool = new ElectricTool(qualityh, category, id, name, brand, quantity, price, category);
+            Product electricTool = new ElectricTool(qualityh, category, id, name, brand, quantity, price, category);
             return electricTool;
         } else if ("Material de Construcción".equals(category)) {
             System.out.println("Ingrese el peso del material:");
             float weigth = reader.nextFloat();
-            ConstructionMaterial material = new ConstructionMaterial(weigth, id, name, brand, quantity, price, category);
+            Product material = new ConstructionMaterial(weigth, id, name, brand, quantity, price, category);
             return material;
 
         } else {
