@@ -30,6 +30,7 @@ public class InventoryHadwareStore {
         Inventory inventory = new Inventory();
         Admin admin = new Admin("Richard", "richard123", "richard123");
         inventory.login(admin);
+        inventory.readProducts();
         Scanner scan = new Scanner(System.in);
         int opc;
         int option;
@@ -37,14 +38,16 @@ public class InventoryHadwareStore {
         do {
             System.out.println("\t****INVENTARIO FERRETERIA****");
             System.out.println("1. INGRESAR PRODUCTO AL INVENTARIO ");
-            System.out.println("2. VENDER PRODCUTO");
-            System.out.println("3. MODIFICAR PRODUCTO");
-            System.out.println("4. ELIMINAR PRODUCTO");
-            System.out.println("5. MOSTRAR INVENTARIO");
-            System.out.println("6. MOSTRAR REGISTRO DE VENTA");
+            System.out.println("2. INGRESAR CANTIDAD DE PRODUCTO AL INVENTARIO");
+            System.out.println("3. VENDER PRODUCTO");
+            System.out.println("4. MODIFICAR PRODUCTO");
+            System.out.println("5. ELIMINAR PRODUCTO");
+            System.out.println("6. MOSTRAR INVENTARIO");
+            System.out.println("7. MOSTRAR REGISTRO DE VENTA");
             System.out.println("0. SALIR");
             System.out.print("ESCOJA UNA OPCION: ");
             opc = scan.nextInt();
+            scan.nextLine();
             System.out.println("   ");
             switch (opc) {
                 case 1:
@@ -101,6 +104,36 @@ public class InventoryHadwareStore {
                     String registryString = gson.toJson(registry);
                     FileManager.writeFile("RegistroDeVentas.json", registryString);                    
                     break;
+                case 6:
+                    System.out.println("Ingrese que desea ver del inventario");
+                    System.out.println("1. Todo el inventario");
+                    System.out.println("2. Un producto especifico de inventario");
+                    option = scan.nextInt();
+                    scan.nextLine();
+                    switch(option){
+                        case 1:
+                            System.out.println("Mostrando todo el inventario..");
+                            inventoryView(inventory);
+                            break;
+                        case 2:
+                            System.out.println("Ingrese el nombre del producto que desea ver:");
+                            String productToSee = scan.nextLine();
+                            for(Product product :inventory.getProducts()){
+                                if(product.getName().equals(productToSee)){
+                                    System.out.println("**************************************");
+                                    System.out.println("Nombre del producto-->" + product.getName());
+                                    System.out.println("Marca del producto -->" + product.getBrand());
+                                    System.out.println("ID del producto -->" + product.getId());
+                                    System.out.println("Categoría del producto -->" + product.getCategory());
+                                    System.out.println("Precio del producto -->" + product.getPrice());
+                                    System.out.println("Cantidad actual en el inventario del producto -->" + product.getQuantity());
+                                    System.out.println("**************************************");
+                                }
+                            }
+                            break;
+                        default:
+                    }
+                    break;
                 case 0:
                     System.out.println("\t**GRACIAS POR USAR MI PROGRAMA....!!**0"
                             + "");
@@ -156,4 +189,23 @@ public class InventoryHadwareStore {
         }
 
     }
+    public static void inventoryView(Inventory inventory){
+     
+        System.out.println("*********Inventario Actual*********");
+        System.out.println("Total de productos: " + inventory.getProducts().size());
+        int i=0;
+        for(Product product:inventory.getProducts()){
+            System.out.println("Producto N°" + (i+1));
+            System.out.println("Nombre del producto-->" + product.getName());
+            System.out.println("Marca del producto -->" + product.getBrand());
+            System.out.println("ID del producto -->" + product.getId());
+            System.out.println("Categoría del producto -->" + product.getCategory());
+            System.out.println("Precio del producto -->" + product.getPrice());
+            System.out.println("Cantidad actual en el inventario del producto -->" + product.getQuantity());
+            int j = i+1;
+            i = j; 
+        }
+        System.out.println("********************************");
+    }
+    
 }

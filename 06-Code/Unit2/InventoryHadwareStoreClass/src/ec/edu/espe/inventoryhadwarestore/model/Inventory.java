@@ -19,7 +19,7 @@ import java.util.Scanner;
  */
 public class Inventory {
 
-    private ArrayList<Product> products;
+    private ArrayList<Product> products = new ArrayList<>();
 
     public Inventory() {
     }
@@ -46,9 +46,22 @@ public class Inventory {
 
             }
         } else {
+<<<<<<< HEAD
             System.out.println("Usuario incorrecto, ingrese más tarde..!!");
             System.out.println("Usuario incorrecto, ingrese más tarde");
 
+=======
+<<<<<<< HEAD
+//<<<<<<< HEAD
+            System.out.println("Usuario incorrecto, ingrese más tarde..!!");
+//=======
+            System.out.println("Usuario incorrecto, ingrese más tarde");
+//>>>>>>> 20b4e3a557e978c98a903949b0fb361b3feee0ef
+=======
+            System.out.println("Usuario incorrecto, ingrese más tarde..!!");
+            System.out.println("Usuario incorrecto, ingrese más tarde");
+>>>>>>> 2f744c23e2c4971b246dc4ff08851c3999b53eaa
+>>>>>>> 58f6f9bf64f2efdeedcf2007a9034a41cd421f32
             System.exit(0);
         }
 
@@ -68,14 +81,14 @@ public class Inventory {
                 String productx = breader.readLine();
                 product = productx;
             } while (product != null);
-
+            setProducts(productList);
         } catch (Exception exception) {
             System.out.println("No se leyó la lista de productos..");
         }
     }
 
     public void addProduct(Product product) {
-        products.add(product);
+        getProducts().add(product);
         Gson gson = new Gson();
         gson.toJson(product);
         FileManager.writeFile("RegistroProductos.json", gson.toJson(product));
