@@ -121,6 +121,7 @@ public class InventoryHadwareStore {
                     }
 
                     break;
+<<<<<<< HEAD
                 case 5:
                     System.out.println("Ingrese el nombre del producto que desea eliminar: ");
                     String productDelete = scan.nextLine();
@@ -133,6 +134,46 @@ public class InventoryHadwareStore {
                     }
                     
                     break;
+=======
+                case 4:
+                    ArrayList<Product> products = inventory.getProducts();
+                    System.out.println("Ingrese que producto desea modificar");
+                    String searchName = scan.nextLine();
+                    boolean found = false;
+                    for(int i=0;i<products.size();i++){
+                        if(products.get(i).getName().equals(searchName)){
+                            found = true;
+                            System.out.println("Que dato desea modificar?");
+                            System.out.println("1:Marca");
+                            System.out.println("2:Precio");
+                            System.out.println("3:Categoria");
+                            option = scan.nextInt();
+                            scan.nextLine();
+                            switch(option){
+                                case 1:
+                                    System.out.println("Nueva Marca:");
+                                    products.get(i).setBrand(scan.nextLine());
+                                break;
+                                case 2:
+                                    System.out.println("Nuevo Precio:");
+                                    products.get(i).setPrice(scan.nextFloat());
+                                break;
+                                case 3:
+                                    System.out.println("Nueva Categoria:");
+                                    products.get(i).setCategory(scan.nextLine());
+                                break;
+                            }
+                            gson.toJson(products.get(i));
+                            FileManager.writeFile("RegistroProductos.json", gson.toJson(products.get(i)));
+                            System.out.println("Producto modificado");
+                        }
+                    }
+                    if (!found){
+                        System.out.println("No se encontro el producto");
+                    }
+                    break;
+                    
+>>>>>>> 6318b72beec8b28427bb79923d9c7287f19d14ae
                 case 6:
                     System.out.println("Ingrese que desea ver del inventario");
                     System.out.println("1. Todo el inventario");
