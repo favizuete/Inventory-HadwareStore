@@ -126,4 +126,11 @@ public class Product {
         return category;
     }
 
+    /**
+     * @param category the category to set
+     */
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
 }
