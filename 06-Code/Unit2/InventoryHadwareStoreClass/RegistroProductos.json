@@ -1,2 +1,9 @@
+<<<<<<< HEAD
 {"quality":"buena","id":1,"name":"Pala","brand":"APM","quantity":20,"price":10.4,"category":"Herramienta"}
 {"id":23658,"name":"martillo","brand":"fv","quantity":10,"price":2.0,"category":"herramienta"}
+=======
+{"quality":"alta","id":553,"name":"Martillo","brand":"fv","quantity":200,"price":7.2,"category":"Herramienta"}
+{"id":778,"name":"Taladro","brand":"BOCH","quantity":120,"price":30.0,"category":"Herramienta El�ctrica"}
+{"id":232,"name":"martillo","brand":"husky","quantity":1,"price":2.0,"category":"tool"}
+{"id":232,"name":"martillo","brand":"husky","quantity":1,"price":2.0,"category":"electric tool"}
+>>>>>>> 71c3808a749e29e81b568f8c09d864576027230d

@@ -13,7 +13,11 @@ import ec.edu.espe.inventoryhadwarestore.model.Inventory;
 import ec.edu.espe.inventoryhadwarestore.model.Product;
 import ec.edu.espe.inventoryhadwarestore.model.SalesRegistry;
 import ec.edu.espe.inventoryhadwarestore.model.Tool;
+import ec.edu.espe.inventoryhadwarestore.model.Validation;
 import espe.edu.ec.filemanagerlibrary.FileManager;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
@@ -28,6 +32,8 @@ public class InventoryHadwareStore {
     public static void main(String[] args) throws IOException {
         Gson gson = new Gson();
         Inventory inventory = new Inventory();
+        SalesRegistry salesRegistry = new SalesRegistry();
+        Validation validate = new Validation();
         Admin admin = new Admin("Richard", "richard123", "richard123");
         inventory.login(admin);
         inventory.readProducts();
@@ -43,7 +49,6 @@ public class InventoryHadwareStore {
             System.out.println("4. MODIFICAR PRODUCTO");
             System.out.println("5. ELIMINAR PRODUCTO");
             System.out.println("6. MOSTRAR INVENTARIO");
-            System.out.println("7. MOSTRAR REGISTRO DE VENTA");
             System.out.println("0. SALIR");
             System.out.print("ESCOJA UNA OPCION: ");
             opc = scan.nextInt();
@@ -56,7 +61,11 @@ public class InventoryHadwareStore {
                     break;
                 case 2:
                     do {
+<<<<<<< HEAD
                         System.out.println("Ingrese el producto que desea ingresar:");
+=======
+                        System.out.println("Ingrese el producto que desea registrar:");
+>>>>>>> 71c3808a749e29e81b568f8c09d864576027230d
                         String readedproduct = scan.nextLine();
                         for (Product product : inventory.getProducts()) {
                             if (readedproduct.equals(product.getName())) {
@@ -75,7 +84,7 @@ public class InventoryHadwareStore {
                     break;
                 case 3:
                     ArrayList<Product> productsToSell = new ArrayList<>();
-                    System.out.println("Buen dia cliente, proporcione su nombre para continuar:");
+                    System.out.println("Buen día,ingrese su nombre para continuar:");
                     System.out.println("Ingrese su nombre");
                     String name = scan.nextLine();
                     do {
@@ -102,8 +111,64 @@ public class InventoryHadwareStore {
                     registry.generateId();
                     String registryString = gson.toJson(registry);
                     FileManager.writeFile("RegistroDeVentas.json", registryString);
+<<<<<<< HEAD
                     break;
                     
+=======
+                    while ("si".equals(validate.getYesOrNo("Desea imprimir el registro de ventra?"
+                            + "[si/no]: "))) {
+                        String sales = gson.toJson(registry);
+                        FileManager.readFile("RegistroDeVenta.jason");
+                        SalesRegistry reg;
+                        reg = gson.fromJson(sales, SalesRegistry.class);
+                        System.out.println("\t\t***Registo de Venta***");
+                        int i = 0;
+                        System.out.println("Venta N°" + (i + 1));
+                        System.out.println(reg);
+                        System.out.println("==============================================");
+                    }
+
+                    break;
+
+                case 4:
+                    ArrayList<Product> products = inventory.getProducts();
+                    System.out.println("Ingrese que producto desea modificar");
+                    String searchName = scan.nextLine();
+                    boolean found = false;
+                    for (int i = 0; i < products.size(); i++) {
+                        if (products.get(i).getName().equals(searchName)) {
+                            found = true;
+                            System.out.println("Que dato desea modificar?");
+                            System.out.println("1:Marca");
+                            System.out.println("2:Precio");
+                            System.out.println("3:Categoria");
+                            option = scan.nextInt();
+                            scan.nextLine();
+                            switch (option) {
+                                case 1:
+                                    System.out.println("Nueva Marca:");
+                                    products.get(i).setBrand(scan.nextLine());
+                                    break;
+                                case 2:
+                                    System.out.println("Nuevo Precio:");
+                                    products.get(i).setPrice(scan.nextFloat());
+                                    break;
+                                case 3:
+                                    System.out.println("Nueva Categoria:");
+                                    products.get(i).setCategory(scan.nextLine());
+                                    break;
+                            }
+                            gson.toJson(products.get(i));
+                            FileManager.writeFile("RegistroProductos.json", gson.toJson(products.get(i)));
+                            System.out.println("Producto modificado");
+                        }
+                    }
+                    if (!found) {
+                        System.out.println("No se encontro el producto");
+                    }
+                    break;
+
+>>>>>>> 71c3808a749e29e81b568f8c09d864576027230d
                 case 6:
                     System.out.println("Ingrese que desea ver del inventario");
                     System.out.println("1. Todo el inventario");
@@ -135,7 +200,7 @@ public class InventoryHadwareStore {
                     }
                     break;
                 case 0:
-                    System.out.println("\t**GRACIAS POR USAR MI PROGRAMA....!!**0"
+                    System.out.println("\t**GRACIAS POR USAR MI PROGRAMA....!!**"
                             + "");
                     break;
                 default:
@@ -209,4 +274,20 @@ public class InventoryHadwareStore {
         System.out.println("********************************");
     }
 
+<<<<<<< HEAD
+=======
+    public String answerYesorNo(String question) {
+        Scanner scan = new Scanner(System.in);
+        String data = "";
+        while (data.equals("")) {
+            System.out.println(question);
+            data = scan.nextLine();
+            if (!"si".equals(data) & !"no".equals(data)) {
+                data = "";
+            }
+        }
+        return data;
+    }
+
+>>>>>>> 71c3808a749e29e81b568f8c09d864576027230d
 }
