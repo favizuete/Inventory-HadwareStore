@@ -46,23 +46,12 @@ public class Inventory {
 
             }
         } else {
-<<<<<<< HEAD
             System.out.println("Usuario incorrecto, ingrese más tarde..!!");
             System.out.println("Usuario incorrecto, ingrese más tarde");
-
-=======
-<<<<<<< HEAD
-//<<<<<<< HEAD
-            System.out.println("Usuario incorrecto, ingrese más tarde..!!");
-//=======
-            System.out.println("Usuario incorrecto, ingrese más tarde");
-//>>>>>>> 20b4e3a557e978c98a903949b0fb361b3feee0ef
-=======
             System.out.println("Usuario incorrecto, ingrese más tarde..!!");
             System.out.println("Usuario incorrecto, ingrese más tarde");
->>>>>>> 2f744c23e2c4971b246dc4ff08851c3999b53eaa
->>>>>>> 58f6f9bf64f2efdeedcf2007a9034a41cd421f32
-            System.exit(0);
+            System.out.println("Usuario incorrecto, ingrese más tarde..!!");
+            System.out.println("Usuario incorrecto, ingrese más tarde");
         }
 
     }

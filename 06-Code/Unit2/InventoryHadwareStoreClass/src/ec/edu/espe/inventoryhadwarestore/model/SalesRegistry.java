@@ -18,19 +18,22 @@ import java.util.Calendar;
  * @author Christopher Yépez ESPE-DCCO
  */
 public class SalesRegistry {
+
+    private String customer;
+    private Date date;
+    private String id;
+    private static int staticTotalSales;
+    private ArrayList<Product> selledProducts;
+
+    @Override
+    public String toString() {
+        return "SalesRegistry{" + "customer=" + customer + ", date=" + date + ", id=" + id + ", selledProducts=" + selledProducts + '}';
+    }
     
-     private String customer;
-     private Date date;
-     private String id;
-     private static int staticTotalSales;
-     private ArrayList<Product> selledProducts;
+    
 
-
-
-
-     
-    public void recordSale(){
-       /* Gson gson = new Gson();
+    public void recordSale() {
+        /* Gson gson = new Gson();
         try{
            FileReader fr = new FileReader("RegistroDeVentas.json");
            BufferedReader bf = new BufferedReader(fr);
@@ -42,15 +45,16 @@ public class SalesRegistry {
         }
         catch(Exception e){            
         }           
-       */ 
+         */
     }
-    public void generateId(){
+
+    public void generateId() {
         String customer = getCustomer();
         char[] charCustomer = new char[2];
-        customer.getChars(0,2,charCustomer,0);
+        customer.getChars(0, 2, charCustomer, 0);
         String customerNewString = Arrays.toString(charCustomer);
         int sales = getStaticTotalSales();
-        int totalsales = sales + 1;      
+        int totalsales = sales + 1;
         setStaticTotalSales(totalsales);
         Date date = getDate();
         String finalId = customerNewString + String.valueOf(totalsales) + String.valueOf(date.getDate());
@@ -75,7 +79,7 @@ public class SalesRegistry {
     public void setSelledProducts(ArrayList<Product> selledProducts) {
         this.selledProducts = selledProducts;
     }
-    
+
     /**
      * @return the customer
      */
@@ -132,6 +136,4 @@ public class SalesRegistry {
         staticTotalSales = aStaticTotalSales;
     }
 
-     
-     
 }
