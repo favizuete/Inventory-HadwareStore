@@ -27,7 +27,7 @@ public class SalesRegistry {
 
     @Override
     public String toString() {
-        return "SalesRegistry{" + "customer=" + customer + ", date=" + date + ", id=" + id + ", selledProducts=" + selledProducts + '}';
+        return "SalesRegistry{" + "customer=" + customer +"\n"+ ", date=" + date +"\n"+ ", id=" + id + "\n"+", selledProducts=" + selledProducts + '}';
     }
     
     

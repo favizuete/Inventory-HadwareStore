@@ -49,7 +49,6 @@ public class InventoryHadwareStore {
             System.out.println("4. MODIFICAR PRODUCTO");
             System.out.println("5. ELIMINAR PRODUCTO");
             System.out.println("6. MOSTRAR INVENTARIO");
-            System.out.println("7. MOSTRAR REGISTRO DE VENTA");
             System.out.println("0. SALIR");
             System.out.print("ESCOJA UNA OPCION: ");
             opc = scan.nextInt();
@@ -122,6 +121,18 @@ public class InventoryHadwareStore {
                     }
 
                     break;
+                case 5:
+                    System.out.println("Ingrese el nombre del producto que desea eliminar: ");
+                    String productDelete = scan.nextLine();
+                    for(Product product:inventory.getProducts()){
+                        if(product.getName().equals(productDelete)){
+                            System.out.println("Producto encontrado..");
+                            product.remove(productDelete);
+                            
+                        }
+                    }
+                    
+                    break;
                 case 6:
                     System.out.println("Ingrese que desea ver del inventario");
                     System.out.println("1. Todo el inventario");
@@ -152,10 +163,6 @@ public class InventoryHadwareStore {
                         default:
                     }
                     break;
-                case 7:
-
-                    break;
-
                 case 0:
                     System.out.println("\t**GRACIAS POR USAR MI PROGRAMA....!!**"
                             + "");
@@ -231,15 +238,6 @@ public class InventoryHadwareStore {
         System.out.println("********************************");
     }
 
-//    public static void showSell(SalesRegistry sales) {
-//        Gson gson = new Gson();
-//        FileManager.readFile("RegistroDeventas.json");
-//        sales = gson.fromJson(br, SalesRegistry.class);
-//        System.out.println("\t\t***Registro de Ventas***");
-//        int i = 0;
-//        System.out.println("Venta N°" + (i + 1));
-//        System.out.println(sales);
-//    }
     public String answerYesorNo(String question) {
         Scanner scan = new Scanner(System.in);
         String data = "";
