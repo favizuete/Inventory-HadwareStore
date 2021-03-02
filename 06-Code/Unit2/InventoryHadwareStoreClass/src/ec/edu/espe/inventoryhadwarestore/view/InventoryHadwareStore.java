@@ -60,12 +60,7 @@ public class InventoryHadwareStore {
                     break;
                 case 2:
                     do {
-<<<<<<< HEAD
-
                         System.out.println("Ingrese el producto que desea ingresar:");
-=======
-                        System.out.println("Ingrese el producto que desea registrar:");
->>>>>>> 9e8b25d3da868f1452ca8c23a5c8eaf81a6ed402
                         String readedproduct = scan.nextLine();
                         for (Product product : inventory.getProducts()) {
                             if (readedproduct.equals(product.getName())) {
@@ -111,9 +106,8 @@ public class InventoryHadwareStore {
                     registry.generateId();
                     String registryString = gson.toJson(registry);
                     FileManager.writeFile("RegistroDeVentas.json", registryString);
-<<<<<<< HEAD
-
-                    while ("si".equals(validate.getYesOrNo("Desea imprimir el registro de ventra?" + "[si/no]: "))) {
+                    while ("si".equals(validate.getYesOrNo("Desea imprimir el registro de ventra?" + "[si/no]: "))) 
+                    {
                         String sales = gson.toJson(registry);
                         FileManager.readFile("RegistroDeVenta.jason");
                         SalesRegistry reg;
@@ -124,7 +118,7 @@ public class InventoryHadwareStore {
                         System.out.println(reg);
                         System.out.println("==============================================");
                     }
-=======
+
                     String sales = gson.toJson(registry);
                     FileManager.readFile("RegistroDeVenta.jason");
                     SalesRegistry reg;
@@ -134,7 +128,6 @@ public class InventoryHadwareStore {
                     System.out.println("Venta N°" + (i + 1));
                     System.out.println(reg);
                     System.out.println("==============================================");
->>>>>>> 9e8b25d3da868f1452ca8c23a5c8eaf81a6ed402
 
                     break;
 
@@ -175,13 +168,11 @@ public class InventoryHadwareStore {
                         System.out.println("No se encontro el producto");
                     }
                     break;
-<<<<<<< HEAD
-=======
+
                 case 5:
 
                     break;
 
->>>>>>> 9e8b25d3da868f1452ca8c23a5c8eaf81a6ed402
                 case 6:
                     System.out.println("Ingrese que desea ver del inventario");
                     System.out.println("1. Todo el inventario");
@@ -300,8 +291,4 @@ public class InventoryHadwareStore {
         }
         return data;
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> 9e8b25d3da868f1452ca8c23a5c8eaf81a6ed402
 }
