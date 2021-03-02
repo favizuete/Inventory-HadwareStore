@@ -38,12 +38,15 @@
                           <Component id="txtPassword" alignment="0" pref="151" max="32767" attributes="0"/>
                       </Group>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="137" max="-2" attributes="0"/>
-                      <Component id="LoginButton" min="-2" pref="73" max="-2" attributes="0"/>
-                  </Group>
               </Group>
               <EmptySpace pref="128" max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
+              <Component id="LoginButton" min="-2" pref="73" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="btnExit" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -60,9 +63,12 @@
               <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="txtPassword" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
-              <Component id="LoginButton" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="64" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="LoginButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnExit" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="70" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -101,6 +107,14 @@
       </Events>
     </Component>
     <Component class="javax.swing.JPasswordField" name="txtPassword">
+    </Component>
+    <Component class="javax.swing.JButton" name="btnExit">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Exit"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnExitActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

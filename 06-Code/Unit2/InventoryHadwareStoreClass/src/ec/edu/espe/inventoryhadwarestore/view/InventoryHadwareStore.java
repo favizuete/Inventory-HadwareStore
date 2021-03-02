@@ -62,11 +62,11 @@ public class InventoryHadwareStore {
                     break;
                 case 2:
                     do {
-<<<<<<< HEAD
+
                         System.out.println("Ingrese el producto que desea ingresar:");
-=======
+
                         System.out.println("Ingrese el producto que desea registrar:");
->>>>>>> db4d0a2c8f0bf2acc8f923996947a70814644748
+
                         String readedproduct = scan.nextLine();
                         for (Product product : inventory.getProducts()) {
                             if (readedproduct.equals(product.getName())) {
@@ -112,13 +112,9 @@ public class InventoryHadwareStore {
                     registry.generateId();
                     String registryString = gson.toJson(registry);
                     FileManager.writeFile("RegistroDeVentas.json", registryString);
-<<<<<<< HEAD
-                    while ("si".equals(validate.getYesOrNo("Desea imprimir el registro de ventra?" + "[si/no]: "))) 
-                    {
-=======
 
                     while ("si".equals(validate.getYesOrNo("Desea imprimir el registro de ventra?" + "[si/no]: "))) {
->>>>>>> db4d0a2c8f0bf2acc8f923996947a70814644748
+
                         String sales = gson.toJson(registry);
                         FileManager.readFile("RegistroDeVenta.jason");
                         SalesRegistry reg;
@@ -129,10 +125,7 @@ public class InventoryHadwareStore {
                         System.out.println(reg);
                         System.out.println("==============================================");
                     }
-<<<<<<< HEAD
 
-=======
->>>>>>> db4d0a2c8f0bf2acc8f923996947a70814644748
                     String sales = gson.toJson(registry);
                     FileManager.readFile("RegistroDeVenta.jason");
                     SalesRegistry reg;
@@ -182,10 +175,7 @@ public class InventoryHadwareStore {
                         System.out.println("No se encontro el producto");
                     }
                     break;
-<<<<<<< HEAD
 
-=======
->>>>>>> db4d0a2c8f0bf2acc8f923996947a70814644748
                 case 5:
 
                     break;
@@ -296,7 +286,6 @@ public class InventoryHadwareStore {
         System.out.println("********************************");
     }
 
-<<<<<<< HEAD
     public String answerYesorNo(String question) {
         Scanner scan = new Scanner(System.in);
         String data = "";
@@ -309,8 +298,5 @@ public class InventoryHadwareStore {
         }
         return data;
     }
-=======
-    
 
->>>>>>> db4d0a2c8f0bf2acc8f923996947a70814644748
 }

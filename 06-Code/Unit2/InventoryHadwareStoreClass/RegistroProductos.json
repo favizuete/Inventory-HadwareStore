@@ -1,49 +1,4 @@
-<<<<<<< HEAD
 {"quality":"buena","id":1,"name":"Pala","brand":"APM","quantity":20,"price":10.4,"category":"Herramienta"}
 {"id":23658,"name":"martillo","brand":"fv","quantity":10,"price":2.0,"category":"herramienta"}
-=======
 {"quality":"alta","id":553,"name":"Martillo","brand":"fv","quantity":200,"price":7.2,"category":"Herramienta"}
 {"id":778,"name":"Taladro","brand":"BOCH","quantity":120,"price":30.0,"category":"Herramienta El�ctrica"}
-{"id":232,"name":"martillo","brand":"husky","quantity":1,"price":2.0,"category":"tool"}
-{"id":232,"name":"martillo","brand":"husky","quantity":1,"price":2.0,"category":"electric tool"}
-<<<<<<< HEAD
-{"id":553,"name":"Martillo","brand":"Lestview","quantity":200,"price":7.2,"category":"Herramienta"}
-{"id":553,"name":"Martillo","brand":"Martillo","quantity":0,"price":0.0,"category":"Martillo"}
-{"id":778,"name":"Taladro","brand":"BOCH","quantity":120,"price":30.0,"category":"Herramienta El�ctrica"}
-{"id":232,"name":"martillo","brand":"husky","quantity":1,"price":2.0,"category":"tool"}
-{"id":232,"name":"martillo","brand":"husky","quantity":1,"price":2.0,"category":"electric tool"}
-{"id":553,"name":"Martillo","brand":"Martillo","quantity":4,"price":4.0,"category":"Martillo"}
-{"id":553,"name":"Martillo","brand":"fv","quantity":200,"price":7.2,"category":"Herramienta"}
-{"id":778,"name":"Taladro","brand":"Taladro","quantity":1,"price":1.0,"category":"Taladro"}
-{"id":232,"name":"martillo","brand":"husky","quantity":1,"price":2.0,"category":"tool"}
-{"id":232,"name":"martillo","brand":"husky","quantity":1,"price":2.0,"category":"electric tool"}
-{"id":553,"name":"Martillo","brand":"Lestview","quantity":200,"price":7.2,"category":"Herramienta"}
-{"id":553,"name":"Martillo","brand":"Martillo","quantity":0,"price":0.0,"category":"Martillo"}
-{"id":778,"name":"Taladro","brand":"Taladro","quantity":6,"price":6.0,"category":"Taladro"}
-{"id":232,"name":"martillo","brand":"husky","quantity":1,"price":2.0,"category":"tool"}
-{"id":232,"name":"martillo","brand":"husky","quantity":1,"price":2.0,"category":"electric tool"}
-{"id":553,"name":"Martillo","brand":"Martillo","quantity":4,"price":4.0,"category":"Martillo"}
-Martillo
-{"quality":"Alta","id":778,"name":"Martillo","brand":"fv","quantity":500,"price":7.2,"category":"Herramienta"}
-{"id":432,"name":"Taladro","brand":"boch","quantity":120,"price":22.3,"category":"Herramienta Electrica"}
-Martillo
-{"quality":"Alta","id":745,"name":"Martillo","brand":"Fv","quantity":200,"price":7.3,"category":"Herramienta"}
-{"id":965,"name":"Taladro","brand":"Boch","quantity":120,"price":22.5,"category":"Herramienta Electrica"}
-Martillo
-{"quality":"Alta","id":745,"name":"Martillo","brand":"Fv","quantity":200,"price":7.2,"category":"Herramienta"}
-{"id":495,"name":"Taladro","brand":"Boch","quantity":300,"price":22.3,"category":"Herramienta Electrica"}
-Martillo
-=======
->>>>>>> 71c3808a749e29e81b568f8c09d864576027230d
-<<<<<<< HEAD
-{"id":2307,"name":"pala","brand":"Fv","quantity":10,"price":10.0,"category":"herramienta"}
-{"id":2301,"name":"combo","brand":"Fv","quantity":3,"price":6.0,"category":"herramienta"}
-{"id":2307,"name":"pala","brand":"Stihl","quantity":10,"price":10.0,"category":"herramienta"}
-{"id":2308,"name":"Amoladora","brand":"DeWalt","quantity":20,"price":150.0,"category":"Herramienta Electrica"}
-{"id":2307,"name":"pala","brand":"fv","quantity":10,"price":3.0,"category":"herramienta"}
-{"id":2308,"name":"martillo","brand":"stihl","quantity":25,"price":2.0,"category":"herramienta"}
-{"id":2307,"name":"martillo","brand":"FV","quantity":20,"price":3.0,"category":"herramienta"}
-{"id":2308,"name":"pala","brand":"stihl","quantity":25,"price":15.0,"category":"herramienta"}
-=======
->>>>>>> 655b0576dac8b0c29daf5bc1704230bea68c2d4b
->>>>>>> 9e8b25d3da868f1452ca8c23a5c8eaf81a6ed402
