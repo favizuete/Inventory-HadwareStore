@@ -13,7 +13,6 @@ import ec.edu.espe.inventoryhadwarestore.model.Inventory;
 import ec.edu.espe.inventoryhadwarestore.model.Product;
 import ec.edu.espe.inventoryhadwarestore.model.SalesRegistry;
 import ec.edu.espe.inventoryhadwarestore.model.Tool;
-import ec.edu.espe.inventoryhadwarestore.model.Validation;
 import espe.edu.ec.filemanagerlibrary.FileManager;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -33,7 +32,6 @@ public class InventoryHadwareStore {
         Gson gson = new Gson();
         Inventory inventory = new Inventory();
         SalesRegistry salesRegistry = new SalesRegistry();
-        Validation validate = new Validation();
         Admin admin = new Admin("Richard", "richard123", "richard123");
         inventory.login(admin);
         inventory.readProducts();
@@ -107,16 +105,16 @@ public class InventoryHadwareStore {
                     registry.generateId();
                     String registryString = gson.toJson(registry);
                     FileManager.writeFile("RegistroDeVentas.json", registryString);
-                        String sales = gson.toJson(registry);
-                        FileManager.readFile("RegistroDeVenta.jason");
-                        SalesRegistry reg;
-                        reg = gson.fromJson(sales, SalesRegistry.class);
-                        System.out.println("\t\t***Registo de Venta***");
-                        int i = 0;
-                        System.out.println("Venta N°" + (i + 1));
-                        System.out.println(reg);
-                        System.out.println("==============================================");
-                    
+                    String sales = gson.toJson(registry);
+                    FileManager.readFile("RegistroDeVenta.jason");
+                    SalesRegistry reg;
+                    reg = gson.fromJson(sales, SalesRegistry.class);
+                    System.out.println("\t\t***Registo de Venta***");
+                    int i = 0;
+                    System.out.println("Venta N°" + (i + 1));
+                    System.out.println(reg);
+                    System.out.println("==============================================");
+
                     break;
 
                 case 4:
@@ -157,14 +155,6 @@ public class InventoryHadwareStore {
                     }
                     break;
                 case 5:
-                    String elemet;
-                    ArrayList<Product> prod = inventory.getProducts();
-                    System.out.println("Ingrese que producto desea eliminar");
-                    elemet = scan.nextLine();
-                    productDelete(prod, elemet);
-                    gson.toJson(prod);
-                    FileManager.writeFile("RegistroProductos.json", elemet);
-                    System.out.println("Producto Eliminado..!!");
 
                     break;
 
@@ -272,6 +262,7 @@ public class InventoryHadwareStore {
         }
         System.out.println("********************************");
     }
+
     public String answerYesorNo(String question) {
         Scanner scan = new Scanner(System.in);
         String data = "";
@@ -283,10 +274,6 @@ public class InventoryHadwareStore {
             }
         }
         return data;
-    }
-
-    public static void productDelete(ArrayList product, String elemt) {
-        product.remove(elemt);
     }
 
 }
