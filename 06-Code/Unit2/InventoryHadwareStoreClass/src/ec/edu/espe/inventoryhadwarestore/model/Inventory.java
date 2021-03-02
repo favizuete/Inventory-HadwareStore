@@ -47,11 +47,6 @@ public class Inventory {
             }
         } else {
             System.out.println("Usuario incorrecto, ingrese más tarde..!!");
-            System.out.println("Usuario incorrecto, ingrese más tarde");
-            System.out.println("Usuario incorrecto, ingrese más tarde..!!");
-            System.out.println("Usuario incorrecto, ingrese más tarde");
-            System.out.println("Usuario incorrecto, ingrese más tarde..!!");
-            System.out.println("Usuario incorrecto, ingrese más tarde");
         }
 
     }
