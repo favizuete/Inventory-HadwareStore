@@ -6,6 +6,7 @@
 package ec.edu.espe.inventoryhadwarestore.view;
 
 import com.google.gson.Gson;
+import ec.edu.espe.inventoryhadwarestore.controller.InventoryController;
 import ec.edu.espe.inventoryhadwarestore.model.Admin;
 import ec.edu.espe.inventoryhadwarestore.model.ConstructionMaterial;
 import ec.edu.espe.inventoryhadwarestore.model.ElectricTool;
@@ -32,16 +33,14 @@ public class InventoryHadwareStore {
     public static void main(String[] args) throws IOException {
         Gson gson = new Gson();
         Inventory inventory = new Inventory();
+        InventoryController iController = new InventoryController();
         SalesRegistry salesRegistry = new SalesRegistry();
         Validation validate = new Validation();
         Admin admin = new Admin("Richard", "richard123", "richard123");
         inventory.login(admin);
         inventory.readProducts();
         Scanner scan = new Scanner(System.in);
-        int opc;
-        int option;
-        int op;
-
+        int opc,option,op;
         do {
             System.out.println("\t****INVENTARIO FERRETERIA****");
             System.out.println("1. INGRESAR PRODUCTO AL INVENTARIO ");
@@ -57,16 +56,13 @@ public class InventoryHadwareStore {
             System.out.println("   ");
             switch (opc) {
                 case 1:
-                    inventory.addProduct(enterAProduct());
+                  
+                    inventory.addProduct(iController.enterAProduct());
                     System.out.println("Inventario -->" + inventory);
                     break;
                 case 2:
                     do {
-
                         System.out.println("Ingrese el producto que desea ingresar:");
-
-                        System.out.println("Ingrese el producto que desea registrar:");
-
                         String readedproduct = scan.nextLine();
                         for (Product product : inventory.getProducts()) {
                             if (readedproduct.equals(product.getName())) {
@@ -177,9 +173,7 @@ public class InventoryHadwareStore {
                     break;
 
                 case 5:
-
                     break;
-
                 case 6:
                     System.out.println("Ingrese que desea ver del inventario");
                     System.out.println("1. Todo el inventario");
@@ -189,7 +183,7 @@ public class InventoryHadwareStore {
                     switch (option) {
                         case 1:
                             System.out.println("Mostrando todo el inventario..");
-                            inventoryView(inventory);
+                            iController.inventoryView(inventory);
                             break;
                         case 2:
                             System.out.println("Ingrese el nombre del producto que desea ver:");
@@ -221,82 +215,6 @@ public class InventoryHadwareStore {
 
         } while (opc != 0);
 
-    }
-
-    public static Product enterAProduct() {
-        Scanner reader = new Scanner(System.in);
-        System.out.println("===================================");
-        System.out.println("=====INGRESE UN NUEVO PRODUCTO=====");
-        System.out.println("Ingrese el id del producto        :");
-        int id = reader.nextInt();
-        reader.nextLine();
-        System.out.println("Ingrese el nombre del producto    :");
-        String name = reader.nextLine();
-        System.out.println("Ingrese la marca del producto     :");
-        String brand = reader.nextLine();
-        System.out.println("Ingrese la cantidad del producto  :");
-        int quantity = reader.nextInt();
-        reader.nextLine();
-        System.out.println("Ingrese el precio del producto    :");
-        float price = reader.nextFloat();
-        reader.nextLine();
-        System.out.println("Ingrese la categoría del producto :");
-        String category = reader.nextLine();
-
-        if ("Herramienta".equals(category)) {
-            System.out.println("Ingrese la calidad de la herramienta:");
-            String qualityh = reader.nextLine();
-            Product tool = new Tool(qualityh, id, name, brand, quantity, price, category);
-            return tool;
-
-        } else if ("Herramienta electrica".equals(category)) {
-            System.out.println("Ingrese la calidad de la herramienta electrica:");
-            String qualityh = reader.nextLine();
-            Product electricTool = new ElectricTool(qualityh, category, id, name, brand, quantity, price, category);
-            return electricTool;
-        } else if ("Material de Construcción".equals(category)) {
-            System.out.println("Ingrese el peso del material:");
-            float weigth = reader.nextFloat();
-            Product material = new ConstructionMaterial(weigth, id, name, brand, quantity, price, category);
-            return material;
-
-        } else {
-            Product product = new Product(id, name, brand, quantity, price, category);
-            return product;
-        }
-
-    }
-
-    public static void inventoryView(Inventory inventory) {
-
-        System.out.println("*********Inventario Actual*********");
-        System.out.println("Total de productos: " + inventory.getProducts().size());
-        int i = 0;
-        for (Product product : inventory.getProducts()) {
-            System.out.println("Producto N°" + (i + 1));
-            System.out.println("Nombre del producto-->" + product.getName());
-            System.out.println("Marca del producto -->" + product.getBrand());
-            System.out.println("ID del producto -->" + product.getId());
-            System.out.println("Categoría del producto -->" + product.getCategory());
-            System.out.println("Precio del producto -->" + product.getPrice());
-            System.out.println("Cantidad actual en el inventario del producto -->" + product.getQuantity());
-            int j = i + 1;
-            i = j;
-        }
-        System.out.println("********************************");
-    }
-
-    public String answerYesorNo(String question) {
-        Scanner scan = new Scanner(System.in);
-        String data = "";
-        while (data.equals("")) {
-            System.out.println(question);
-            data = scan.nextLine();
-            if (!"si".equals(data) & !"no".equals(data)) {
-                data = "";
-            }
-        }
-        return data;
     }
 
 }

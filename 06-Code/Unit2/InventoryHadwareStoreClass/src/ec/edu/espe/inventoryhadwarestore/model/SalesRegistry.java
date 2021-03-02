@@ -32,22 +32,6 @@ public class SalesRegistry {
     
     
 
-    public void recordSale() {
-        /* Gson gson = new Gson();
-        try{
-           FileReader fr = new FileReader("RegistroDeVentas.json");
-           BufferedReader bf = new BufferedReader(fr);
-           
-           for(Product product : getSelledProducts()){
-               gson.toJson(product);
-           }
-           gson.toJson(jsonElement)                                          
-        }
-        catch(Exception e){            
-        }           
-         */
-    }
-
     public void generateId() {
         String customer = getCustomer();
         char[] charCustomer = new char[2];
