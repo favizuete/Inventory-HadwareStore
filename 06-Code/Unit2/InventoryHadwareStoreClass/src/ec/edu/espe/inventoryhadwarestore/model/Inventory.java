@@ -46,8 +46,11 @@ public class Inventory {
 
             }
         } else {
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> db4d0a2c8f0bf2acc8f923996947a70814644748
 
             System.out.println("Usuario incorrecto, ingrese más tarde..!!");
 
@@ -64,9 +67,16 @@ public class Inventory {
             System.out.println("Usuario incorrecto, ingrese más tarde");
             System.out.println("Usuario incorrecto, ingrese más tarde..!!");
             System.out.println("Usuario incorrecto, ingrese más tarde");
+<<<<<<< HEAD
             System.out.println("Usuario incorrecto, ingrese más tarde..!!");
+=======
+
+            System.out.println("Usuario incorrecto, ingrese más tarde..!!");
+
+>>>>>>> db4d0a2c8f0bf2acc8f923996947a70814644748
         }
     }
+
     public void readProducts() {
 
         Gson gson = new Gson();
