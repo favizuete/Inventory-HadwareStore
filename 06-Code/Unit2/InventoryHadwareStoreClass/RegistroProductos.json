@@ -2,3 +2,29 @@
 {"id":778,"name":"Taladro","brand":"BOCH","quantity":120,"price":30.0,"category":"Herramienta El�ctrica"}
 {"id":232,"name":"martillo","brand":"husky","quantity":1,"price":2.0,"category":"tool"}
 {"id":232,"name":"martillo","brand":"husky","quantity":1,"price":2.0,"category":"electric tool"}
+{"id":553,"name":"Martillo","brand":"Lestview","quantity":200,"price":7.2,"category":"Herramienta"}
+{"id":553,"name":"Martillo","brand":"Martillo","quantity":0,"price":0.0,"category":"Martillo"}
+{"id":778,"name":"Taladro","brand":"BOCH","quantity":120,"price":30.0,"category":"Herramienta El�ctrica"}
+{"id":232,"name":"martillo","brand":"husky","quantity":1,"price":2.0,"category":"tool"}
+{"id":232,"name":"martillo","brand":"husky","quantity":1,"price":2.0,"category":"electric tool"}
+{"id":553,"name":"Martillo","brand":"Martillo","quantity":4,"price":4.0,"category":"Martillo"}
+{"id":553,"name":"Martillo","brand":"fv","quantity":200,"price":7.2,"category":"Herramienta"}
+{"id":778,"name":"Taladro","brand":"Taladro","quantity":1,"price":1.0,"category":"Taladro"}
+{"id":232,"name":"martillo","brand":"husky","quantity":1,"price":2.0,"category":"tool"}
+{"id":232,"name":"martillo","brand":"husky","quantity":1,"price":2.0,"category":"electric tool"}
+{"id":553,"name":"Martillo","brand":"Lestview","quantity":200,"price":7.2,"category":"Herramienta"}
+{"id":553,"name":"Martillo","brand":"Martillo","quantity":0,"price":0.0,"category":"Martillo"}
+{"id":778,"name":"Taladro","brand":"Taladro","quantity":6,"price":6.0,"category":"Taladro"}
+{"id":232,"name":"martillo","brand":"husky","quantity":1,"price":2.0,"category":"tool"}
+{"id":232,"name":"martillo","brand":"husky","quantity":1,"price":2.0,"category":"electric tool"}
+{"id":553,"name":"Martillo","brand":"Martillo","quantity":4,"price":4.0,"category":"Martillo"}
+Martillo
+{"quality":"Alta","id":778,"name":"Martillo","brand":"fv","quantity":500,"price":7.2,"category":"Herramienta"}
+{"id":432,"name":"Taladro","brand":"boch","quantity":120,"price":22.3,"category":"Herramienta Electrica"}
+Martillo
+{"quality":"Alta","id":745,"name":"Martillo","brand":"Fv","quantity":200,"price":7.3,"category":"Herramienta"}
+{"id":965,"name":"Taladro","brand":"Boch","quantity":120,"price":22.5,"category":"Herramienta Electrica"}
+Martillo
+{"quality":"Alta","id":745,"name":"Martillo","brand":"Fv","quantity":200,"price":7.2,"category":"Herramienta"}
+{"id":495,"name":"Taladro","brand":"Boch","quantity":300,"price":22.3,"category":"Herramienta Electrica"}
+Martillo

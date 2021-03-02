@@ -159,6 +159,17 @@ public class InventoryHadwareStore {
                         System.out.println("No se encontro el producto");
                     }
                     break;
+                case 5:
+                    String elemet;
+                    ArrayList<Product> prod = inventory.getProducts();
+                    System.out.println("Ingrese que producto desea eliminar");
+                    elemet = scan.nextLine();
+                    productDelete(prod, elemet);
+                    gson.toJson(prod);
+                    FileManager.writeFile("RegistroProductos.json", elemet);
+                    System.out.println("Producto Eliminado..!!");
+
+                    break;
 
                 case 6:
                     System.out.println("Ingrese que desea ver del inventario");
@@ -276,6 +287,10 @@ public class InventoryHadwareStore {
             }
         }
         return data;
+    }
+
+    public static void productDelete(ArrayList product, String elemt) {
+        product.remove(elemt);
     }
 
 }
