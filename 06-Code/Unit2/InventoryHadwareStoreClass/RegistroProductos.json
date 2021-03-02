@@ -7,3 +7,11 @@
 {"id":232,"name":"martillo","brand":"husky","quantity":1,"price":2.0,"category":"tool"}
 {"id":232,"name":"martillo","brand":"husky","quantity":1,"price":2.0,"category":"electric tool"}
 >>>>>>> 71c3808a749e29e81b568f8c09d864576027230d
+{"id":2307,"name":"pala","brand":"Fv","quantity":10,"price":10.0,"category":"herramienta"}
+{"id":2301,"name":"combo","brand":"Fv","quantity":3,"price":6.0,"category":"herramienta"}
+{"id":2307,"name":"pala","brand":"Stihl","quantity":10,"price":10.0,"category":"herramienta"}
+{"id":2308,"name":"Amoladora","brand":"DeWalt","quantity":20,"price":150.0,"category":"Herramienta Electrica"}
+{"id":2307,"name":"pala","brand":"fv","quantity":10,"price":3.0,"category":"herramienta"}
+{"id":2308,"name":"martillo","brand":"stihl","quantity":25,"price":2.0,"category":"herramienta"}
+{"id":2307,"name":"martillo","brand":"FV","quantity":20,"price":3.0,"category":"herramienta"}
+{"id":2308,"name":"pala","brand":"stihl","quantity":25,"price":15.0,"category":"herramienta"}

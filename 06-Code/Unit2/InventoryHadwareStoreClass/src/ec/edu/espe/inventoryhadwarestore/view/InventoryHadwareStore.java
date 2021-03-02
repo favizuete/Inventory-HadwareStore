@@ -40,6 +40,7 @@ public class InventoryHadwareStore {
         Scanner scan = new Scanner(System.in);
         int opc;
         int option;
+        int op;
 
         do {
             System.out.println("\t****INVENTARIO FERRETERIA****");
@@ -61,11 +62,8 @@ public class InventoryHadwareStore {
                     break;
                 case 2:
                     do {
-<<<<<<< HEAD
+
                         System.out.println("Ingrese el producto que desea ingresar:");
-=======
-                        System.out.println("Ingrese el producto que desea registrar:");
->>>>>>> 71c3808a749e29e81b568f8c09d864576027230d
                         String readedproduct = scan.nextLine();
                         for (Product product : inventory.getProducts()) {
                             if (readedproduct.equals(product.getName())) {
@@ -111,12 +109,8 @@ public class InventoryHadwareStore {
                     registry.generateId();
                     String registryString = gson.toJson(registry);
                     FileManager.writeFile("RegistroDeVentas.json", registryString);
-<<<<<<< HEAD
-                    break;
-                    
-=======
-                    while ("si".equals(validate.getYesOrNo("Desea imprimir el registro de ventra?"
-                            + "[si/no]: "))) {
+
+                    while ("si".equals(validate.getYesOrNo("Desea imprimir el registro de ventra?" + "[si/no]: "))) {
                         String sales = gson.toJson(registry);
                         FileManager.readFile("RegistroDeVenta.jason");
                         SalesRegistry reg;
@@ -167,8 +161,6 @@ public class InventoryHadwareStore {
                         System.out.println("No se encontro el producto");
                     }
                     break;
-
->>>>>>> 71c3808a749e29e81b568f8c09d864576027230d
                 case 6:
                     System.out.println("Ingrese que desea ver del inventario");
                     System.out.println("1. Todo el inventario");
@@ -209,6 +201,7 @@ public class InventoryHadwareStore {
             }
 
         } while (opc != 0);
+
     }
 
     public static Product enterAProduct() {
@@ -274,8 +267,6 @@ public class InventoryHadwareStore {
         System.out.println("********************************");
     }
 
-<<<<<<< HEAD
-=======
     public String answerYesorNo(String question) {
         Scanner scan = new Scanner(System.in);
         String data = "";
@@ -288,6 +279,4 @@ public class InventoryHadwareStore {
         }
         return data;
     }
-
->>>>>>> 71c3808a749e29e81b568f8c09d864576027230d
 }
