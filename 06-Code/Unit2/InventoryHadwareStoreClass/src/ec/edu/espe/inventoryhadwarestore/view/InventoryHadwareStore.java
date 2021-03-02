@@ -107,8 +107,6 @@ public class InventoryHadwareStore {
                     registry.generateId();
                     String registryString = gson.toJson(registry);
                     FileManager.writeFile("RegistroDeVentas.json", registryString);
-                    while ("si".equals(validate.getYesOrNo("Desea imprimir el registro de ventra?"
-                            + "[si/no]: "))) {
                         String sales = gson.toJson(registry);
                         FileManager.readFile("RegistroDeVenta.jason");
                         SalesRegistry reg;
@@ -118,8 +116,7 @@ public class InventoryHadwareStore {
                         System.out.println("Venta N°" + (i + 1));
                         System.out.println(reg);
                         System.out.println("==============================================");
-                    }
-
+                    
                     break;
 
                 case 4:
@@ -127,8 +124,8 @@ public class InventoryHadwareStore {
                     System.out.println("Ingrese que producto desea modificar");
                     String searchName = scan.nextLine();
                     boolean found = false;
-                    for (int i = 0; i < products.size(); i++) {
-                        if (products.get(i).getName().equals(searchName)) {
+                    for (int j = 0; j < products.size(); j++) {
+                        if (products.get(j).getName().equals(searchName)) {
                             found = true;
                             System.out.println("Que dato desea modificar?");
                             System.out.println("1:Marca");
@@ -139,19 +136,19 @@ public class InventoryHadwareStore {
                             switch (option) {
                                 case 1:
                                     System.out.println("Nueva Marca:");
-                                    products.get(i).setBrand(scan.nextLine());
+                                    products.get(j).setBrand(scan.nextLine());
                                     break;
                                 case 2:
                                     System.out.println("Nuevo Precio:");
-                                    products.get(i).setPrice(scan.nextFloat());
+                                    products.get(j).setPrice(scan.nextFloat());
                                     break;
                                 case 3:
                                     System.out.println("Nueva Categoria:");
-                                    products.get(i).setCategory(scan.nextLine());
+                                    products.get(j).setCategory(scan.nextLine());
                                     break;
                             }
-                            gson.toJson(products.get(i));
-                            FileManager.writeFile("RegistroProductos.json", gson.toJson(products.get(i)));
+                            gson.toJson(products.get(j));
+                            FileManager.writeFile("RegistroProductos.json", gson.toJson(products.get(j)));
                             System.out.println("Producto modificado");
                         }
                     }
@@ -275,7 +272,6 @@ public class InventoryHadwareStore {
         }
         System.out.println("********************************");
     }
-
     public String answerYesorNo(String question) {
         Scanner scan = new Scanner(System.in);
         String data = "";

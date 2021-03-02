@@ -3,6 +3,21 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            <file>file:/C:/Users/HP/OneDrive/Escritorio/Group%206%20Project/Inventory-HadwareStore/06-Code/Unit2/InventoryHadwareStoreClass/src/ec/edu/espe/inventoryhadwarestore/view/InventoryHadwareStore.java</file>
+            <file>file:/C:/Users/HP/OneDrive/Escritorio/Group%206%20Project/Inventory-HadwareStore/06-Code/Unit2/InventoryHadwareStoreClass/src/ec/edu/espe/inventoryhadwarestore/model/Tool.java</file>
+            <file>file:/C:/Users/HP/OneDrive/Escritorio/Group%206%20Project/Inventory-HadwareStore/06-Code/Unit2/InventoryHadwareStoreClass/src/ec/edu/espe/inventoryhadwarestore/model/ConstructionMaterial.java</file>
+            <file>file:/C:/Users/HP/OneDrive/Escritorio/Group%206%20Project/Inventory-HadwareStore/06-Code/Unit2/InventoryHadwareStoreClass/src/ec/edu/espe/inventoryhadwarestore/model/Validation.java</file>
+            <file>file:/C:/Users/HP/OneDrive/Escritorio/Group%206%20Project/Inventory-HadwareStore/06-Code/Unit2/InventoryHadwareStoreClass/src/ec/edu/espe/inventoryhadwarestore/model/Inventory.java</file>
+            <file>file:/C:/Users/HP/OneDrive/Escritorio/Group%206%20Project/Inventory-HadwareStore/06-Code/Unit2/InventoryHadwareStoreClass/src/ec/edu/espe/inventoryhadwarestore/model/Product.java</file>
+            <file>file:/C:/Users/HP/OneDrive/Escritorio/Group%206%20Project/Inventory-HadwareStore/06-Code/Unit2/InventoryHadwareStoreClass/src/ec/edu/espe/inventoryhadwarestore/model/ElectricTool.java</file>
+            <file>file:/C:/Users/HP/OneDrive/Escritorio/Group%206%20Project/Inventory-HadwareStore/06-Code/Unit2/InventoryHadwareStoreClass/src/ec/edu/espe/inventoryhadwarestore/model/Admin.java</file>
+            <file>file:/C:/Users/HP/OneDrive/Escritorio/Group%206%20Project/Inventory-HadwareStore/06-Code/Unit2/InventoryHadwareStoreClass/src/ec/edu/espe/inventoryhadwarestore/model/SalesRegistry.java</file>
+=======
+<<<<<<< HEAD
+>>>>>>> 655b0576dac8b0c29daf5bc1704230bea68c2d4b
             <file>file:/C:/Users/f10_p/Desktop/Tito%20U/noviembre-abril2021/POO/Hello%20World/GitHub/MaxDev/06-Code/Unit2/InventoryHadwareStoreClass/src/ec/edu/espe/inventoryhadwarestore/model/Product.java</file>
             <file>file:/C:/Users/f10_p/Desktop/Tito%20U/noviembre-abril2021/POO/Hello%20World/GitHub/MaxDev/06-Code/Unit2/InventoryHadwareStoreClass/src/ec/edu/espe/inventoryhadwarestore/model/SalesRegistry.java</file>
             <file>file:/C:/Users/f10_p/Desktop/Tito%20U/noviembre-abril2021/POO/Hello%20World/GitHub/MaxDev/06-Code/Unit2/InventoryHadwareStoreClass/src/ec/edu/espe/inventoryhadwarestore/model/ElectricTool.java</file>
@@ -12,6 +27,21 @@
             <file>file:/C:/Users/f10_p/Desktop/Tito%20U/noviembre-abril2021/POO/Hello%20World/GitHub/MaxDev/06-Code/Unit2/InventoryHadwareStoreClass/src/ec/edu/espe/inventoryhadwarestore/view/InventoryHadwareStore.java</file>
             <file>file:/C:/Users/f10_p/Desktop/Tito%20U/noviembre-abril2021/POO/Hello%20World/GitHub/MaxDev/06-Code/Unit2/InventoryHadwareStoreClass/src/ec/edu/espe/inventoryhadwarestore/model/Tool.java</file>
             <file>file:/C:/Users/f10_p/Desktop/Tito%20U/noviembre-abril2021/POO/Hello%20World/GitHub/MaxDev/06-Code/Unit2/InventoryHadwareStoreClass/src/ec/edu/espe/inventoryhadwarestore/model/Admin.java</file>
+<<<<<<< HEAD
+=======
+=======
+            <file>file:/C:/Repository%20Ferreteria/Inventory-HadwareStore/06-Code/Unit2/InventoryHadwareStoreClass/src/ec/edu/espe/inventoryhadwarestore/model/ElectricTool.java</file>
+            <file>file:/C:/Repository%20Ferreteria/Inventory-HadwareStore/06-Code/Unit2/InventoryHadwareStoreClass/src/ec/edu/espe/inventoryhadwarestore/model/SalesRegistry.java</file>
+            <file>file:/C:/Repository%20Ferreteria/Inventory-HadwareStore/06-Code/Unit2/InventoryHadwareStoreClass/src/ec/edu/espe/inventoryhadwarestore/view/InventoryHadwareStore.java</file>
+            <file>file:/C:/Repository%20Ferreteria/Inventory-HadwareStore/06-Code/Unit2/InventoryHadwareStoreClass/src/ec/edu/espe/inventoryhadwarestore/model/Admin.java</file>
+            <file>file:/C:/Repository%20Ferreteria/Inventory-HadwareStore/06-Code/Unit2/InventoryHadwareStoreClass/src/ec/edu/espe/inventoryhadwarestore/model/ConstructionMaterial.java</file>
+            <file>file:/C:/Repository%20Ferreteria/Inventory-HadwareStore/06-Code/Unit2/InventoryHadwareStoreClass/src/ec/edu/espe/inventoryhadwarestore/model/Tool.java</file>
+            <file>file:/C:/Repository%20Ferreteria/Inventory-HadwareStore/06-Code/Unit2/InventoryHadwareStoreClass/src/ec/edu/espe/inventoryhadwarestore/model/Validation.java</file>
+            <file>file:/C:/Repository%20Ferreteria/Inventory-HadwareStore/06-Code/Unit2/InventoryHadwareStoreClass/src/ec/edu/espe/inventoryhadwarestore/model/Inventory.java</file>
+            <file>file:/C:/Repository%20Ferreteria/Inventory-HadwareStore/06-Code/Unit2/InventoryHadwareStoreClass/src/ec/edu/espe/inventoryhadwarestore/model/Product.java</file>
+>>>>>>> 6318b72beec8b28427bb79923d9c7287f19d14ae
+>>>>>>> 71c3808a749e29e81b568f8c09d864576027230d
+>>>>>>> 655b0576dac8b0c29daf5bc1704230bea68c2d4b
         </group>
     </open-files>
 </project-private>
