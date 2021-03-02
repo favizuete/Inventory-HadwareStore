@@ -46,8 +46,6 @@ public class Inventory {
 
             }
         } else {
-<<<<<<< HEAD
-
 
             System.out.println("Usuario incorrecto, ingrese más tarde..!!");
 
@@ -65,11 +63,11 @@ public class Inventory {
             System.out.println("Usuario incorrecto, ingrese más tarde..!!");
             System.out.println("Usuario incorrecto, ingrese más tarde");
 
-=======
             System.out.println("Usuario incorrecto, ingrese más tarde..!!");
->>>>>>> 9e8b25d3da868f1452ca8c23a5c8eaf81a6ed402
+
         }
     }
+
     public void readProducts() {
 
         Gson gson = new Gson();
