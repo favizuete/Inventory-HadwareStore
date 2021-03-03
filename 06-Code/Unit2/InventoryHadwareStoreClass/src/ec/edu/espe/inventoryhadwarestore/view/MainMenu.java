@@ -122,14 +122,14 @@ public class MainMenu extends javax.swing.JFrame {
 
         AddProduct add = new AddProduct();
         add.setVisible(true);
-        this.setVisible(false);     
+        this.setVisible(false);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-       // TODO add your handling code here:
-       ModifyProduct modify = new ModifyProduct();
-       modify.setVisible(true);
-       this.setVisible(false);
+        // TODO add your handling code here:
+        ModifyProduct modify = new ModifyProduct();
+        modify.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
 
@@ -138,7 +138,7 @@ public class MainMenu extends javax.swing.JFrame {
         ShowInventory showInventory = new ShowInventory();
         showInventory.setVisible(true);
         this.setVisible(false);
-        
+
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
@@ -148,12 +148,12 @@ public class MainMenu extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
-    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {                                           
+    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         EnterQuantity enterQuantity = new EnterQuantity();
         enterQuantity.setVisible(true);
         this.setVisible(false);
-    }                                          
+    }
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
         // TODO add your handling code here:
@@ -162,13 +162,10 @@ public class MainMenu extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
-<<<<<<< HEAD
+
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem5ActionPerformed
-=======
->>>>>>> aa4b7639c6af126b461977f0724e6a1270f82c9b
-
 
     /**
      * @param args the command line arguments
