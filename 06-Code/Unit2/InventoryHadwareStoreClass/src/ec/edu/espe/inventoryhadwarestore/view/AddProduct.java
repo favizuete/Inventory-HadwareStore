@@ -173,11 +173,11 @@ public class AddProduct extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-<<<<<<< HEAD
+
     private void btnRegistryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistryActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnRegistryActionPerformed
-=======
+
     private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
         // TODO add your handling code here:
         dispose();
@@ -187,7 +187,7 @@ public class AddProduct extends javax.swing.JFrame {
         // TODO add your handling code here:
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
->>>>>>> refs/remotes/origin/main
+
 
     /**
      * @param args the command line arguments
