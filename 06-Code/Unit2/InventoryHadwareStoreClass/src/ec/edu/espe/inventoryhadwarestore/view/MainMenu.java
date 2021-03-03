@@ -148,13 +148,6 @@ public class MainMenu extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
-    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
-        EnterQuantity enterQuantity = new EnterQuantity();
-        enterQuantity.setVisible(true);
-        this.setVisible(false);
-    }
-
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
         // TODO add your handling code here:
         SellProduct sell = new SellProduct();
@@ -162,13 +155,6 @@ public class MainMenu extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
-
-<<<<<<< HEAD
-    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem5ActionPerformed
-=======
->>>>>>> ba0bf4b49db974c4de40443bf7236b05fa3b55bb
 
     /**
      * @param args the command line arguments
