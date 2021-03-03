@@ -28,26 +28,39 @@ public class ConstructionMaterial extends Product{
        
     }
       @Override
-    public void sell(int quantityToSell){
+    public float sell(int quantityToSell){
         int quantity = getQuantity();
         int totalquantity = quantity - quantityToSell;
         if(totalquantity<0){
             System.out.println("No hay stock suficiente para la cantidad solicitada");
- 
+            return -1F;
         }
         else{
+            float price = getPrice();
+            float totalPrice = price*quantity;
+            if(getWeight()>=100){
+                totalPrice = totalPrice + 5F;     
+                
+            }else if(getWeight()>50){
+                
+                totalPrice = totalPrice + 3F;
+                
+            }else if(getWeight()>10){
+            
+                totalPrice = totalPrice + 1F;
+            }            
             setQuantity(totalquantity);
+            return totalPrice;
         }
         
     }
-    
-    
-    
-    
+
     @Override
     public String toString() {
-        return "ConstructionMaterial{" + "wegith=" + weight + '}';
+        return super.toString(); //To change body of generated methods, choose Tools | Templates.
     }
+    
+    
 
     public float getWeight() {
         return weight;
@@ -56,6 +69,67 @@ public class ConstructionMaterial extends Product{
     public void setWeight(float weight) {
         this.weight = weight;
     }
+
+      @Override
+    public int getId() {
+        return id;
+    }
+
+      @Override
+    public void setId(int id) {
+        this.id = id;
+    }
+
+      @Override
+    public String getName() {
+        return name;
+    }
+
+      @Override
+    public void setName(String name) {
+        this.name = name;
+    }
+
+      @Override
+    public String getBrand() {
+        return brand;
+    }
+
+      @Override
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+      @Override
+    public int getQuantity() {
+        return quantity;
+    }
+
+      @Override
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+      @Override
+    public float getPrice() {
+        return price;
+    }
+
+      @Override
+    public void setPrice(float price) {
+        this.price = price;
+    }
+
+      @Override
+    public String getCategory() {
+        return category;
+    }
+
+      @Override
+    public void setCategory(String category) {
+        this.category = category;
+    }
+    
 }
 
    

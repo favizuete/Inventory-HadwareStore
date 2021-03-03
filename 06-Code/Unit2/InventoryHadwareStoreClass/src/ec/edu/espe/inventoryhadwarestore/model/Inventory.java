@@ -61,8 +61,8 @@ public class Inventory {
             FileReader freader = new FileReader("RegistroProductos.json");
             BufferedReader breader = new BufferedReader(freader);
             String product = breader.readLine();
-            do {
-                Product products = gson.fromJson(product, Product.class);
+            do {                            
+                Tool products = gson.fromJson(product,Tool.class);                
                 productList.addAll(Arrays.asList(products));
                 String productx = breader.readLine();
                 product = productx;

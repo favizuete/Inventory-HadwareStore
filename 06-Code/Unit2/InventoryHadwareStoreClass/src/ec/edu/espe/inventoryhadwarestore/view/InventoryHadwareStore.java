@@ -82,7 +82,7 @@ public class InventoryHadwareStore {
                     break;
                 case 3:
                     ArrayList<Product> productsToSell = new ArrayList<>();
-                    System.out.println("Buen día,ingrese su nombre para continuar:");
+                    Float totalPrice = 0F;
                     System.out.println("Ingrese su nombre");
                     String name = scan.nextLine();
                     do {
@@ -94,8 +94,14 @@ public class InventoryHadwareStore {
                                 System.out.println("Ingrese la cantidad que desea vender de este producto:");
                                 int quantityToSell = scan.nextInt();
                                 scan.nextLine();
-                                product.sell(quantityToSell);
-                                productsToSell.add(product);
+                                totalPrice = totalPrice + product.sell(quantityToSell);
+                                if(totalPrice==-1F){
+                                   productsToSell.add(product);
+                                }
+                                else{
+                                    System.out.println("Producto no vendido");
+                                }
+
                             }
                         }
                         System.out.println("Ingrese 1 para vender otro producto");
@@ -105,7 +111,7 @@ public class InventoryHadwareStore {
                     } while (option != 2);
                     Date date = new Date();
                     String id = "";
-                    SalesRegistry registry = new SalesRegistry(name, date, id, productsToSell);
+                    SalesRegistry registry = new SalesRegistry(name, date, id, productsToSell,totalPrice);
                     registry.generateId();
                     String registryString = gson.toJson(registry);
                     FileManager.writeFile("RegistroDeVentas.json", registryString);
