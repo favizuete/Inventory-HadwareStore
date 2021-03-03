@@ -289,17 +289,15 @@ public class AddProduct extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-<<<<<<< HEAD
     private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
         // TODO add your handling code here:
         dispose();
     }//GEN-LAST:event_btnExitActionPerformed
-=======
+
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
->>>>>>> 65860d1c1a68e8971a52809333feea3e85088ca8
 
     /**
      * @param args the command line arguments
