@@ -14,7 +14,7 @@ public class ConstructionMaterial extends Product{
     
       private float weight;
 
-    public ConstructionMaterial(float weight, int id, String name, String brand, int quantity, float price, String category) {
+    public ConstructionMaterial(int id, String name, String brand, int quantity, float price, String category,float weight) {
         super(id, name, brand, quantity, price, category);
         this.weight = weight;
     }
