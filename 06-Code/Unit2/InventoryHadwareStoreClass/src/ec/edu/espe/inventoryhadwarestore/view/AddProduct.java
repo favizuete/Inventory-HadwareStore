@@ -43,7 +43,6 @@ public class AddProduct extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-<<<<<<< HEAD
     private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
         // TODO add your handling code here:
         dispose();
@@ -54,8 +53,6 @@ public class AddProduct extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
-=======
->>>>>>> ece04b91e8975d8ec1d62e104842538dabd0fbb6
     /**
      * @param args the command line arguments
      */
