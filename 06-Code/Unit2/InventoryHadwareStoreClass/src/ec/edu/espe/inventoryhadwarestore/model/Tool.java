@@ -15,14 +15,14 @@ public class Tool extends Product{
     
     private String quality;
 
-    public Tool(String quality, int id, String name, String brand, int quantity, float price, String category) {
+    public Tool(int id, String name, String brand, int quantity, float price, String category,String quality) {
         super(id, name, brand, quantity, price, category);
         this.quality = quality;
     }
     @Override
     public void add(int quantityToAdd){
-        int quantity = getQuantity();
-        int totalquantity= quantity + quantityToAdd;
+        int quantityx = getQuantity();
+        int totalquantity= quantityx + quantityToAdd;
         setQuantity(totalquantity);
        
     }

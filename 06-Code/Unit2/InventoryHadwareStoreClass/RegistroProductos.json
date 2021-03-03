@@ -1,3 +1,22 @@
+<<<<<<< HEAD
 {"quality":"Alta","energySource":"Alta","id":669,"name":"Cortadora Electrica","brand":"Fv","quantity":200,"price":45.3,"category":"Herramienta electrica"}
 {"quality":"Alta","energySource":"Alta","id":669,"name":"Cortadora Electrica","brand":"Fv","quantity":200,"price":75.5,"category":"Herramienta electrica"}
 {"quality":"Alta","id":669,"name":"Cortadora Electrica","brand":"Fv","quantity":200,"price":45.3,"category":"Herramienta electrica"}
+=======
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+{"quality":"buena","id":1,"name":"Pala","brand":"APM","quantity":20,"price":10.4,"category":"Herramienta"}
+{"quality":"alta","id":553,"name":"Martillo","brand":"fv","quantity":200,"price":7.2,"category":"Herramienta"}
+<<<<<<< HEAD
+{"id":778,"name":"Taladro","brand":"BOCH","quantity":120,"price":30.0,"category":"Herramienta El�ctrica"}
+=======
+{"id":778,"name":"Taladro","brand":"BOCH","quantity":120,"price":30.0,"category":"Herramienta El�ctrica"}{"id":2305,"name":"martillo","brand":"fv","quantity":25,"price":3.0,"category":"herramienta"}
+=======
+{"quality":"Buena","id":6,"name":"Destornillador electrico","brand":"A","quantity":20,"price":2.0,"category":"Herramienta electrica"}
+{"id":20,"name":"Arena","brand":"si","quantity":25,"price":2.0,"category":"Material"}
+>>>>>>> 195de33e094cbfc64492815914aa004d89c29229
+>>>>>>> 65860d1c1a68e8971a52809333feea3e85088ca8
+=======
+{"quality":"Buena","id":2,"name":"Pala","brand":"APM","quantity":20,"price":2.0,"category":"Herramienta"}
+>>>>>>> Stashed changes
+>>>>>>> 063dba2fd183c527d92a31af36b428c5e03af24d

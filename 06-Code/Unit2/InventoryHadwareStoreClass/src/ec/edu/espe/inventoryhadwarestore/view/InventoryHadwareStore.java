@@ -96,10 +96,11 @@ public class InventoryHadwareStore {
                                 scan.nextLine();
                                 totalPrice = totalPrice + product.sell(quantityToSell);
                                 if(totalPrice==-1F){
-                                   productsToSell.add(product);
+                                   
+                                    System.out.println("Producto no vendido");
                                 }
                                 else{
-                                    System.out.println("Producto no vendido");
+                                    productsToSell.add(product);
                                 }
 
                             }

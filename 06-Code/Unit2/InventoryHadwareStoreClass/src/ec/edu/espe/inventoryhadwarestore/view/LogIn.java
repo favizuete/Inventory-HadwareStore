@@ -127,7 +127,7 @@ public class LogIn extends javax.swing.JFrame {
     }//GEN-LAST:event_txtUserActionPerformed
 
     private void LoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginButtonActionPerformed
-        Admin admin = new Admin("Richard","richard123","richard");
+        Admin admin = new Admin("Richard","codemaster23","codemaster");
         String user = txtUser.getText();
         System.out.println(user);
         System.out.println(admin.getUser());
