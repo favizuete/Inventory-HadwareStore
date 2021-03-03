@@ -227,9 +227,7 @@ public class EnterQuantity extends javax.swing.JFrame {
         for(Product product : inventory.getProducts()){
             if(product.getName().equals(txtProductToAdd.getText())){
                 found = true;
-                System.out.println("Product-->" + product);
                 int quantityToAdd = (int) SpinQuantityOfProduct.getValue();
-                System.out.println("quantity to Add-->" + quantityToAdd);
                 product.add(quantityToAdd);
                 quan = product.getQuantity();
                 gson.toJson(product);

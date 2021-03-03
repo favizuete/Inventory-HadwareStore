@@ -82,7 +82,8 @@ public class InventoryHadwareStore {
                     break;
                 case 3:
                     ArrayList<Product> productsToSell = new ArrayList<>();
-                    Float totalPrice = 0F;
+                    float totalPrice = 0F;
+                    float addedPrice = 0F;
                     System.out.println("Ingrese su nombre");
                     String name = scan.nextLine();
                     do {
@@ -94,12 +95,14 @@ public class InventoryHadwareStore {
                                 System.out.println("Ingrese la cantidad que desea vender de este producto:");
                                 int quantityToSell = scan.nextInt();
                                 scan.nextLine();
-                                totalPrice = totalPrice + product.sell(quantityToSell);
-                                if(totalPrice==-1F){
+                                addedPrice = product.sell(quantityToSell);
+                                
+                                if(addedPrice==-1F){
                                    
                                     System.out.println("Producto no vendido");
                                 }
                                 else{
+                                    totalPrice = totalPrice + addedPrice;
                                     productsToSell.add(product);
                                 }
 
