@@ -5,6 +5,10 @@
  */
 package ec.edu.espe.inventoryhadwarestore.model;
 
+import com.mongodb.MongoClient;
+import com.mongodb.MongoClientURI;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
 import java.util.ArrayList;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -119,6 +123,11 @@ public class InventoryTest {
         instance.setProducts(products);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
+    }
+    @Test
+    public void testReadFromMongoDb(){
+        Inventory inventory = new Inventory();        
+        inventory.readProductsFromMongoDB();        
     }
     
 }

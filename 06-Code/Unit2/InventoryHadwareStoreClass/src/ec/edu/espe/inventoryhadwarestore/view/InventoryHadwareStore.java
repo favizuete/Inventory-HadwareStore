@@ -39,7 +39,7 @@ public class InventoryHadwareStore {
         Validation validate = new Validation();
         Admin admin = new Admin("Richard", "richard123", "richard123");
         inventory.login(admin);
-        inventory.readProducts();
+        inventory.readProductsFromMongoDB();
         Scanner scan = new Scanner(System.in);
         int opc,option,op;
         do {
@@ -71,7 +71,10 @@ public class InventoryHadwareStore {
                                 System.out.println("Ingrese la cantidad que desea añadir a ese producto:");
                                 int quantityToAdd = scan.nextInt();
                                 scan.nextLine();
+                                int oldquantity = product.getQuantity();
                                 product.add(quantityToAdd);
+                                int newQuantity = product.getQuantity();
+                                MongoManager.updateQuantity(oldquantity, oldquantity);
                             }
                         }
                         System.out.println("Ingrese 1 para ingresar un nuevo producto");

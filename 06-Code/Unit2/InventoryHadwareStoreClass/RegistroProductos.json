@@ -26,3 +26,8 @@
 >>>>>>> Stashed changes
 >>>>>>> 063dba2fd183c527d92a31af36b428c5e03af24d
 >>>>>>> refs/remotes/origin/main
+{"quality":"buena","id":1,"name":"Pala","brand":"A","quantity":20,"price":2.0,"category":"Herramienta"}
+{"quality":"buena","id":45,"name":"Destorn","brand":"a","quantity":30,"price":2.0,"category":"Herramienta"}
+{"quality":"buena","id":4,"name":"Pala","brand":"APM","quantity":25,"price":2.0,"category":"Herramienta"}
+{"quality":"mala","energySource":"alambrico","id":4,"name":"Destornillador electrico","brand":"APM","quantity":150,"price":20.0,"category":"Herramienta electrica"}
+{"quality":"buena","id":20,"name":"Pala","brand":"APM","quantity":20,"price":2.0,"category":"Herramienta"}
