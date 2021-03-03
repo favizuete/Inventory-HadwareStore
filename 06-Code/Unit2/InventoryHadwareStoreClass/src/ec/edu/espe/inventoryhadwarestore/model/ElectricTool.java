@@ -15,7 +15,7 @@ public class ElectricTool extends Product{
     private String energySource;
 
 
-    public ElectricTool(String quality, String energySource, int id, String name, String brand, int quantity, float price, String category) {
+    public ElectricTool( int id, String name, String brand, int quantity, float price, String category, String quality, String energySource) {
         super(id, name, brand, quantity, price, category);
         this.quality = quality;
         this.energySource = energySource;

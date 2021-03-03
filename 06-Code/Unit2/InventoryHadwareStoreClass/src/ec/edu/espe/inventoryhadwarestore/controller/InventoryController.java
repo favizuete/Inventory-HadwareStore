@@ -61,7 +61,7 @@ public class InventoryController {
           if ("Herramienta".equals(category)) {
             System.out.println("Ingrese la calidad de la herramienta:");
             String qualityh = reader.nextLine();
-            Product tool = new Tool(qualityh, id, name, brand, quantity, price, category);
+            Product tool = new Tool(id, name, brand, quantity, price, category,qualityh);
             x=1;
            productToReturn = tool;
         } else if ("Herramienta electrica".equals(category)) {
@@ -69,14 +69,14 @@ public class InventoryController {
             String qualityh = reader.nextLine();
             System.out.println("Ingrese el tipo de corriente de fuente:");
             String energySource = reader.nextLine();
-            Product electricTool = new ElectricTool(qualityh, energySource, id, name, brand, quantity, price, category);
+            Product electricTool = new ElectricTool(id, name, brand, quantity, price, category,qualityh, energySource);
             x=1;
             productToReturn = electricTool;
 
         } else if ("Material".equals(category)) {
             System.out.println("Ingrese el peso del material:");
             float weigth = reader.nextFloat();
-            Product material = new ConstructionMaterial(weigth, id, name, brand, quantity, price, category);
+            Product material = new ConstructionMaterial(id, name, brand, quantity, price, category, weigth);
             x=1;
             productToReturn = material;
 
