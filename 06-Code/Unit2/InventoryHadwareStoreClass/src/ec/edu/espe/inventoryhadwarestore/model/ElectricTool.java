@@ -25,11 +25,26 @@ public class ElectricTool extends Product{
         this.energySource = energySource;
     }
 
-    public ElectricTool(String quality, String energySource) {
-        this.quality = quality;
-        this.energySource = energySource;
+    @Override
+    public void add(int quantityToAdd){
+        int quantity = getQuantity();
+        int totalquantity= quantity + quantityToAdd;
+        setQuantity(totalquantity);
+       
     }
-
+    @Override
+    public void sell(int quantityToSell){
+        int quantity = getQuantity();
+        int totalquantity = quantity - quantityToSell;
+        if(totalquantity<0){
+            System.out.println("No hay stock suficiente para la cantidad solicitada");
+ 
+        }
+        else{
+            setQuantity(totalquantity);
+        }
+        
+    }
 
 
     

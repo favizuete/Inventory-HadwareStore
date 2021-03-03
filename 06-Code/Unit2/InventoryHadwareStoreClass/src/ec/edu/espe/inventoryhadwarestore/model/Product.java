@@ -14,7 +14,7 @@ import java.nio.file.Paths;
  *
  * @author Fausto Vizuete ESPE-DCCO
  */
-public class Product {
+public abstract class Product {
 
     private int id;
     private String name;
@@ -31,29 +31,10 @@ public class Product {
         this.price = price;
         this.category = category;
     }
-
-    public Product() {
-    }
-
-   
-    public void add(int quantityToAdd){
-        int quantity = getQuantity();
-        int totalquantity= quantity + quantityToAdd;
-        setQuantity(totalquantity);
-       
-    }
-    public void sell(int quantityToSell){
-        int quantity = getQuantity();
-        int totalquantity = quantity - quantityToSell;
-        if(totalquantity<0){
-            System.out.println("No hay stock suficiente para la cantidad solicitada");
- 
-        }
-        else{
-            setQuantity(totalquantity);
-        }
-        
-    }
+  
+    public abstract void add(int quantityToAdd);
+    public abstract void sell(int quantityToSell);
+    
     public void modify(){
        
     }

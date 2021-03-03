@@ -53,30 +53,36 @@ public class InventoryController {
         System.out.println("Ingrese el precio del producto    :");
         float price = reader.nextFloat();
         reader.nextLine();
-        System.out.println("Ingrese la categoría del producto :");
-        String category = reader.nextLine();
-
-        if ("Herramienta".equals(category)) {
+        int x=0;
+        Product productToReturn = null;
+        while(x==0){
+          System.out.println("Ingrese la categoría del producto :");
+          String category = reader.nextLine();
+          if ("Herramienta".equals(category)) {
             System.out.println("Ingrese la calidad de la herramienta:");
             String qualityh = reader.nextLine();
             Product tool = new Tool(qualityh, id, name, brand, quantity, price, category);
-            return tool;
-
+            x=1;
+           productToReturn = tool;
         } else if ("Herramienta electrica".equals(category)) {
             System.out.println("Ingrese la calidad de la herramienta electrica:");
             String qualityh = reader.nextLine();
             Product electricTool = new ElectricTool(qualityh, category, id, name, brand, quantity, price, category);
-            return electricTool;
+            x=1;
+            productToReturn = electricTool;
+
         } else if ("Material de Construcción".equals(category)) {
             System.out.println("Ingrese el peso del material:");
             float weigth = reader.nextFloat();
             Product material = new ConstructionMaterial(weigth, id, name, brand, quantity, price, category);
-            return material;
+            x=1;
+            productToReturn = material;
 
         } else {
-            Product product = new Product(id, name, brand, quantity, price, category);
-            return product;
+            System.out.println("No hay su categoria ingrese de nuevo..");
+            x=0;
+        }          
         }
-
+        return productToReturn;
     }
 }

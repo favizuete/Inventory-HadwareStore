@@ -14,13 +14,36 @@ public class ConstructionMaterial extends Product{
     
       private float weight;
 
-    public ConstructionMaterial(float weigth, int id, String name, String brand, int quantity, float price, String category) {
+    public ConstructionMaterial(float weight, int id, String name, String brand, int quantity, float price, String category) {
         super(id, name, brand, quantity, price, category);
+        this.weight = weight;
     }
 
-    public ConstructionMaterial() {
-    }
 
+      @Override
+    public void add(int quantityToAdd){
+        int quantity = getQuantity();
+        int totalquantity= quantity + quantityToAdd;
+        setQuantity(totalquantity);
+       
+    }
+      @Override
+    public void sell(int quantityToSell){
+        int quantity = getQuantity();
+        int totalquantity = quantity - quantityToSell;
+        if(totalquantity<0){
+            System.out.println("No hay stock suficiente para la cantidad solicitada");
+ 
+        }
+        else{
+            setQuantity(totalquantity);
+        }
+        
+    }
+    
+    
+    
+    
     @Override
     public String toString() {
         return "ConstructionMaterial{" + "wegith=" + weight + '}';
