@@ -84,11 +84,6 @@ public class MainMenu extends javax.swing.JFrame {
         jMenu3.setText("Producto");
 
         jMenuItem5.setText("Añadir productos");
-        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem5ActionPerformed(evt);
-            }
-        });
         jMenu3.add(jMenuItem5);
 
         jMenuItem6.setText("Vender productos");
@@ -137,7 +132,7 @@ public class MainMenu extends javax.swing.JFrame {
        this.setVisible(false);
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
-<<<<<<< HEAD
+
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
         // TODO add your handling code here:
         ShowInventory showInventory = new ShowInventory();
@@ -153,12 +148,12 @@ public class MainMenu extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
-    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {                                           
         // TODO add your handling code here:
         EnterQuantity enterQuantity = new EnterQuantity();
         enterQuantity.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jMenuItem5ActionPerformed
+    }                                          
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
         // TODO add your handling code here:
@@ -167,12 +162,8 @@ public class MainMenu extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
-=======
-    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem5ActionPerformed
 
->>>>>>> b92826ff0d70cd0e8f5b45f6b169c769c9616f14
+
     /**
      * @param args the command line arguments
      */
