@@ -1,8 +1,0 @@
-{"customer":"Fausto","date":"Feb 28, 2021, 11:39:15 PM","id":"[F, a]128","selledProducts":[{"id":553,"name":"Martillo","brand":"fv","quantity":198,"price":7.2,"category":"Herramienta"},{"id":778,"name":"Taladro","brand":"BOCH","quantity":118,"price":30.0,"category":"Herramienta El�ctrica"}]}
-{"customer":"Marco Hernandez","date":"Feb 28, 2021, 11:40:32 PM","id":"[M, a]228","selledProducts":[{"id":553,"name":"Martillo","brand":"fv","quantity":195,"price":7.2,"category":"Herramienta"}]}
-{"customer":"Juan","date":"Mar 1, 2021, 6:21:55 PM","id":"[J, u]11","selledProducts":[]}
-{"customer":"Marco","date":"Mar 1, 2021, 6:22:42 PM","id":"[M, a]21","selledProducts":[{"id":553,"name":"Martillo","brand":"fv","quantity":197,"price":7.2,"category":"Herramienta"}]}
-{"customer":"Mario","date":"Mar 1, 2021, 6:25:31 PM","id":"[M, a]11","selledProducts":[{"id":553,"name":"Martillo","brand":"fv","quantity":197,"price":7.2,"category":"Herramienta"}]}
-{"customer":"Vanessa","date":"Mar 2, 2021 6:10:16 PM","id":"[V, a]12","selledProducts":[]}
-{"customer":"Daysi","date":"Mar 2, 2021 7:24:05 PM","id":"[D, a]12","selledProducts":[]}
-{"customer":"Gloria","date":"Mar 2, 2021 7:34:59 PM","id":"[G, l]12","selledProducts":[]}
