@@ -22,13 +22,16 @@ public class SalesRegistry {
     private String customer;
     private Date date;
     private String id;
-    private static int staticTotalSales;
+    private static int TotalSales;
     private ArrayList<Product> selledProducts;
+    private float profitInDollars;
 
     @Override
     public String toString() {
-        return "SalesRegistry{" + "customer=" + customer +"\n"+ ", date=" + date +"\n"+ ", id=" + id + "\n"+", selledProducts=" + selledProducts + '}';
+        return "SalesRegistry{" + "customer=" + customer + ", date=" + date + ", id=" + id + ", selledProducts=" + selledProducts + ", profitInDollars=" + profitInDollars + '}';
     }
+
+
     
     
 
@@ -37,9 +40,9 @@ public class SalesRegistry {
         char[] charCustomer = new char[2];
         customer.getChars(0, 2, charCustomer, 0);
         String customerNewString = Arrays.toString(charCustomer);
-        int sales = getStaticTotalSales();
+        int sales = getTotalSales();
         int totalsales = sales + 1;
-        setStaticTotalSales(totalsales);
+        setTotalSales(totalsales);
         Date date = getDate();
         String finalId = customerNewString + String.valueOf(totalsales) + String.valueOf(date.getDate());
         System.out.println(finalId);
@@ -49,12 +52,15 @@ public class SalesRegistry {
     public SalesRegistry() {
     }
 
-    public SalesRegistry(String customer, Date date, String id, ArrayList<Product> selledProducts) {
+    public SalesRegistry(String customer, Date date, String id, ArrayList<Product> selledProducts, float profitInDollars) {
         this.customer = customer;
         this.date = date;
         this.id = id;
         this.selledProducts = selledProducts;
+        this.profitInDollars = profitInDollars;
     }
+
+
 
     public ArrayList<Product> getSelledProducts() {
         return selledProducts;
@@ -107,17 +113,25 @@ public class SalesRegistry {
     }
 
     /**
-     * @return the staticTotalSales
+     * @return the TotalSales
      */
-    public static int getStaticTotalSales() {
-        return staticTotalSales;
+    public static int getTotalSales() {
+        return TotalSales;
     }
 
     /**
-     * @param aStaticTotalSales the staticTotalSales to set
+     * @param aStaticTotalSales the TotalSales to set
      */
-    public static void setStaticTotalSales(int aStaticTotalSales) {
-        staticTotalSales = aStaticTotalSales;
+    public static void setTotalSales(int aStaticTotalSales) {
+        TotalSales = aStaticTotalSales;
+    }
+
+    public float getProfitInDollars() {
+        return profitInDollars;
+    }
+
+    public void setProfitInDollars(float profitInDollars) {
+        this.profitInDollars = profitInDollars;
     }
 
 }

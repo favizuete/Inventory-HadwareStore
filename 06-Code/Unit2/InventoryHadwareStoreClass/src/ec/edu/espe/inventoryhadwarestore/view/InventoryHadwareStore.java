@@ -14,6 +14,7 @@ import ec.edu.espe.inventoryhadwarestore.model.Inventory;
 import ec.edu.espe.inventoryhadwarestore.model.Product;
 import ec.edu.espe.inventoryhadwarestore.model.SalesRegistry;
 import ec.edu.espe.inventoryhadwarestore.model.Tool;
+import ec.edu.espe.inventoryhadwarestore.utils.MongoManager;
 import ec.edu.espe.inventoryhadwarestore.utils.Validation;
 import espe.edu.ec.filemanagerlibrary.FileManager;
 import java.io.BufferedReader;
@@ -56,7 +57,7 @@ public class InventoryHadwareStore {
             System.out.println("   ");
             switch (opc) {
                 case 1:
-                  
+                    
                     inventory.addProduct(iController.enterAProduct());
                     System.out.println("Inventario -->" + inventory);
                     break;
@@ -81,7 +82,7 @@ public class InventoryHadwareStore {
                     break;
                 case 3:
                     ArrayList<Product> productsToSell = new ArrayList<>();
-                    System.out.println("Buen día,ingrese su nombre para continuar:");
+                    Float totalPrice = 0F;
                     System.out.println("Ingrese su nombre");
                     String name = scan.nextLine();
                     do {
@@ -93,8 +94,14 @@ public class InventoryHadwareStore {
                                 System.out.println("Ingrese la cantidad que desea vender de este producto:");
                                 int quantityToSell = scan.nextInt();
                                 scan.nextLine();
-                                product.sell(quantityToSell);
-                                productsToSell.add(product);
+                                totalPrice = totalPrice + product.sell(quantityToSell);
+                                if(totalPrice==-1F){
+                                   productsToSell.add(product);
+                                }
+                                else{
+                                    System.out.println("Producto no vendido");
+                                }
+
                             }
                         }
                         System.out.println("Ingrese 1 para vender otro producto");
@@ -104,7 +111,7 @@ public class InventoryHadwareStore {
                     } while (option != 2);
                     Date date = new Date();
                     String id = "";
-                    SalesRegistry registry = new SalesRegistry(name, date, id, productsToSell);
+                    SalesRegistry registry = new SalesRegistry(name, date, id, productsToSell,totalPrice);
                     registry.generateId();
                     String registryString = gson.toJson(registry);
                     FileManager.writeFile("RegistroDeVentas.json", registryString);
@@ -173,7 +180,36 @@ public class InventoryHadwareStore {
                     break;
 
                 case 5:
+                    ArrayList<Product> newProducts = inventory.getProducts();
+                    Product productToErase = null;
+                    System.out.println("Ingrese nombre del producto que desea eliminar");
+                    String nameToErase = scan.nextLine();
+                    boolean found2 = false; 
+                    for(Product product : newProducts){
+                        if(nameToErase.equals(product.getName())){
+                            System.out.println("Producto encontrado");
+                            found2 = true;
+                            productToErase = product;
+                            
+                        }
+                        else{
+                            System.out.println("Producto no encontrado..");
+                        }
+                    }
+                    if(found2==true){
+                       MongoManager.delete(productToErase.getName());                           
+                            newProducts.remove(productToErase);
+                            FileManager.deleteFile("RegistroProductos.json");
+                            FileManager.createFile("RegistroProductos.json");
+                            inventory.setProducts(newProducts);
+                            for(Product productx : newProducts){
+                                String productjson = gson.toJson(productx);
+                                FileManager.writeFile("RegistroProductos.json", productjson);
+                            } 
+                    }
+                                        
                     break;
+
                 case 6:
                     System.out.println("Ingrese que desea ver del inventario");
                     System.out.println("1. Todo el inventario");

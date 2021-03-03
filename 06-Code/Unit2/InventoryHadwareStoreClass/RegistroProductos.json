@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 {"quality":"buena","id":1,"name":"Pala","brand":"APM","quantity":20,"price":10.4,"category":"Herramienta"}
 {"id":23658,"name":"martillo","brand":"fv","quantity":10,"price":2.0,"category":"herramienta"}
 {"quality":"alta","id":553,"name":"Martillo","brand":"fv","quantity":200,"price":7.2,"category":"Herramienta"}
 {"id":778,"name":"Taladro","brand":"BOCH","quantity":120,"price":30.0,"category":"Herramienta El�ctrica"}{"id":2305,"name":"martillo","brand":"fv","quantity":25,"price":3.0,"category":"herramienta"}
+=======
+{"quality":"Buena","id":6,"name":"Destornillador electrico","brand":"A","quantity":20,"price":2.0,"category":"Herramienta electrica"}
+{"id":20,"name":"Arena","brand":"si","quantity":25,"price":2.0,"category":"Material"}
+>>>>>>> 195de33e094cbfc64492815914aa004d89c29229
