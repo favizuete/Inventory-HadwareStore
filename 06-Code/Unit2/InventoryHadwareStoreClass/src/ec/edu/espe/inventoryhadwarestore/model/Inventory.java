@@ -6,9 +6,11 @@
 package ec.edu.espe.inventoryhadwarestore.model;
 
 import com.google.gson.Gson;
+import ec.edu.espe.inventoryhadwarestore.utils.MongoManager;
 import espe.edu.ec.filemanagerlibrary.FileManager;
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -59,8 +61,8 @@ public class Inventory {
             FileReader freader = new FileReader("RegistroProductos.json");
             BufferedReader breader = new BufferedReader(freader);
             String product = breader.readLine();
-            do {
-                Product products = gson.fromJson(product, Product.class);
+            do {                            
+                Tool products = gson.fromJson(product,Tool.class);                
                 productList.addAll(Arrays.asList(products));
                 String productx = breader.readLine();
                 product = productx;
@@ -71,9 +73,18 @@ public class Inventory {
         }
     }
 
-    public void addProduct(Product product) {
-        getProducts().add(product);
+    public void addProduct(Product product) throws UnknownHostException {
         Gson gson = new Gson();
+        getProducts().add(product);
+        System.out.println("Product-->" + product);
+
+        String name = product.getName();
+        String category = product.getCategory();
+        int id = product.getId();
+        float pice = product.getPrice();
+        String brand = product.getBrand();
+        int quantity = product.getQuantity();
+        MongoManager.save(id, name, brand, quantity, pice, category);
         gson.toJson(product);
         FileManager.writeFile("RegistroProductos.json", gson.toJson(product));
     }
