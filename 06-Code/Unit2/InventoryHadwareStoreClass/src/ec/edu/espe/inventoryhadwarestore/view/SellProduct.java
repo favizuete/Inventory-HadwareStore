@@ -9,6 +9,7 @@ import com.google.gson.Gson;
 import ec.edu.espe.inventoryhadwarestore.model.Inventory;
 import ec.edu.espe.inventoryhadwarestore.model.Product;
 import ec.edu.espe.inventoryhadwarestore.model.SalesRegistry;
+import ec.edu.espe.inventoryhadwarestore.utils.MongoManager;
 import espe.edu.ec.filemanagerlibrary.FileManager;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -28,6 +29,7 @@ public class SellProduct extends javax.swing.JFrame {
      */
     public SellProduct() {
         initComponents();
+
     }
 
     /**
@@ -52,6 +54,8 @@ public class SellProduct extends javax.swing.JFrame {
         spinQuantity = new javax.swing.JSpinner();
         SellButton = new javax.swing.JButton();
         RetturnButton = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        txtQuantityValue = new javax.swing.JLabel();
 
         jCheckBoxMenuItem1.setSelected(true);
         jCheckBoxMenuItem1.setText("jCheckBoxMenuItem1");
@@ -92,14 +96,14 @@ public class SellProduct extends javax.swing.JFrame {
             }
         });
 
+        jLabel4.setText("Cantidad Restante:");
+
+        txtQuantityValue.setText("0");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(111, 111, 111)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(113, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -112,7 +116,7 @@ public class SellProduct extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(27, 27, 27)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -122,6 +126,17 @@ public class SellProduct extends javax.swing.JFrame {
                                 .addComponent(txtProductToSell))
                             .addComponent(spinQuantity, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(48, 48, 48))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(111, 111, 111)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(124, 124, 124)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(52, 52, 52)
+                        .addComponent(txtQuantityValue, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(113, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -140,7 +155,11 @@ public class SellProduct extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(spinQuantity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 127, Short.MAX_VALUE)
+                .addGap(50, 50, 50)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(txtQuantityValue))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(SellButton)
                     .addComponent(RetturnButton)
@@ -180,37 +199,36 @@ public class SellProduct extends javax.swing.JFrame {
     }//GEN-LAST:event_RetturnButtonActionPerformed
 
     private void SellButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SellButtonActionPerformed
-       Inventory inventory = new Inventory();
+        SaleRegistry registryWindow = new SaleRegistry();
+        registryWindow.setVisible(false);
+        Inventory inventory = new Inventory();
        ArrayList<Product> productsToSell = new ArrayList<>();
         Gson gson = new Gson();
-        inventory.readProducts();
+        inventory.readProductsFromMongoDB();
         Boolean found = false;
         int quan=0;
         float totalPrice= 0;
         float addedPrice = 0;
+        int quantityToSell= 0;
         for(Product product : inventory.getProducts()){
             if(product.getName().equals(txtProductToSell.getText())){
-                found = true;
-                int quantityToSell = (int) spinQuantity.getValue();
+
+                quantityToSell = (int) spinQuantity.getValue();
+                int OldQuantity = product.getQuantity();
                 addedPrice = product.sell(quantityToSell);
-                  if(addedPrice==-1F){
-                                   
-                                    JOptionPane.showMessageDialog(rootPane,"Producto no Vendido");
-                                }
-                                else{
-                                    totalPrice = totalPrice + addedPrice;
-                                    productsToSell.add(product);
-                                }
-
-                gson.toJson(product);
-                
-                try {
-                    FileReader fr = new FileReader("RegistroProductos.json");
-                    BufferedReader br = new BufferedReader(fr);
-                    
-                } catch (FileNotFoundException ex) {
-                }
-
+                    if(addedPrice==-1F){
+                        JOptionPane.showMessageDialog(rootPane,"Producto no Vendido");
+                    }
+                    else{
+                        found = true;
+                        totalPrice = totalPrice + addedPrice;
+                        productsToSell.add(product);
+                        int newQuantity = product.getQuantity();
+                        quan = product.getQuantity();                       
+                        txtQuantityValue.setText(Integer.toString(quan));
+                        MongoManager.updateQuantity(product.getName(),newQuantity);    
+                    }
+                        
             }
         }
         Date date = new Date();
@@ -220,7 +238,13 @@ public class SellProduct extends javax.swing.JFrame {
         String registryString = gson.toJson(registry);
         FileManager.writeFile("RegistroDeVentas.json", registryString);
         if(found==true){
-            JOptionPane.showMessageDialog(rootPane,"Cantidad vendida registrada"); 
+            JOptionPane.showMessageDialog(rootPane,"Cantidad vendida registrada");
+            registryWindow.setVisible(true);
+            SaleRegistry.txtGetName.setText(txtName.getText());
+            SaleRegistry.txtGetProduct.setText(txtProductToSell.getText());
+            SaleRegistry.txtGetQuantity.setText(Integer.toString(quantityToSell));
+            this.setVisible(false);
+            
             
         }else{
             JOptionPane.showMessageDialog(rootPane,"Cantidad no registrada"); 
@@ -271,10 +295,12 @@ public class SellProduct extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSpinner spinQuantity;
     private javax.swing.JTextField txtName;
     private javax.swing.JTextField txtProductToSell;
+    private javax.swing.JLabel txtQuantityValue;
     // End of variables declaration//GEN-END:variables
 }
