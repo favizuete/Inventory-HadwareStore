@@ -31,3 +31,9 @@
 {"quality":"buena","id":4,"name":"Pala","brand":"APM","quantity":25,"price":2.0,"category":"Herramienta"}
 {"quality":"mala","energySource":"alambrico","id":4,"name":"Destornillador electrico","brand":"APM","quantity":150,"price":20.0,"category":"Herramienta electrica"}
 {"quality":"buena","id":20,"name":"Pala","brand":"APM","quantity":20,"price":2.0,"category":"Herramienta"}
+{"quality":"buena","energySource":"alambrico","id":2,"name":"Martillo Electrico","brand":"ADD","quantity":300,"price":2.5,"category":"Herramienta electrica"}
+{"quality":"Alta","id":2,"name":"2","brand":"De Walt","quantity":100,"price":2.0,"category":"Herramienta"}
+{"quality":"Alta","id":3,"name":"Destornillador","brand":"Stihl","quantity":100,"price":3.0,"category":"Herramienta"}
+{"weight":50.0,"id":10,"name":"10","brand":"Rival","quantity":100,"price":2.0,"category":"Material de Construcción"}
+{"weight":35.0,"id":11,"name":"Cemento","brand":"Evolution","quantity":150,"price":2.0,"category":"Material de Construcción"}
+{"weight":35.0,"id":11,"name":"Cemento","brand":"Evolution","quantity":150,"price":2.0,"category":"Material"}
