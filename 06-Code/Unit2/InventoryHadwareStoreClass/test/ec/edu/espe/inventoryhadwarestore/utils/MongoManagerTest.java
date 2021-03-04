@@ -79,13 +79,13 @@ public class MongoManagerTest {
     /**
      * Test of update method, of class MongoManager.
      */
-    @Test
+    /*@Test
     public void testUpdateQuantity() {
         System.out.println("update");
         int oldQuantity = 20;
         int newQuantity = 40;
         MongoManager.updateQuantity(oldQuantity, newQuantity);
 
-    }
+    }*/
     
 }
