@@ -77,14 +77,17 @@ public class AddProduct extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        AddProductPanel.setBackground(new java.awt.Color(0, 204, 204));
         AddProductPanel.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 12, 105)));
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         jLabel1.setText("Ingreso del Producto");
 
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel2.setText("ID:");
         jLabel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel3.setText("Nombre:");
         jLabel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -104,12 +107,13 @@ public class AddProduct extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(listBrand);
 
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel5.setText("Cantidad:");
         jLabel5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         spnQuantity.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
-        btnRegistry.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        btnRegistry.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
         btnRegistry.setText("Registrar");
         btnRegistry.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnRegistry.addActionListener(new java.awt.event.ActionListener() {
@@ -119,7 +123,9 @@ public class AddProduct extends javax.swing.JFrame {
         });
 
         btnExit.setBackground(new java.awt.Color(255, 204, 51));
+        btnExit.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
         btnExit.setForeground(new java.awt.Color(204, 0, 0));
+        btnExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/inventoryhadwarestore/imagen/exit.png"))); // NOI18N
         btnExit.setText("Salir");
         btnExit.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnExit.addActionListener(new java.awt.event.ActionListener() {
@@ -128,7 +134,7 @@ public class AddProduct extends javax.swing.JFrame {
             }
         });
 
-        txtReturn.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtReturn.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
         txtReturn.setText("Regresar");
         txtReturn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         txtReturn.addActionListener(new java.awt.event.ActionListener() {
@@ -136,6 +142,8 @@ public class AddProduct extends javax.swing.JFrame {
                 txtReturnActionPerformed(evt);
             }
         });
+
+        qualityPanel.setBackground(new java.awt.Color(0, 204, 204));
 
         listQuality.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         listQuality.setModel(new javax.swing.AbstractListModel<String>() {
@@ -168,6 +176,9 @@ public class AddProduct extends javax.swing.JFrame {
                 .addContainerGap(31, Short.MAX_VALUE))
         );
 
+        weightPanel.setBackground(new java.awt.Color(0, 204, 204));
+
+        jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel6.setText("Peso:");
 
         javax.swing.GroupLayout weightPanelLayout = new javax.swing.GroupLayout(weightPanel);
@@ -191,6 +202,9 @@ public class AddProduct extends javax.swing.JFrame {
                 .addContainerGap(62, Short.MAX_VALUE))
         );
 
+        eSourcePanel.setBackground(new java.awt.Color(0, 204, 204));
+
+        jLabel8.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel8.setText("Fuente de Energia:");
 
         listSource.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
@@ -222,8 +236,10 @@ public class AddProduct extends javax.swing.JFrame {
             .addComponent(jScrollPane4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
+        jLabel61.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel61.setText("Precio:");
 
+        OtherButton.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
         OtherButton.setText("Realizar otro Registro");
         OtherButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -235,12 +251,17 @@ public class AddProduct extends javax.swing.JFrame {
         AddProductPanel.setLayout(AddProductPanelLayout);
         AddProductPanelLayout.setHorizontalGroup(
             AddProductPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AddProductPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 441, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(278, 278, 278))
             .addGroup(AddProductPanelLayout.createSequentialGroup()
                 .addGroup(AddProductPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(AddProductPanelLayout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addComponent(btnRegistry, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(31, 31, 31)
+                        .addComponent(OtherButton)
+                        .addGap(41, 41, 41)
+                        .addComponent(txtReturn, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(37, 37, 37)
+                        .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(AddProductPanelLayout.createSequentialGroup()
                         .addGap(106, 106, 106)
                         .addGroup(AddProductPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -263,20 +284,13 @@ public class AddProduct extends javax.swing.JFrame {
                                             .addComponent(spnQuantity, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                             .addComponent(weightPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(AddProductPanelLayout.createSequentialGroup()
-                        .addGap(36, 36, 36)
-                        .addComponent(btnRegistry, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(34, 34, 34)
-                        .addComponent(OtherButton)
-                        .addGap(50, 50, 50)
-                        .addComponent(txtReturn, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(49, 49, 49)
-                        .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(AddProductPanelLayout.createSequentialGroup()
-                        .addGap(100, 100, 100)
-                        .addGroup(AddProductPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(qualityPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(eSourcePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(67, 67, 67)
+                        .addGroup(AddProductPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(AddProductPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(qualityPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(eSourcePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
         AddProductPanelLayout.setVerticalGroup(
             AddProductPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -307,7 +321,7 @@ public class AddProduct extends javax.swing.JFrame {
                 .addComponent(qualityPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(eSourcePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(weightPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(AddProductPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -317,6 +331,8 @@ public class AddProduct extends javax.swing.JFrame {
                     .addComponent(OtherButton))
                 .addGap(45, 45, 45))
         );
+
+        CategoryPannel.setBackground(new java.awt.Color(0, 204, 204));
 
         jLabel63.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel63.setText("Seleccione una categoría");
@@ -385,7 +401,7 @@ public class AddProduct extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(CategoryPannel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
-                .addComponent(AddProductPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 504, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(AddProductPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -556,185 +572,29 @@ public class AddProduct extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel AddProductPanel;
-    private javax.swing.JPanel CategoryPanel;
-    private javax.swing.JPanel CategoryPanel1;
-    private javax.swing.JPanel CategoryPanel10;
-    private javax.swing.JPanel CategoryPanel11;
-    private javax.swing.JPanel CategoryPanel12;
-    private javax.swing.JPanel CategoryPanel13;
-    private javax.swing.JPanel CategoryPanel14;
-    private javax.swing.JPanel CategoryPanel15;
-    private javax.swing.JPanel CategoryPanel16;
-    private javax.swing.JPanel CategoryPanel17;
-    private javax.swing.JPanel CategoryPanel18;
-    private javax.swing.JPanel CategoryPanel19;
-    private javax.swing.JPanel CategoryPanel2;
-    private javax.swing.JPanel CategoryPanel20;
-    private javax.swing.JPanel CategoryPanel21;
-    private javax.swing.JPanel CategoryPanel22;
-    private javax.swing.JPanel CategoryPanel23;
-    private javax.swing.JPanel CategoryPanel24;
-    private javax.swing.JPanel CategoryPanel25;
-    private javax.swing.JPanel CategoryPanel3;
-    private javax.swing.JPanel CategoryPanel4;
-    private javax.swing.JPanel CategoryPanel5;
-    private javax.swing.JPanel CategoryPanel6;
-    private javax.swing.JPanel CategoryPanel7;
-    private javax.swing.JPanel CategoryPanel8;
-    private javax.swing.JPanel CategoryPanel9;
     private javax.swing.JPanel CategoryPannel;
     private javax.swing.JButton OtherButton;
     private javax.swing.JButton btnExit;
     private javax.swing.JButton btnRegistry;
-    private javax.swing.JButton btnRegistry1;
-    private javax.swing.JButton btnRegistry10;
-    private javax.swing.JButton btnRegistry11;
-    private javax.swing.JButton btnRegistry12;
-    private javax.swing.JButton btnRegistry13;
-    private javax.swing.JButton btnRegistry14;
-    private javax.swing.JButton btnRegistry15;
-    private javax.swing.JButton btnRegistry16;
-    private javax.swing.JButton btnRegistry17;
-    private javax.swing.JButton btnRegistry18;
-    private javax.swing.JButton btnRegistry19;
-    private javax.swing.JButton btnRegistry2;
-    private javax.swing.JButton btnRegistry20;
-    private javax.swing.JButton btnRegistry21;
-    private javax.swing.JButton btnRegistry22;
-    private javax.swing.JButton btnRegistry23;
-    private javax.swing.JButton btnRegistry24;
-    private javax.swing.JButton btnRegistry25;
-    private javax.swing.JButton btnRegistry26;
     private javax.swing.JButton btnRegistry28;
-    private javax.swing.JButton btnRegistry3;
-    private javax.swing.JButton btnRegistry4;
-    private javax.swing.JButton btnRegistry5;
-    private javax.swing.JButton btnRegistry6;
-    private javax.swing.JButton btnRegistry7;
-    private javax.swing.JButton btnRegistry8;
-    private javax.swing.JButton btnRegistry9;
     private javax.swing.JPanel eSourcePanel;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel34;
-    private javax.swing.JLabel jLabel35;
-    private javax.swing.JLabel jLabel36;
-    private javax.swing.JLabel jLabel37;
-    private javax.swing.JLabel jLabel38;
-    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel40;
-    private javax.swing.JLabel jLabel41;
-    private javax.swing.JLabel jLabel42;
-    private javax.swing.JLabel jLabel43;
-    private javax.swing.JLabel jLabel44;
-    private javax.swing.JLabel jLabel45;
-    private javax.swing.JLabel jLabel46;
-    private javax.swing.JLabel jLabel47;
-    private javax.swing.JLabel jLabel48;
-    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel50;
-    private javax.swing.JLabel jLabel51;
-    private javax.swing.JLabel jLabel52;
-    private javax.swing.JLabel jLabel53;
-    private javax.swing.JLabel jLabel54;
-    private javax.swing.JLabel jLabel55;
-    private javax.swing.JLabel jLabel56;
-    private javax.swing.JLabel jLabel57;
-    private javax.swing.JLabel jLabel58;
-    private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel60;
     private javax.swing.JLabel jLabel61;
     private javax.swing.JLabel jLabel63;
     private javax.swing.JLabel jLabel64;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane10;
-    private javax.swing.JScrollPane jScrollPane11;
-    private javax.swing.JScrollPane jScrollPane12;
-    private javax.swing.JScrollPane jScrollPane13;
-    private javax.swing.JScrollPane jScrollPane14;
-    private javax.swing.JScrollPane jScrollPane15;
-    private javax.swing.JScrollPane jScrollPane16;
-    private javax.swing.JScrollPane jScrollPane17;
-    private javax.swing.JScrollPane jScrollPane18;
-    private javax.swing.JScrollPane jScrollPane19;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane20;
-    private javax.swing.JScrollPane jScrollPane21;
-    private javax.swing.JScrollPane jScrollPane22;
-    private javax.swing.JScrollPane jScrollPane23;
-    private javax.swing.JScrollPane jScrollPane24;
-    private javax.swing.JScrollPane jScrollPane25;
-    private javax.swing.JScrollPane jScrollPane26;
-    private javax.swing.JScrollPane jScrollPane27;
-    private javax.swing.JScrollPane jScrollPane28;
-    private javax.swing.JScrollPane jScrollPane29;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane31;
     private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JScrollPane jScrollPane7;
-    private javax.swing.JScrollPane jScrollPane8;
-    private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JList<String> listBrand;
-    private javax.swing.JList<String> listCategory;
-    private javax.swing.JList<String> listCategory1;
-    private javax.swing.JList<String> listCategory10;
-    private javax.swing.JList<String> listCategory11;
-    private javax.swing.JList<String> listCategory12;
-    private javax.swing.JList<String> listCategory13;
-    private javax.swing.JList<String> listCategory14;
-    private javax.swing.JList<String> listCategory15;
-    private javax.swing.JList<String> listCategory16;
-    private javax.swing.JList<String> listCategory17;
-    private javax.swing.JList<String> listCategory18;
-    private javax.swing.JList<String> listCategory19;
-    private javax.swing.JList<String> listCategory2;
-    private javax.swing.JList<String> listCategory20;
-    private javax.swing.JList<String> listCategory21;
-    private javax.swing.JList<String> listCategory22;
-    private javax.swing.JList<String> listCategory23;
-    private javax.swing.JList<String> listCategory24;
-    private javax.swing.JList<String> listCategory25;
     private javax.swing.JList<String> listCategory27;
-    private javax.swing.JList<String> listCategory3;
-    private javax.swing.JList<String> listCategory4;
-    private javax.swing.JList<String> listCategory5;
-    private javax.swing.JList<String> listCategory6;
-    private javax.swing.JList<String> listCategory7;
-    private javax.swing.JList<String> listCategory8;
-    private javax.swing.JList<String> listCategory9;
     private javax.swing.JList<String> listQuality;
     private javax.swing.JList<String> listSource;
     private javax.swing.JPanel qualityPanel;
