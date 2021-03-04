@@ -49,7 +49,7 @@ public class MongoManagerTest {
         int quantity = 100;
         float price = (float) 0.2;
         String category = "Herramienta";
-        MongoManager.save(id, name, brand, quantity, price, category);
+        //MongoManager.save(id, name, brand, quantity, price, category);
 
     }
 
@@ -80,11 +80,11 @@ public class MongoManagerTest {
      * Test of update method, of class MongoManager.
      */
     @Test
-    public void testUpdate() {
+    public void testUpdateQuantity() {
         System.out.println("update");
-        String nameToChange = "Cortadora";
-        String nameToUpdate = "Martillo electrico";
-        MongoManager.update(nameToChange, nameToUpdate);
+        int oldQuantity = 20;
+        int newQuantity = 40;
+        MongoManager.updateQuantity(oldQuantity, newQuantity);
 
     }
     

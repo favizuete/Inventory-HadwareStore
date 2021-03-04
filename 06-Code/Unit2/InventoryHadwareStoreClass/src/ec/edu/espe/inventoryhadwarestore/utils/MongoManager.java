@@ -133,7 +133,7 @@ public class MongoManager {
             }
             
     }
-    public static void updateBrand(String oldBrand,String newBrand){
+    public static void updateBrand(String name,String newBrand){
         try{
             MongoClientURI uri = new MongoClientURI(
             "mongodb+srv://dbChris:inventory123@proyect1.jfdts.mongodb.net/Proyect1?retryWrites=true&w=majority"); 
@@ -141,9 +141,9 @@ public class MongoManager {
             MongoDatabase database = mongoClient.getDatabase("test");
             MongoCollection<Document> collection = database.getCollection("Example"); 
             Document firstDocument;
-            firstDocument = collection.find().filter(Filters.eq("name", oldBrand)).first();           
-            firstDocument.replace("name",newBrand);           
-            collection.replaceOne(Filters.gte("name",oldBrand), firstDocument);
+            firstDocument = collection.find().filter(Filters.eq("name", name)).first();           
+            firstDocument.replace("brand",newBrand);           
+            collection.replaceOne(Filters.gte("name",name), firstDocument);
             mongoClient.close();
         }
         catch(Exception e){
@@ -151,7 +151,7 @@ public class MongoManager {
         }
 
     }
-     public static void updateQuantity(int oldQuantity,int newQuantity){
+     public static void updateQuantity(String name,int newQuantity){
         try{
             MongoClientURI uri = new MongoClientURI(
             "mongodb+srv://dbChris:inventory123@proyect1.jfdts.mongodb.net/Proyect1?retryWrites=true&w=majority"); 
@@ -159,9 +159,9 @@ public class MongoManager {
             MongoDatabase database = mongoClient.getDatabase("test");
             MongoCollection<Document> collection = database.getCollection("Example"); 
             Document firstDocument;
-            firstDocument = collection.find().filter(Filters.eq("name", oldQuantity)).first();           
-            firstDocument.replace("name",newQuantity);           
-            collection.replaceOne(Filters.gte("name",oldQuantity), firstDocument);
+            firstDocument = collection.find().filter(Filters.eq("name",name)).first();           
+            firstDocument.replace("quantity",newQuantity);           
+            collection.replaceOne(Filters.gte("name",name), firstDocument);
             mongoClient.close();
         }
         catch(Exception e){

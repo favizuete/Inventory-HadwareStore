@@ -103,6 +103,7 @@ public class Inventory {
             }             
         }
         setProducts(productlist);
+        mongoClient.close();
     }
 
     public void addProduct(Product product) throws UnknownHostException {

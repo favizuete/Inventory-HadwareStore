@@ -8,6 +8,7 @@ package ec.edu.espe.inventoryhadwarestore.view;
 import com.google.gson.Gson;
 import ec.edu.espe.inventoryhadwarestore.model.Inventory;
 import ec.edu.espe.inventoryhadwarestore.model.Product;
+import ec.edu.espe.inventoryhadwarestore.utils.MongoManager;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -25,6 +26,7 @@ public class EnterQuantity extends javax.swing.JFrame {
      * Creates new form IngresarCantidad
      */
     public EnterQuantity() {
+        
         initComponents();
     }
 
@@ -196,7 +198,7 @@ public class EnterQuantity extends javax.swing.JFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(43, Short.MAX_VALUE))
+                .addContainerGap(61, Short.MAX_VALUE))
         );
 
         pack();
@@ -221,23 +223,19 @@ public class EnterQuantity extends javax.swing.JFrame {
     private void ButtonToAddQuantityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonToAddQuantityActionPerformed
         Inventory inventory = new Inventory();
         Gson gson = new Gson();
-        inventory.readProducts();
+        inventory.readProductsFromMongoDB();
         Boolean found = false;
         int quan=0;
         for(Product product : inventory.getProducts()){
             if(product.getName().equals(txtProductToAdd.getText())){
                 found = true;
                 int quantityToAdd = (int) SpinQuantityOfProduct.getValue();
+                int oldQuantity = product.getQuantity();
+                String name = product.getName();
                 product.add(quantityToAdd);
                 quan = product.getQuantity();
                 gson.toJson(product);
-                try {
-                    FileReader fr = new FileReader("RegistroProductos.json");
-                    BufferedReader br = new BufferedReader(fr);
-                    
-                } catch (FileNotFoundException ex) {
-                }
-
+                MongoManager.updateQuantity(name, quan);
             }
         }
         if(found==true){

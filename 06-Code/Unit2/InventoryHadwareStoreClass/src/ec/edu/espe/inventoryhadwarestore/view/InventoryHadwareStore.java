@@ -74,7 +74,7 @@ public class InventoryHadwareStore {
                                 int oldquantity = product.getQuantity();
                                 product.add(quantityToAdd);
                                 int newQuantity = product.getQuantity();
-                                MongoManager.updateQuantity(oldquantity, oldquantity);
+                                MongoManager.updateQuantity(product.getName(), oldquantity);
                             }
                         }
                         System.out.println("Ingrese 1 para ingresar un nuevo producto");
@@ -98,8 +98,8 @@ public class InventoryHadwareStore {
                                 System.out.println("Ingrese la cantidad que desea vender de este producto:");
                                 int quantityToSell = scan.nextInt();
                                 scan.nextLine();
-                                addedPrice = product.sell(quantityToSell);
-                                
+                                int oldQuantity = product.getQuantity();
+                                addedPrice = product.sell(quantityToSell);                                    
                                 if(addedPrice==-1F){
                                    
                                     System.out.println("Producto no vendido");
@@ -107,6 +107,8 @@ public class InventoryHadwareStore {
                                 else{
                                     totalPrice = totalPrice + addedPrice;
                                     productsToSell.add(product);
+                                    int newQuantity = product.getQuantity();
+                                    MongoManager.updateQuantity(product.getName(), newQuantity);
                                 }
 
                             }
@@ -123,16 +125,11 @@ public class InventoryHadwareStore {
                     String registryString = gson.toJson(registry);
                     FileManager.writeFile("RegistroDeVentas.json", registryString);
 
-                    while ("si".equals(validate.getYesOrNo("Desea imprimir el registro de ventra?" + "[si/no]: "))) {
-
-                        String sales = gson.toJson(registry);
-                        FileManager.readFile("RegistroDeVenta.jason");
-                        SalesRegistry reg;
-                        reg = gson.fromJson(sales, SalesRegistry.class);
+                    while ("si".equals(validate.getYesOrNo("Desea imprimir el registro de venta?" + "[si/no]: "))) {
                         System.out.println("\t\t***Registo de Venta***");
-                        int i = 0;
+                        int i = registry.getTotalSales();
                         System.out.println("Venta N°" + (i + 1));
-                        System.out.println(reg);
+                        System.out.println(registry);
                         System.out.println("==============================================");
                     }
 

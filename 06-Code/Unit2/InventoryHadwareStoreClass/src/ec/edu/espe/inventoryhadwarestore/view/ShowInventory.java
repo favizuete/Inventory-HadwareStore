@@ -64,12 +64,6 @@ public class ShowInventory extends javax.swing.JFrame {
             }
         ));
         jScrollPane1.setViewportView(jTable1);
-        if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(0).setHeaderValue("Nombre");
-            jTable1.getColumnModel().getColumn(1).setHeaderValue("Marca");
-            jTable1.getColumnModel().getColumn(2).setHeaderValue("Precio");
-            jTable1.getColumnModel().getColumn(3).setHeaderValue("Categoria");
-        }
 
         btnExit.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         btnExit.setForeground(new java.awt.Color(255, 51, 51));
@@ -122,8 +116,8 @@ public class ShowInventory extends javax.swing.JFrame {
                     .addComponent(txtProductName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(78, 78, 78)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(88, 88, 88)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(76, 76, 76)
                 .addComponent(btnExit)
                 .addContainerGap(93, Short.MAX_VALUE))
         );
