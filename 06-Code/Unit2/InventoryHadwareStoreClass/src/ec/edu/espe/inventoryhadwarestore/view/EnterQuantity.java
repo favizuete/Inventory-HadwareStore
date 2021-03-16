@@ -44,13 +44,13 @@ public class EnterQuantity extends javax.swing.JFrame {
         txtProductToAdd = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        SpinQuantityOfProduct = new javax.swing.JSpinner();
+        spnQuantityOfProduct = new javax.swing.JSpinner();
         jLabel4 = new javax.swing.JLabel();
-        JTotalQuantity = new javax.swing.JLabel();
-        ButtonToAddQuantity = new javax.swing.JButton();
-        ReloadButton = new javax.swing.JButton();
-        RetturnButton = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        lbTotalQuantity = new javax.swing.JLabel();
+        btnRegistry = new javax.swing.JButton();
+        btnReload = new javax.swing.JButton();
+        btnReturn = new javax.swing.JButton();
+        btnExit = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -74,43 +74,43 @@ public class EnterQuantity extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel4.setText("Cantidad Total Actual");
 
-        JTotalQuantity.setText("0");
-        JTotalQuantity.setOpaque(true);
+        lbTotalQuantity.setText("0");
+        lbTotalQuantity.setOpaque(true);
 
-        ButtonToAddQuantity.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
-        ButtonToAddQuantity.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/inventoryhadwarestore/imagen/check.png"))); // NOI18N
-        ButtonToAddQuantity.setText("Registrar");
-        ButtonToAddQuantity.addActionListener(new java.awt.event.ActionListener() {
+        btnRegistry.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
+        btnRegistry.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/inventoryhadwarestore/imagen/check.png"))); // NOI18N
+        btnRegistry.setText("Registrar");
+        btnRegistry.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ButtonToAddQuantityActionPerformed(evt);
+                btnRegistryActionPerformed(evt);
             }
         });
 
-        ReloadButton.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
-        ReloadButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/inventoryhadwarestore/imagen/refresh.png"))); // NOI18N
-        ReloadButton.setText("Recargar");
-        ReloadButton.addActionListener(new java.awt.event.ActionListener() {
+        btnReload.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
+        btnReload.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/inventoryhadwarestore/imagen/refresh.png"))); // NOI18N
+        btnReload.setText("Recargar");
+        btnReload.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ReloadButtonActionPerformed(evt);
+                btnReloadActionPerformed(evt);
             }
         });
 
-        RetturnButton.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
-        RetturnButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/inventoryhadwarestore/imagen/return.png"))); // NOI18N
-        RetturnButton.setText("Regresar");
-        RetturnButton.addActionListener(new java.awt.event.ActionListener() {
+        btnReturn.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
+        btnReturn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/inventoryhadwarestore/imagen/return.png"))); // NOI18N
+        btnReturn.setText("Regresar");
+        btnReturn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RetturnButtonActionPerformed(evt);
+                btnReturnActionPerformed(evt);
             }
         });
 
-        jButton1.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 51, 51));
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/inventoryhadwarestore/imagen/exit.png"))); // NOI18N
-        jButton1.setText("Salir");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnExit.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
+        btnExit.setForeground(new java.awt.Color(255, 51, 51));
+        btnExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/inventoryhadwarestore/imagen/exit.png"))); // NOI18N
+        btnExit.setText("Salir");
+        btnExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnExitActionPerformed(evt);
             }
         });
 
@@ -128,18 +128,18 @@ public class EnterQuantity extends javax.swing.JFrame {
                             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(41, 41, 41)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(SpinQuantityOfProduct)
+                            .addComponent(spnQuantityOfProduct)
                             .addComponent(txtProductToAdd)
-                            .addComponent(JTotalQuantity, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(lbTotalQuantity, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(128, 128, 128))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(RetturnButton, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnReturn, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
-                        .addComponent(ReloadButton, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnReload, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(76, 76, 76)
-                        .addComponent(ButtonToAddQuantity)
+                        .addComponent(btnRegistry)
                         .addGap(57, 57, 57)
-                        .addComponent(jButton1)
+                        .addComponent(btnExit)
                         .addContainerGap(24, Short.MAX_VALUE))))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(113, 113, 113)
@@ -158,17 +158,17 @@ public class EnterQuantity extends javax.swing.JFrame {
                 .addGap(42, 42, 42)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(SpinQuantityOfProduct, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(spnQuantityOfProduct, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(28, 28, 28)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JTotalQuantity))
+                    .addComponent(lbTotalQuantity))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 129, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ButtonToAddQuantity)
-                    .addComponent(ReloadButton)
-                    .addComponent(RetturnButton)
-                    .addComponent(jButton1))
+                    .addComponent(btnRegistry)
+                    .addComponent(btnReload)
+                    .addComponent(btnReturn)
+                    .addComponent(btnExit))
                 .addGap(31, 31, 31))
         );
 
@@ -187,52 +187,24 @@ public class EnterQuantity extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtProductToAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtProductToAddActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_txtProductToAddActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
 
-    private void ReloadButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReloadButtonActionPerformed
+    }//GEN-LAST:event_btnExitActionPerformed
 
-        EnterQuantity ret = new EnterQuantity();
-        ret.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_ReloadButtonActionPerformed
+    private void btnReloadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReloadActionPerformed
 
-    private void ButtonToAddQuantityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonToAddQuantityActionPerformed
-        Inventory inventory = new Inventory();
-        Gson gson = new Gson();
-        inventory.readProductsFromMongoDB();
-        Boolean found = false;
-        int quan=0;
-        for(Product product : inventory.getProducts()){
-            if(product.getName().equals(txtProductToAdd.getText())){
-                found = true;
-                int quantityToAdd = (int) SpinQuantityOfProduct.getValue();
-                int oldQuantity = product.getQuantity();
-                String name = product.getName();
-                product.add(quantityToAdd);
-                quan = product.getQuantity();
-                gson.toJson(product);
-                MongoManager.updateQuantity(name, quan);
-            }
-        }
-        if(found==true){
-            JOptionPane.showMessageDialog(rootPane,"Cantidad añadida registrada"); 
-            JTotalQuantity.setText(Integer.toString(quan));
-        }else{
-            JOptionPane.showMessageDialog(rootPane,"Producto no existente o Error del Sistema"); 
-        }
-    }//GEN-LAST:event_ButtonToAddQuantityActionPerformed
+    }//GEN-LAST:event_btnReloadActionPerformed
 
-    private void RetturnButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RetturnButtonActionPerformed
-        MainMenu menu = new MainMenu();               
-        menu.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_RetturnButtonActionPerformed
+    private void btnRegistryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistryActionPerformed
+
+    }//GEN-LAST:event_btnRegistryActionPerformed
+
+    private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
+
+    }//GEN-LAST:event_btnReturnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -271,17 +243,17 @@ public class EnterQuantity extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton ButtonToAddQuantity;
-    private javax.swing.JLabel JTotalQuantity;
-    private javax.swing.JButton ReloadButton;
-    private javax.swing.JButton RetturnButton;
-    private javax.swing.JSpinner SpinQuantityOfProduct;
-    private javax.swing.JButton jButton1;
+    public javax.swing.JButton btnExit;
+    public javax.swing.JButton btnRegistry;
+    public javax.swing.JButton btnReload;
+    public javax.swing.JButton btnReturn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField txtProductToAdd;
+    public javax.swing.JLabel lbTotalQuantity;
+    public javax.swing.JSpinner spnQuantityOfProduct;
+    public javax.swing.JTextField txtProductToAdd;
     // End of variables declaration//GEN-END:variables
 }

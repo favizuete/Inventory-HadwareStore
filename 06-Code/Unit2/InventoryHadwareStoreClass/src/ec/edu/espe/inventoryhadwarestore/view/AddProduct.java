@@ -27,7 +27,7 @@ public class AddProduct extends javax.swing.JFrame {
     public AddProduct() {
         initComponents();
         AddProductPanel.setVisible(false);
-        OtherButton.setVisible(false);
+        btnOther.setVisible(false);
         
     }
 
@@ -51,9 +51,8 @@ public class AddProduct extends javax.swing.JFrame {
         listBrand = new javax.swing.JList<>();
         jLabel5 = new javax.swing.JLabel();
         spnQuantity = new javax.swing.JSpinner();
-        btnRegistry = new javax.swing.JButton();
         btnExit = new javax.swing.JButton();
-        txtReturn = new javax.swing.JButton();
+        btnReturn = new javax.swing.JButton();
         qualityPanel = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         listQuality = new javax.swing.JList<>();
@@ -67,13 +66,14 @@ public class AddProduct extends javax.swing.JFrame {
         listSource = new javax.swing.JList<>();
         jLabel61 = new javax.swing.JLabel();
         spnPrice = new javax.swing.JSpinner();
-        OtherButton = new javax.swing.JButton();
+        btnOther = new javax.swing.JButton();
+        btnRegistry = new javax.swing.JButton();
         CategoryPannel = new javax.swing.JPanel();
         jLabel63 = new javax.swing.JLabel();
         jLabel64 = new javax.swing.JLabel();
         jScrollPane31 = new javax.swing.JScrollPane();
         listCategory27 = new javax.swing.JList<>();
-        btnRegistry28 = new javax.swing.JButton();
+        btnCategory = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -113,15 +113,6 @@ public class AddProduct extends javax.swing.JFrame {
 
         spnQuantity.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
-        btnRegistry.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
-        btnRegistry.setText("Registrar");
-        btnRegistry.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btnRegistry.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRegistryActionPerformed(evt);
-            }
-        });
-
         btnExit.setBackground(new java.awt.Color(255, 204, 51));
         btnExit.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
         btnExit.setForeground(new java.awt.Color(204, 0, 0));
@@ -134,12 +125,12 @@ public class AddProduct extends javax.swing.JFrame {
             }
         });
 
-        txtReturn.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
-        txtReturn.setText("Regresar");
-        txtReturn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        txtReturn.addActionListener(new java.awt.event.ActionListener() {
+        btnReturn.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
+        btnReturn.setText("Regresar");
+        btnReturn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnReturn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtReturnActionPerformed(evt);
+                btnReturnActionPerformed(evt);
             }
         });
 
@@ -239,11 +230,20 @@ public class AddProduct extends javax.swing.JFrame {
         jLabel61.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel61.setText("Precio:");
 
-        OtherButton.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
-        OtherButton.setText("Realizar otro Registro");
-        OtherButton.addActionListener(new java.awt.event.ActionListener() {
+        btnOther.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
+        btnOther.setText("Realizar otro Registro");
+        btnOther.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                OtherButtonActionPerformed(evt);
+                btnOtherActionPerformed(evt);
+            }
+        });
+
+        btnRegistry.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
+        btnRegistry.setText("Registrar");
+        btnRegistry.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnRegistry.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegistryActionPerformed(evt);
             }
         });
 
@@ -254,12 +254,12 @@ public class AddProduct extends javax.swing.JFrame {
             .addGroup(AddProductPanelLayout.createSequentialGroup()
                 .addGroup(AddProductPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(AddProductPanelLayout.createSequentialGroup()
-                        .addGap(23, 23, 23)
+                        .addGap(36, 36, 36)
                         .addComponent(btnRegistry, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(31, 31, 31)
-                        .addComponent(OtherButton)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnOther)
                         .addGap(41, 41, 41)
-                        .addComponent(txtReturn, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnReturn, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(37, 37, 37)
                         .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(AddProductPanelLayout.createSequentialGroup()
@@ -326,9 +326,9 @@ public class AddProduct extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(AddProductPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnExit)
-                    .addComponent(btnRegistry)
-                    .addComponent(txtReturn)
-                    .addComponent(OtherButton))
+                    .addComponent(btnReturn)
+                    .addComponent(btnOther)
+                    .addComponent(btnRegistry))
                 .addGap(45, 45, 45))
         );
 
@@ -349,12 +349,12 @@ public class AddProduct extends javax.swing.JFrame {
         });
         jScrollPane31.setViewportView(listCategory27);
 
-        btnRegistry28.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        btnRegistry28.setText("Continuar Al registro");
-        btnRegistry28.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btnRegistry28.addActionListener(new java.awt.event.ActionListener() {
+        btnCategory.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        btnCategory.setText("Continuar Al registro");
+        btnCategory.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnCategory.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRegistry28btnRegistry1ActionPerformed(evt);
+                btnCategorybtnRegistry1ActionPerformed(evt);
             }
         });
 
@@ -371,7 +371,7 @@ public class AddProduct extends javax.swing.JFrame {
                         .addComponent(jScrollPane31, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(CategoryPannelLayout.createSequentialGroup()
                         .addGap(73, 73, 73)
-                        .addComponent(btnRegistry28, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnCategory, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(CategoryPannelLayout.createSequentialGroup()
                         .addGap(25, 25, 25)
                         .addComponent(jLabel63, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -389,7 +389,7 @@ public class AddProduct extends javax.swing.JFrame {
                         .addGap(27, 27, 27)
                         .addComponent(jLabel64)))
                 .addGap(49, 49, 49)
-                .addComponent(btnRegistry28)
+                .addComponent(btnCategory)
                 .addGap(170, 170, 170))
         );
 
@@ -410,10 +410,11 @@ public class AddProduct extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addComponent(AddProductPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
                         .addComponent(CategoryPannel, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(AddProductPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         pack();
@@ -422,71 +423,6 @@ public class AddProduct extends javax.swing.JFrame {
 
     private void btnRegistryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistryActionPerformed
 
-        Inventory inventory = new Inventory();
-        inventory.readProductsFromMongoDB();
-        if(listCategory27.getSelectedIndex()==0){
-
-           String id = txtId.getText();
-           int id1 = Integer.parseInt(id);
-           String name =txtName.getText();
-           String brand = listBrand.getSelectedValue();
-           int quantity = (int) spnQuantity.getValue();
-           int price1 =  (int) spnPrice.getValue();
-           float price = (float) price1;
-           String quality = listQuality.getSelectedValue();
-           String category = listCategory27.getSelectedValue();
-           Product tool =new  Tool(id1,name,brand,quantity,price,category,quality);
-            try {
-                inventory.addProduct(tool);
-                OtherButton.setVisible(true);
-            } catch (UnknownHostException ex) {
-                Logger.getLogger(AddProduct.class.getName()).log(Level.SEVERE, null, ex);
-            }
-
-       }else if(listCategory27.getSelectedIndex()==1){
-            String id = txtId.getText();
-            int id1 = Integer.parseInt(id);
-            String name =txtName.getText();
-            String brand = listBrand.getSelectedValue();
-            int quantity = (int) spnQuantity.getValue();
-            int price1 =  (int) spnPrice.getValue();
-            float price = (float) price1;           
-            String quality = listQuality.getSelectedValue();
-            String eSource = listSource.getSelectedValue();
-            String category = "Herramienta electrica";           
-            Product eTool = new ElectricTool(id1,name,brand,quantity,price,category,quality,eSource);
-            try {
-                inventory.addProduct(eTool);
-                OtherButton.setVisible(true);
-            } catch (UnknownHostException ex) {
-                Logger.getLogger(AddProduct.class.getName()).log(Level.SEVERE, null, ex);
-            }                    
-           
-           
-           
-           
-       }else if(listCategory27.getSelectedIndex()==2){
-            String id = txtId.getText();
-            int id1 = Integer.parseInt(id);
-            String name =txtName.getText();
-            String brand = listBrand.getSelectedValue();
-            int quantity = (int) spnQuantity.getValue();
-            int price1 =  (int) spnPrice.getValue(); 
-            float price = (float) price1;
-            String category = "Material";
-            int weight1 = (int) spnWeight.getValue();
-            float weight = (float) weight1;
-            Product material = new ConstructionMaterial(id1,name,brand,quantity,price,category,weight);
-            try {
-                inventory.addProduct(material);
-                OtherButton.setVisible(true);
-            } catch (UnknownHostException ex) {
-                Logger.getLogger(AddProduct.class.getName()).log(Level.SEVERE, null, ex);
-            }            
-       }else{
-        JOptionPane.showMessageDialog(rootPane,"No ha seleccionado una categoría"); 
-       }    
-        
     }//GEN-LAST:event_btnRegistryActionPerformed
 
     private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
@@ -499,41 +435,17 @@ public class AddProduct extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void txtReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtReturnActionPerformed
-        // TODO add your handling code here:
-        MainMenu menu = new MainMenu();
-        menu.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_txtReturnActionPerformed
+    private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
 
-    private void btnRegistry28btnRegistry1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistry28btnRegistry1ActionPerformed
-    Inventory inventory = new Inventory();
-    inventory.readProductsFromMongoDB();
-        if(listCategory27.getSelectedIndex()==0){
-           AddProductPanel.setVisible(true);
-           weightPanel.setVisible(false);
-           eSourcePanel.setVisible(false);
-           CategoryPannel.setVisible(false);
-       }else if(listCategory27.getSelectedIndex()==1){
-           AddProductPanel.setVisible(true);
-           weightPanel.setVisible(false);    
-           CategoryPannel.setVisible(false);        
-     }else if(listCategory27.getSelectedIndex()==2){
-           AddProductPanel.setVisible(true);
-           eSourcePanel.setVisible(false);
-           qualityPanel.setVisible(false);
-           CategoryPannel.setVisible(false);          
-           
-       }else{
-        JOptionPane.showMessageDialog(rootPane,"No ha seleccionado una categoría"); 
-       }
-    }//GEN-LAST:event_btnRegistry28btnRegistry1ActionPerformed
+    }//GEN-LAST:event_btnReturnActionPerformed
 
-    private void OtherButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OtherButtonActionPerformed
-        AddProduct add = new AddProduct();
-        add.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_OtherButtonActionPerformed
+    private void btnCategorybtnRegistry1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCategorybtnRegistry1ActionPerformed
+
+    }//GEN-LAST:event_btnCategorybtnRegistry1ActionPerformed
+
+    private void btnOtherActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOtherActionPerformed
+
+    }//GEN-LAST:event_btnOtherActionPerformed
 
     /**
      * @param args the command line arguments
@@ -571,13 +483,14 @@ public class AddProduct extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel AddProductPanel;
-    private javax.swing.JPanel CategoryPannel;
-    private javax.swing.JButton OtherButton;
-    private javax.swing.JButton btnExit;
-    private javax.swing.JButton btnRegistry;
-    private javax.swing.JButton btnRegistry28;
-    private javax.swing.JPanel eSourcePanel;
+    public javax.swing.JPanel AddProductPanel;
+    public javax.swing.JPanel CategoryPannel;
+    public javax.swing.JButton btnCategory;
+    public javax.swing.JButton btnExit;
+    public javax.swing.JButton btnOther;
+    public javax.swing.JButton btnRegistry;
+    public javax.swing.JButton btnReturn;
+    public javax.swing.JPanel eSourcePanel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -593,17 +506,16 @@ public class AddProduct extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane31;
     private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JList<String> listBrand;
-    private javax.swing.JList<String> listCategory27;
-    private javax.swing.JList<String> listQuality;
-    private javax.swing.JList<String> listSource;
-    private javax.swing.JPanel qualityPanel;
-    private javax.swing.JSpinner spnPrice;
-    private javax.swing.JSpinner spnQuantity;
-    private javax.swing.JSpinner spnWeight;
-    private javax.swing.JTextField txtId;
-    private javax.swing.JTextField txtName;
-    private javax.swing.JButton txtReturn;
-    private javax.swing.JPanel weightPanel;
+    public javax.swing.JList<String> listBrand;
+    public javax.swing.JList<String> listCategory27;
+    public javax.swing.JList<String> listQuality;
+    public javax.swing.JList<String> listSource;
+    public javax.swing.JPanel qualityPanel;
+    public javax.swing.JSpinner spnPrice;
+    public javax.swing.JSpinner spnQuantity;
+    public javax.swing.JSpinner spnWeight;
+    public javax.swing.JTextField txtId;
+    public javax.swing.JTextField txtName;
+    public javax.swing.JPanel weightPanel;
     // End of variables declaration//GEN-END:variables
 }

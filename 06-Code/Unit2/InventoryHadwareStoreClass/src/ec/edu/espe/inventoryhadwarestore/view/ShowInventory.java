@@ -19,6 +19,15 @@ import javax.swing.table.DefaultTableModel;
 public class ShowInventory extends javax.swing.JFrame {
     DefaultTableModel model = new DefaultTableModel();
     JTable tabla = new JTable (model);
+    
+    
+    public void generate(){
+        model.addColumn("name");
+        model.addColumn("brand");
+        model.addColumn("price");
+        model.addColumn("quantity");
+        model.addColumn("category");
+    }
     public void  generateTable(){
         Inventory inventory = new Inventory();
         inventory.readProductsFromMongoDB();
@@ -27,11 +36,6 @@ public class ShowInventory extends javax.swing.JFrame {
         System.out.println(productlist.toString());
         int i=0;
         Vector<?> rowData = null;
-        model.addColumn("name");
-        model.addColumn("brand");
-        model.addColumn("price");
-        model.addColumn("quantity");
-        model.addColumn("category");
         for(Product product: productlist){
             model.addRow(rowData);
             model.setValueAt(product.getName(), i, 0);
@@ -42,11 +46,19 @@ public class ShowInventory extends javax.swing.JFrame {
             i++;
         }
     }
+    public void deleteTable(){
+        int x = model.getRowCount();
+        System.out.println(x);
+        for(int i=0;i<x;i++){
+            model.removeRow(0);
+        }
+    }
     /**
      * Creates new form MostrarDatos
      */
     public ShowInventory() {
         initComponents();
+        btnUpdate.setVisible(false);
     }
 
     /**
@@ -61,10 +73,11 @@ public class ShowInventory extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tblProducts = new javax.swing.JTable();
         btnExit = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btnShow = new javax.swing.JButton();
+        btnReturn = new javax.swing.JButton();
+        btnUpdate = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -73,11 +86,11 @@ public class ShowInventory extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         jLabel1.setText("Mostrar Inventario");
 
-        jTable1.setBackground(new java.awt.Color(204, 204, 255));
-        jTable1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jTable1.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jTable1.setModel(model);
-        jScrollPane1.setViewportView(jTable1);
+        tblProducts.setBackground(new java.awt.Color(204, 204, 255));
+        tblProducts.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        tblProducts.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        tblProducts.setModel(model);
+        jScrollPane1.setViewportView(tblProducts);
 
         btnExit.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         btnExit.setForeground(new java.awt.Color(255, 51, 51));
@@ -89,20 +102,27 @@ public class ShowInventory extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
-        jButton1.setText("Mostrar/Actualizar Inventario");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnShow.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
+        btnShow.setText("Mostrar Inventario");
+        btnShow.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnShowActionPerformed(evt);
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/inventoryhadwarestore/imagen/return.png"))); // NOI18N
-        jButton2.setText("Regresar al Menu");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnReturn.setFont(new java.awt.Font("Times New Roman", 0, 13)); // NOI18N
+        btnReturn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/inventoryhadwarestore/imagen/return.png"))); // NOI18N
+        btnReturn.setText("Regresar al Menu");
+        btnReturn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnReturnActionPerformed(evt);
+            }
+        });
+
+        btnUpdate.setText("Actualizar Inventario");
+        btnUpdate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUpdateActionPerformed(evt);
             }
         });
 
@@ -111,11 +131,13 @@ public class ShowInventory extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(82, 82, 82)
-                .addComponent(jButton2)
+                .addGap(68, 68, 68)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnShow, javax.swing.GroupLayout.DEFAULT_SIZE, 182, Short.MAX_VALUE)
+                    .addComponent(btnUpdate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnReturn)
+                .addGap(35, 35, 35)
                 .addComponent(btnExit)
                 .addGap(54, 54, 54))
             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -135,12 +157,18 @@ public class ShowInventory extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(35, 35, 35)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(62, 62, 62)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnExit)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
-                .addContainerGap(75, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(62, 62, 62)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnExit)
+                            .addComponent(btnReturn)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(45, 45, 45)
+                        .addComponent(btnShow)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnUpdate)))
+                .addContainerGap(68, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -159,18 +187,19 @@ public class ShowInventory extends javax.swing.JFrame {
 
     private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
 
-        dispose();
     }//GEN-LAST:event_btnExitActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        generateTable();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void btnShowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnShowActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        MainMenu menu = new MainMenu();
-        menu.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnShowActionPerformed
+
+    private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
+
+    }//GEN-LAST:event_btnReturnActionPerformed
+
+    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnUpdateActionPerformed
 
     /**
      * @param args the command line arguments
@@ -209,12 +238,13 @@ public class ShowInventory extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnExit;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    public javax.swing.JButton btnExit;
+    public javax.swing.JButton btnReturn;
+    public javax.swing.JButton btnShow;
+    public javax.swing.JButton btnUpdate;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    public javax.swing.JTable tblProducts;
     // End of variables declaration//GEN-END:variables
 }

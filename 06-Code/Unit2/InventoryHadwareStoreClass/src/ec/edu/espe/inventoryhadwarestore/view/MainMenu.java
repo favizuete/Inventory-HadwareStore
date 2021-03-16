@@ -35,22 +35,24 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu2 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
+        mniAdd = new javax.swing.JMenuItem();
+        mniDelete = new javax.swing.JMenuItem();
+        mniModify = new javax.swing.JMenuItem();
+        mniShow = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        jMenuItem6 = new javax.swing.JMenuItem();
+        mniAddQuantity = new javax.swing.JMenuItem();
+        mniSell = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(204, 255, 204));
+
+        jDesktopPane1.setBackground(new java.awt.Color(204, 255, 204));
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Bienvenido al Inventario de Ferreteria!!");
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/inventoryhadwarestore/imagen/inventary.png"))); // NOI18N
-        jLabel2.setText("jLabel2");
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -65,11 +67,11 @@ public class MainMenu extends javax.swing.JFrame {
         jDesktopPane1Layout.setHorizontalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                .addContainerGap(23, Short.MAX_VALUE)
+                .addContainerGap(49, Short.MAX_VALUE)
                 .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDesktopPane1Layout.createSequentialGroup()
                         .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(18, 18, 18)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 424, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(63, 63, 63))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDesktopPane1Layout.createSequentialGroup()
@@ -79,10 +81,13 @@ public class MainMenu extends javax.swing.JFrame {
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(jLabel2)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel3)
                 .addContainerGap(104, Short.MAX_VALUE))
@@ -90,58 +95,58 @@ public class MainMenu extends javax.swing.JFrame {
 
         jMenu2.setText("Inventario");
 
-        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/inventoryhadwarestore/imagen/add.png"))); // NOI18N
-        jMenuItem1.setText("Añadir producto");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        mniAdd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/inventoryhadwarestore/imagen/add.png"))); // NOI18N
+        mniAdd.setText("Añadir producto");
+        mniAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                mniAddActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem1);
+        jMenu2.add(mniAdd);
 
-        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/inventoryhadwarestore/imagen/exit.png"))); // NOI18N
-        jMenuItem2.setText("Eliminar producto");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+        mniDelete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/inventoryhadwarestore/imagen/exit.png"))); // NOI18N
+        mniDelete.setText("Eliminar producto");
+        mniDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
+                mniDeleteActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem2);
+        jMenu2.add(mniDelete);
 
-        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/inventoryhadwarestore/imagen/box.png"))); // NOI18N
-        jMenuItem3.setText("Modificar Producto");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+        mniModify.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/inventoryhadwarestore/imagen/box.png"))); // NOI18N
+        mniModify.setText("Modificar Producto");
+        mniModify.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
+                mniModifyActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem3);
+        jMenu2.add(mniModify);
 
-        jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/inventoryhadwarestore/imagen/query.png"))); // NOI18N
-        jMenuItem4.setText("Mostrar Inventario");
-        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+        mniShow.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/inventoryhadwarestore/imagen/query.png"))); // NOI18N
+        mniShow.setText("Mostrar Inventario");
+        mniShow.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem4ActionPerformed(evt);
+                mniShowActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem4);
+        jMenu2.add(mniShow);
 
         jMenuBar1.add(jMenu2);
 
         jMenu3.setText("Producto");
 
-        jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/inventoryhadwarestore/imagen/addbox.png"))); // NOI18N
-        jMenuItem5.setText("Añadir cantidad de productos");
-        jMenu3.add(jMenuItem5);
+        mniAddQuantity.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/inventoryhadwarestore/imagen/addbox.png"))); // NOI18N
+        mniAddQuantity.setText("Añadir cantidad de productos");
+        jMenu3.add(mniAddQuantity);
 
-        jMenuItem6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/inventoryhadwarestore/imagen/bill.png"))); // NOI18N
-        jMenuItem6.setText("Vender productos");
-        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+        mniSell.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/inventoryhadwarestore/imagen/bill.png"))); // NOI18N
+        mniSell.setText("Vender productos");
+        mniSell.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem6ActionPerformed(evt);
+                mniSellActionPerformed(evt);
             }
         });
-        jMenu3.add(jMenuItem6);
+        jMenu3.add(mniSell);
 
         jMenuBar1.add(jMenu3);
 
@@ -163,42 +168,28 @@ public class MainMenu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void mniAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniAddActionPerformed
 
-        AddProduct add = new AddProduct();
-        add.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_mniAddActionPerformed
 
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+    private void mniModifyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniModifyActionPerformed
+
+    }//GEN-LAST:event_mniModifyActionPerformed
+
+
+    private void mniShowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniShowActionPerformed
         // TODO add your handling code here:
-        ModifyProduct modify = new ModifyProduct();
-        modify.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
 
 
-    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-        // TODO add your handling code here:
-        ShowInventory showInventory = new ShowInventory();
-        showInventory.setVisible(true);
-        this.setVisible(false);
+    }//GEN-LAST:event_mniShowActionPerformed
 
-    }//GEN-LAST:event_jMenuItem4ActionPerformed
+    private void mniDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniDeleteActionPerformed
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        // TODO add your handling code here:
-        DeleteProduct delete = new DeleteProduct();
-        delete.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+    }//GEN-LAST:event_mniDeleteActionPerformed
 
-    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-        // TODO add your handling code here:
-        SellProduct sell = new SellProduct();
-        sell.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_jMenuItem6ActionPerformed
+    private void mniSellActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniSellActionPerformed
+
+    }//GEN-LAST:event_mniSellActionPerformed
 
 
     /**
@@ -244,11 +235,11 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
+    public javax.swing.JMenuItem mniAdd;
+    public javax.swing.JMenuItem mniAddQuantity;
+    public javax.swing.JMenuItem mniDelete;
+    public javax.swing.JMenuItem mniModify;
+    public javax.swing.JMenuItem mniSell;
+    public javax.swing.JMenuItem mniShow;
     // End of variables declaration//GEN-END:variables
 }

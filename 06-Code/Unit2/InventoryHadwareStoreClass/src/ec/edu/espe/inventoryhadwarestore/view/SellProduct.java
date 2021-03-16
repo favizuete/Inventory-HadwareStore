@@ -49,11 +49,11 @@ public class SellProduct extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         txtName = new javax.swing.JTextField();
         txtProductToSell = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
+        btnExit = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         spinQuantity = new javax.swing.JSpinner();
-        SellButton = new javax.swing.JButton();
-        RetturnButton = new javax.swing.JButton();
+        btnSell = new javax.swing.JButton();
+        btnReturn = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         txtQuantityValue = new javax.swing.JLabel();
 
@@ -73,32 +73,32 @@ public class SellProduct extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel3.setText("Ingrese el producto que desea vender");
 
-        jButton2.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 51, 51));
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/inventoryhadwarestore/imagen/exit.png"))); // NOI18N
-        jButton2.setText("Salir");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnExit.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        btnExit.setForeground(new java.awt.Color(255, 51, 51));
+        btnExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/inventoryhadwarestore/imagen/exit.png"))); // NOI18N
+        btnExit.setText("Salir");
+        btnExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnExitActionPerformed(evt);
             }
         });
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLabel5.setText("Ingrese la cantidad de productos para vender");
 
-        SellButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/inventoryhadwarestore/imagen/sell.png"))); // NOI18N
-        SellButton.setText("Vender");
-        SellButton.addActionListener(new java.awt.event.ActionListener() {
+        btnSell.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/inventoryhadwarestore/imagen/sell.png"))); // NOI18N
+        btnSell.setText("Vender");
+        btnSell.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SellButtonActionPerformed(evt);
+                btnSellActionPerformed(evt);
             }
         });
 
-        RetturnButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/inventoryhadwarestore/imagen/return.png"))); // NOI18N
-        RetturnButton.setText("Regresar");
-        RetturnButton.addActionListener(new java.awt.event.ActionListener() {
+        btnReturn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ec/edu/espe/inventoryhadwarestore/imagen/return.png"))); // NOI18N
+        btnReturn.setText("Regresar");
+        btnReturn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RetturnButtonActionPerformed(evt);
+                btnReturnActionPerformed(evt);
             }
         });
 
@@ -116,11 +116,11 @@ public class SellProduct extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(64, 64, 64)
-                        .addComponent(RetturnButton)
+                        .addComponent(btnReturn)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
-                        .addComponent(SellButton, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnSell, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(70, 70, 70)
-                        .addComponent(jButton2)
+                        .addComponent(btnExit)
                         .addGap(36, 36, 36))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                         .addGap(27, 27, 27)
@@ -165,9 +165,9 @@ public class SellProduct extends javax.swing.JFrame {
                     .addComponent(txtQuantityValue))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 122, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(SellButton)
-                    .addComponent(RetturnButton)
-                    .addComponent(jButton2))
+                    .addComponent(btnSell)
+                    .addComponent(btnReturn)
+                    .addComponent(btnExit))
                 .addGap(47, 47, 47))
         );
 
@@ -187,69 +187,17 @@ public class SellProduct extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
 
-        dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnExitActionPerformed
 
-    private void RetturnButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RetturnButtonActionPerformed
-        MainMenu main = new MainMenu();
-        main.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_RetturnButtonActionPerformed
+    private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
 
-    private void SellButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SellButtonActionPerformed
-        SaleRegistry registryWindow = new SaleRegistry();
-        registryWindow.setVisible(false);
-        Inventory inventory = new Inventory();
-       ArrayList<Product> productsToSell = new ArrayList<>();
-        Gson gson = new Gson();
-        inventory.readProductsFromMongoDB();
-        Boolean found = false;
-        int quan=0;
-        float totalPrice= 0;
-        float addedPrice = 0;
-        int quantityToSell= 0;
-        for(Product product : inventory.getProducts()){
-            if(product.getName().equals(txtProductToSell.getText())){
+    }//GEN-LAST:event_btnReturnActionPerformed
 
-                quantityToSell = (int) spinQuantity.getValue();
-                int OldQuantity = product.getQuantity();
-                addedPrice = product.sell(quantityToSell);
-                    if(addedPrice==-1F){
-                        JOptionPane.showMessageDialog(rootPane,"Producto no Vendido");
-                    }
-                    else{
-                        found = true;
-                        totalPrice = totalPrice + addedPrice;
-                        productsToSell.add(product);
-                        int newQuantity = product.getQuantity();
-                        quan = product.getQuantity();                       
-                        txtQuantityValue.setText(Integer.toString(quan));
-                        MongoManager.updateQuantity(product.getName(),newQuantity);    
-                    }
-                        
-            }
-        }
-        Date date = new Date();
-        String id = "";
-        SalesRegistry registry = new SalesRegistry(txtName.getText(), date, id, productsToSell,totalPrice);
-        registry.generateId();
-        String registryString = gson.toJson(registry);
-        FileManager.writeFile("RegistroDeVentas.json", registryString);
-        if(found==true){
-            JOptionPane.showMessageDialog(rootPane,"Cantidad vendida registrada");
-            registryWindow.setVisible(true);
-            SaleRegistry.txtGetName.setText(txtName.getText());
-            SaleRegistry.txtGetProduct.setText(txtProductToSell.getText());
-            SaleRegistry.txtGetQuantity.setText(Integer.toString(quantityToSell));
-            this.setVisible(false);
-            
-            
-        }else{
-            JOptionPane.showMessageDialog(rootPane,"Cantidad no registrada"); 
-        }
-    }//GEN-LAST:event_SellButtonActionPerformed
+    private void btnSellActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSellActionPerformed
+        
+    }//GEN-LAST:event_btnSellActionPerformed
 
     /**
      * @param args the command line arguments
@@ -287,10 +235,10 @@ public class SellProduct extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton RetturnButton;
-    private javax.swing.JButton SellButton;
+    public javax.swing.JButton btnExit;
+    public javax.swing.JButton btnReturn;
+    public javax.swing.JButton btnSell;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -298,9 +246,9 @@ public class SellProduct extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JSpinner spinQuantity;
-    private javax.swing.JTextField txtName;
-    private javax.swing.JTextField txtProductToSell;
-    private javax.swing.JLabel txtQuantityValue;
+    public javax.swing.JSpinner spinQuantity;
+    public javax.swing.JTextField txtName;
+    public javax.swing.JTextField txtProductToSell;
+    public javax.swing.JLabel txtQuantityValue;
     // End of variables declaration//GEN-END:variables
 }

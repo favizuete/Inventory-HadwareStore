@@ -99,7 +99,7 @@ public class MongoManager {
             System.out.println("Find Error..");
         }
     }
-    public static void delete(String name){
+    public static boolean delete(String name){
              try {
             MongoClientURI uri = new MongoClientURI(
             "mongodb+srv://dbChris:inventory123@proyect1.jfdts.mongodb.net/Proyect1?retryWrites=true&w=majority"); 
@@ -109,10 +109,11 @@ public class MongoManager {
 
             collection.deleteOne(Filters.gte("name",name));
             mongoClient.close();
-            
+            return true;
         }
         catch (Exception e){
-               System.out.println("No funciono el delete");  
+               System.out.println("No funciono el delete"); 
+               return false;
         }
     }
     public static void updateName(String nameToChange,String nameToUpdate){

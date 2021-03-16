@@ -145,19 +145,15 @@ public class DeleteProduct extends javax.swing.JFrame {
     }//GEN-LAST:event_txtDeleteActionPerformed
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_btnDeleteActionPerformed
 
     private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
-        // TODO add your handling code here:
-         dispose();
+
     }//GEN-LAST:event_btnExitActionPerformed
 
     private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
-        // TODO add your handling code here:
-        MainMenu menu = new MainMenu();
-        menu.setVisible(true);
-        this.setVisible(false);
+
     }//GEN-LAST:event_btnReturnActionPerformed
 
     /**
@@ -196,12 +192,12 @@ public class DeleteProduct extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnDelete;
-    private javax.swing.JButton btnExit;
-    private javax.swing.JButton btnReturn;
+    public javax.swing.JButton btnDelete;
+    public javax.swing.JButton btnExit;
+    public javax.swing.JButton btnReturn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField txtDelete;
+    public javax.swing.JTextField txtDelete;
     // End of variables declaration//GEN-END:variables
 }

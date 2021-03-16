@@ -28,3 +28,4 @@
 {"customer":"Chris","date":"Mar 3, 2021, 8:08:29 PM","id":"[C, h]13","selledProducts":[{"quality":"buena","id":0,"name":"Pala","brand":"APM","quantity":89,"price":2.0,"category":"Herramienta"}],"profitInDollars":184.0}
 {"customer":"Chris","date":"Mar 3, 2021, 8:09:18 PM","id":"[C, h]13","selledProducts":[{"quality":"buena","id":0,"name":"Pala","brand":"APM","quantity":69,"price":2.0,"category":"Herramienta"}],"profitInDollars":178.0}
 {"customer":"Chris","date":"Mar 3, 2021, 8:12:16 PM","id":"[C, h]13","selledProducts":[{"quality":"buena","id":0,"name":"Pala","brand":"APM","quantity":66,"price":2.0,"category":"Herramienta"}],"profitInDollars":138.0}
+{"customer":"Chris","date":"Mar 15, 2021, 8:27:02 PM","id":"[C, h]115","selledProducts":[{"quality":"Alta","id":0,"name":"Pala","brand":"Stihl","quantity":353,"price":2.0,"category":"Herramienta"}],"profitInDollars":1359.0}
