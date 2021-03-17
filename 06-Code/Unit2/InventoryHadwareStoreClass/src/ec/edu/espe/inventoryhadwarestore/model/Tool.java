@@ -17,7 +17,10 @@ public class Tool extends Product{
 
     public Tool(int id, String name, String brand, int quantity, float price, String category,String quality) {
         super(id, name, brand, quantity, price, category);
-        this.quality = quality;
+        this.quality = quality;       
+    }    
+    public Tool(int id, String name, String brand, int quantity, float price, String category) {
+        super(id, name, brand, quantity, price, category);
     }
     @Override
     public void add(int quantityToAdd){
@@ -48,8 +51,7 @@ public class Tool extends Product{
             }
             else{
                 System.out.println("Ninguna calidad reconocida");
-            }
-            
+            }            
             setQuantity(totalquantity);
             return totalPrice;
         }
@@ -58,26 +60,13 @@ public class Tool extends Product{
 
     @Override
     public String toString() {
-        return super.toString(); //To change body of generated methods, choose Tools | Templates.
+        return super.toString(); 
     }
 
-    public Tool(int id, String name, String brand, int quantity, float price, String category) {
-        super(id, name, brand, quantity, price, category);
-    }
-
-
-
-
-    /**
-     * @return the quality
-     */
     public String getQuality() {
         return quality;
     }
 
-    /**
-     * @param quality the quality to set
-     */
     public void setQuality(String quality) {
         this.quality = quality;
     }

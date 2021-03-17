@@ -34,8 +34,7 @@ public class ElectricTool extends Product{
         int totalquantity = quantity - quantityToSell;
         if(totalquantity<0){
             System.out.println("No hay stock suficiente para la cantidad solicitada");
-            return -1F;
- 
+            return -1F; 
         }
         else{
             float price = getPrice();

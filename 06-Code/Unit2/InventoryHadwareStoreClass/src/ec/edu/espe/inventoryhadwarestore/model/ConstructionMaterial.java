@@ -57,7 +57,7 @@ public class ConstructionMaterial extends Product{
 
     @Override
     public String toString() {
-        return super.toString(); //To change body of generated methods, choose Tools | Templates.
+        return super.toString(); 
     }
     
     

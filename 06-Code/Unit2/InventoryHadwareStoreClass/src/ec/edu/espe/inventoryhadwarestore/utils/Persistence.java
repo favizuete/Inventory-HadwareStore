@@ -10,9 +10,9 @@ package ec.edu.espe.inventoryhadwarestore.utils;
  * @author Christopher Yépez ESPE-DCCO
  */
 interface Persistence {
-    public void save();
-    public void find();
-    public void delete();
-    public void update();
+    public void save(String fileName, String data);
+    public void find(String fileName, String dataToFind);
+    public boolean delete(String fileNAme, String dataToDelete);
+    public boolean update(String fileName, String dataToFind, String dataToUpdate);
     
 }

@@ -66,58 +66,32 @@ public class SalesRegistry {
         this.selledProducts = selledProducts;
     }
 
-    /**
-     * @return the customer
-     */
     public String getCustomer() {
         return customer;
     }
 
-    /**
-     * @param customer the customer to set
-     */
     public void setCustomer(String customer) {
         this.customer = customer;
     }
 
-    /**
-     * @return the date
-     */
+
     public Date getDate() {
         return date;
     }
 
-    /**
-     * @param date the date to set
-     */
     public void setDate(Date date) {
         this.date = date;
     }
-
-    /**
-     * @return the id
-     */
     public String getId() {
         return id;
     }
-
-    /**
-     * @param id the id to set
-     */
     public void setId(String id) {
         this.id = id;
     }
 
-    /**
-     * @return the TotalSales
-     */
     public static int getTotalSales() {
         return TotalSales;
     }
-
-    /**
-     * @param aStaticTotalSales the TotalSales to set
-     */
     public static void setTotalSales(int aStaticTotalSales) {
         TotalSales = aStaticTotalSales;
     }

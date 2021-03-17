@@ -47,7 +47,7 @@ public class SellProductController implements ActionListener, MouseListener{
         if(e.getSource()==sell.btnSell){
         ArrayList<Product> productsToSell = new ArrayList<>();
         Gson gson = new Gson();
-        inventory.readProductsFromMongoDB();
+        inventory.readProducts();
         Boolean found = false;
         int quan=0;
         float totalPrice= 0;
@@ -88,6 +88,7 @@ public class SellProductController implements ActionListener, MouseListener{
             sale.txtGetName.setText(sell.txtName.getText());
             sale.txtGetProduct.setText(sell.txtProductToSell.getText());
             sale.txtGetQuantity.setText(Integer.toString(quantityToSell));
+            sale.txtTotalPrice.setText(Float.toString(totalPrice));
             this.sell.setVisible(false);
             
             

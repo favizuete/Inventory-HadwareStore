@@ -41,7 +41,7 @@ public class EnterQuantityController implements ActionListener, MouseListener{
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==quan.btnRegistry){
         Gson gson = new Gson();
-        inventory.readProductsFromMongoDB();
+        inventory.readProducts();
         Boolean found = false;
         int quant=0;
         for(Product product : inventory.getProducts()){

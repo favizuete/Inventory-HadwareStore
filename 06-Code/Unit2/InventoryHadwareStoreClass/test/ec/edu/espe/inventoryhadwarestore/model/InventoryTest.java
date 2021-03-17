@@ -127,7 +127,7 @@ public class InventoryTest {
     @Test
     public void testReadFromMongoDb(){
         Inventory inventory = new Inventory();        
-        inventory.readProductsFromMongoDB();        
+        inventory.readProducts();        
     }
     
 }

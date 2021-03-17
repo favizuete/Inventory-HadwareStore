@@ -42,43 +42,7 @@ public class Inventory {
         return "Stock { products=" + products + "}";
     }
 
-    public void login(Admin admin) {
-        Scanner reader = new Scanner(System.in);
-        System.out.println("Ingrese el usuario");
-        String user = reader.nextLine();
-        if (user.equals(admin.getUser())) {
-            System.out.println("Ingrese la contraseña");
-            String password = reader.nextLine();
-            while (!password.equals(admin.getPassword())) {
-                System.out.println("Contraseña incorrecta, ingrese de nuevo:");
-                password = reader.nextLine();
-            }
-        } else {
-            System.out.println("Usuario incorrecto, ingrese más tarde..!!");
-            System.exit(0);
-        }
-    }
-
-    public void readProducts() {
-
-        Gson gson = new Gson();
-        ArrayList<Product> productList = new ArrayList<>();
-        try {
-            FileReader freader = new FileReader("RegistroProductos.json");
-            BufferedReader breader = new BufferedReader(freader);
-            String product = breader.readLine();
-            do {                            
-                Tool products = gson.fromJson(product,Tool.class);                
-                productList.addAll(Arrays.asList(products));
-                String productx = breader.readLine();
-                product = productx;
-            } while (product != null);
-            setProducts(productList);
-        } catch (Exception exception) {
-            System.out.println("No se leyó la lista de productos..");
-        }
-    }
-    public void readProductsFromMongoDB(){
+    public void readProducts(){
         Gson gson = new Gson();
         MongoClientURI uri = new MongoClientURI(
         "mongodb+srv://dbChris:inventory123@proyect1.jfdts.mongodb.net/Proyect1?retryWrites=true&w=majority");   
@@ -107,23 +71,14 @@ public class Inventory {
     }
 
     public void addProduct(Product product) throws UnknownHostException {
-        Gson gson = new Gson();
         getProducts().add(product);
         MongoManager.save(product);
-        gson.toJson(product);
-        FileManager.writeFile("RegistroProductos.json", gson.toJson(product));
     }
 
-    /**
-     * @return the products
-     */
     public ArrayList<Product> getProducts() {
         return products;
     }
-
-    /**
-     * @param products the products to set
-     */
+    
     public void setProducts(ArrayList<Product> products) {
         this.products = products;
     }

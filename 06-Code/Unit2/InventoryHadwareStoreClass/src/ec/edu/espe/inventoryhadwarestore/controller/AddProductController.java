@@ -49,7 +49,7 @@ public class AddProductController implements ActionListener, MouseListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==add.btnRegistry){
-        inventory.readProductsFromMongoDB();
+        inventory.readProducts();
         if(add.listCategory27.getSelectedIndex()==0){
            String id = add.txtId.getText();
            int id1 = Integer.parseInt(id);

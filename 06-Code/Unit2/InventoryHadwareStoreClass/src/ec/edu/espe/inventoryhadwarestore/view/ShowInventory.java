@@ -30,7 +30,7 @@ public class ShowInventory extends javax.swing.JFrame {
     }
     public void  generateTable(){
         Inventory inventory = new Inventory();
-        inventory.readProductsFromMongoDB();
+        inventory.readProducts();
         ArrayList<Product> productlist = new ArrayList<>();
         productlist = inventory.getProducts();
         System.out.println(productlist.toString());
