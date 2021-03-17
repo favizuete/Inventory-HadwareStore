@@ -109,28 +109,7 @@ public class Inventory {
     public void addProduct(Product product) throws UnknownHostException {
         Gson gson = new Gson();
         getProducts().add(product);
-        System.out.println("Product-->" + product);
-
-        String name = product.getName();
-        String category = product.getCategory();
-        int id = product.getId();
-        float price = product.getPrice();
-        String brand = product.getBrand();
-        int quantity = product.getQuantity();
-        if("Herramienta".equals(product.getCategory())){
-            Tool tool = (Tool) product;
-            String quality = tool.getQuality();
-            MongoManager.saveTool(id, name, brand, quantity, price, category, quality);
-        }else if("Material".equals(product.getCategory())){
-            ConstructionMaterial material = (ConstructionMaterial) product;
-            float weight = material.getWeight();
-            MongoManager.saveMaterial(id, name, brand, quantity, price, category, weight);
-        }else if("Herramienta electrica".equals(product.getCategory())){
-            ElectricTool ETool = (ElectricTool) product;
-            String quality = ETool.getQuality();
-            String ESource = ETool.getEnergySource();
-            MongoManager.saveElectricTool(id, name, brand, quantity, price, category, quality, ESource);
-        }
+        MongoManager.save(product);
         gson.toJson(product);
         FileManager.writeFile("RegistroProductos.json", gson.toJson(product));
     }

@@ -41,3 +41,5 @@
 {"quality":"Alta","id":5,"name":"Pala","brand":"Stihl","quantity":440,"price":2.0,"category":"Herramienta"}
 {"weight":46.0,"id":4,"name":"Arena","brand":"Evolution","quantity":500,"price":3.0,"category":"Material"}
 {"weight":100.0,"id":10,"name":"Cemento","brand":"Fv","quantity":19,"price":2.0,"category":"Material"}
+{"weight":32.0,"id":1,"name":"Rocas","brand":"De Walt","quantity":200,"price":2.0,"category":"Material"}
+{"quality":"Alta","id":11,"name":"Hacha","brand":"Bosch","quantity":1500,"price":8.0,"category":"Herramienta"}

@@ -86,9 +86,7 @@ public abstract class Product {
     public void setCategory(String category) {
         this.category = category;
     }
-
-
-    
+  
     @Override
     public String toString() {
         return "Product{" + "id=" + id + ", name=" + name + ", brand=" + brand + ", quantity=" + quantity + ", price=" + price + ", category=" + category + '}';

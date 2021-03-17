@@ -26,15 +26,17 @@ public class SalesRegistry {
     private ArrayList<Product> selledProducts;
     private float profitInDollars;
 
-    @Override
-    public String toString() {
-        return "SalesRegistry{" + "customer=" + customer + ", date=" + date + ", id=" + id + ", selledProducts=" + selledProducts + ", profitInDollars=" + profitInDollars + '}';
+    public SalesRegistry() {
     }
 
-
-    
-    
-
+    public SalesRegistry(String customer, Date date, String id, ArrayList<Product> selledProducts, float profitInDollars) {
+        this.customer = customer;
+        this.date = date;
+        this.id = id;
+        this.selledProducts = selledProducts;
+        this.profitInDollars = profitInDollars;
+    }
+  
     public void generateId() {
         String customer = getCustomer();
         char[] charCustomer = new char[2];
@@ -49,17 +51,11 @@ public class SalesRegistry {
         setId(finalId);
     }
 
-    public SalesRegistry() {
-    }
 
-    public SalesRegistry(String customer, Date date, String id, ArrayList<Product> selledProducts, float profitInDollars) {
-        this.customer = customer;
-        this.date = date;
-        this.id = id;
-        this.selledProducts = selledProducts;
-        this.profitInDollars = profitInDollars;
+    @Override
+    public String toString() {
+        return "SalesRegistry{" + "customer=" + customer + ", date=" + date + ", id=" + id + ", selledProducts=" + selledProducts + ", profitInDollars=" + profitInDollars + '}';
     }
-
 
 
     public ArrayList<Product> getSelledProducts() {

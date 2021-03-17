@@ -22,13 +22,7 @@ public class Admin {
         this.password = password;
         this.user = user;
     }
-
-    @Override
-    public String toString() {
-        return "Admin{" + "name=" + name + ", password=" + password + ", user=" + user + '}';
-    }
-    
-    
+   
     /**
      * @return the name
      */
