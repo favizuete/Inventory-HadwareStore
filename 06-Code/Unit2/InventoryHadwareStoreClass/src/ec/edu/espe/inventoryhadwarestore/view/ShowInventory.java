@@ -5,6 +5,7 @@
  */
 package ec.edu.espe.inventoryhadwarestore.view;
 
+import ec.edu.espe.inventoryhadwarestore.controller.InventoryController;
 import ec.edu.espe.inventoryhadwarestore.model.Inventory;
 import ec.edu.espe.inventoryhadwarestore.model.Product;
 import java.util.ArrayList;
@@ -29,10 +30,10 @@ public class ShowInventory extends javax.swing.JFrame {
         model.addColumn("category");
     }
     public void  generateTable(){
-        Inventory inventory = new Inventory();
-        inventory.readProducts();
+        InventoryController inventoryController = new InventoryController();
+        inventoryController.readProducts();
         ArrayList<Product> productlist = new ArrayList<>();
-        productlist = inventory.getProducts();
+        productlist = inventoryController.getInventory().getProducts();
         System.out.println(productlist.toString());
         int i=0;
         Vector<?> rowData = null;

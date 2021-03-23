@@ -23,11 +23,11 @@ import javax.swing.JOptionPane;
  */
 public class EnterQuantityController implements ActionListener, MouseListener{
     EnterQuantity quan;
-    Inventory inventory;
+    InventoryController inventoryController;
 
-    public EnterQuantityController(EnterQuantity quan, Inventory inventory) {
+    public EnterQuantityController(EnterQuantity quan, InventoryController inventoryController) {
         this.quan = quan;
-        this.inventory = inventory;
+        this.inventoryController = inventoryController;
         this.quan.setLocationRelativeTo(null);
         this.quan.setVisible(true);
         this.quan.btnExit.addActionListener(this);
@@ -41,7 +41,8 @@ public class EnterQuantityController implements ActionListener, MouseListener{
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==quan.btnRegistry){
         Gson gson = new Gson();
-        inventory.readProducts();
+        inventoryController.readProducts();
+        Inventory inventory = inventoryController.getInventory();
         Boolean found = false;
         int quant=0;
         for(Product product : inventory.getProducts()){
@@ -73,7 +74,7 @@ public class EnterQuantityController implements ActionListener, MouseListener{
         }
         if(e.getSource()==quan.btnReload){
             EnterQuantity enterquan = new EnterQuantity();
-            EnterQuantityController quanController = new EnterQuantityController(enterquan,inventory);
+            EnterQuantityController quanController = new EnterQuantityController(enterquan,inventoryController);
             this.quan.dispose();
 
         }

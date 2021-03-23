@@ -50,7 +50,8 @@ public class FileManager implements Persistence{
         }
         return true;
     }  
-    public String find(String fileName, String dataToFind,String finder){
+  @Override
+   public String find(String fileName, String dataToFind,String finder){
         //TODO finding dataToFind in file fileName
         FileReader readFile;
         BufferedReader read;
@@ -117,6 +118,7 @@ public class FileManager implements Persistence{
         }
     }
     
+  @Override
     public boolean update(String fileName,String dataToUpdate, String dataToFind){
         //TODO update Information
         
@@ -128,6 +130,7 @@ public class FileManager implements Persistence{
         return update;
     }
     
+  @Override
     public  boolean delete(String fileNAme, String dataToDelete){
         //TODO delete information
         

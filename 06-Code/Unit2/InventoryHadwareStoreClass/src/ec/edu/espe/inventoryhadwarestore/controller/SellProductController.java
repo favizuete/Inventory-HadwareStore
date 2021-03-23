@@ -28,11 +28,11 @@ import javax.swing.JOptionPane;
  */
 public class SellProductController implements ActionListener, MouseListener{
     SellProduct sell;
-    Inventory inventory;
+    InventoryController inventoryController;
 
-    public SellProductController(SellProduct sell, Inventory inventory) {
+    public SellProductController(SellProduct sell, InventoryController inventoryController) {
         this.sell = sell;
-        this.inventory = inventory;
+        this.inventoryController = inventoryController;
         this.sell.setLocationRelativeTo(null);
         this.sell.setVisible(true);
         this.sell.btnExit.addActionListener(this);
@@ -47,15 +47,14 @@ public class SellProductController implements ActionListener, MouseListener{
         if(e.getSource()==sell.btnSell){
         ArrayList<Product> productsToSell = new ArrayList<>();
         Gson gson = new Gson();
-        inventory.readProducts();
+        inventoryController.readProducts();
         Boolean found = false;
         int quan=0;
         float totalPrice= 0;
         float addedPrice = 0;
         int quantityToSell= 0;
-        for(Product product : inventory.getProducts()){
+        for(Product product : inventoryController.getInventory().getProducts()){
             if(product.getName().equals(sell.txtProductToSell.getText())){
-
                 quantityToSell = (int) sell.spinQuantity.getValue();
                 int OldQuantity = product.getQuantity();
                 addedPrice = product.sell(quantityToSell);

@@ -33,8 +33,8 @@ public class SaleRegistryController implements ActionListener, MouseListener{
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==sale.btnSellOther){
             SellProduct sell = new SellProduct();
-            Inventory inventory = new Inventory();
-            SellProductController sellController = new SellProductController(sell,inventory);
+            InventoryController inventoryController = new InventoryController();
+            SellProductController sellController = new SellProductController(sell,inventoryController);
             this.sale.dispose();
         }
         if(e.getSource()==sale.btnReturn){

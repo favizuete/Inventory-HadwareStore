@@ -6,6 +6,7 @@
 package ec.edu.espe.inventoryhadwarestore.view;
 
 import com.google.gson.Gson;
+import ec.edu.espe.inventoryhadwarestore.controller.InventoryController;
 import ec.edu.espe.inventoryhadwarestore.model.Inventory;
 import ec.edu.espe.inventoryhadwarestore.model.Product;
 import espe.edu.ec.filemanagerlibrary.FileManager;
@@ -201,9 +202,9 @@ public class ModifyProduct extends javax.swing.JFrame {
     }//GEN-LAST:event_txtProductModActionPerformed
 
     private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
-        Inventory inventory = new Inventory();
-        inventory.readProducts();
-        ArrayList<Product> products = inventory.getProducts();
+        InventoryController inventoryController = new InventoryController();
+        inventoryController.readProducts();
+        ArrayList<Product> products = inventoryController.getInventory().getProducts();
                     System.out.println("Ingrese que producto desea modificar");
                     String searchName = txtProductMod.getText();
                     boolean found = false;

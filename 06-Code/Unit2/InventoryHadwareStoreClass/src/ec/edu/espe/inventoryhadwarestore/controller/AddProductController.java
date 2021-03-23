@@ -28,12 +28,12 @@ import javax.swing.JOptionPane;
  */
 public class AddProductController implements ActionListener, MouseListener{
     AddProduct add;
-    Inventory inventory;
+    InventoryController inventoryController;
 
 
-    public AddProductController(AddProduct add,Inventory inventory) {
+    public AddProductController(AddProduct add,InventoryController inventoryController) {
         this.add = add;
-        this.inventory = inventory;
+        this.inventoryController = inventoryController;
         this.add.setLocationRelativeTo(null);
         this.add.setVisible(true);
         this.add.btnExit.addActionListener(this);
@@ -49,7 +49,7 @@ public class AddProductController implements ActionListener, MouseListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==add.btnRegistry){
-        inventory.readProducts();
+        inventoryController.readProducts();
         if(add.listCategory27.getSelectedIndex()==0){
            String id = add.txtId.getText();
            int id1 = Integer.parseInt(id);
@@ -62,7 +62,7 @@ public class AddProductController implements ActionListener, MouseListener{
            String category = add.listCategory27.getSelectedValue();
            Product tool =new  Tool(id1,name,brand,quantity,price,category,quality);
             try {
-                inventory.addProduct(tool);
+                inventoryController.addProduct(tool);
                 add.btnOther.setVisible(true);
                 add.btnRegistry.setVisible(false);
             } catch (UnknownHostException ex) {
@@ -82,7 +82,7 @@ public class AddProductController implements ActionListener, MouseListener{
             String category = "Herramienta electrica";           
             Product eTool = new ElectricTool(id1,name,brand,quantity,price,category,quality,eSource);
             try {
-                inventory.addProduct(eTool);
+                inventoryController.addProduct(eTool);
                 add.btnOther.setVisible(true);
                 add.btnRegistry.setVisible(false);
             } catch (UnknownHostException ex) {
@@ -101,7 +101,7 @@ public class AddProductController implements ActionListener, MouseListener{
             float weight = (float) weight1;
             Product material = new ConstructionMaterial(id1,name,brand,quantity,price,category,weight);
             try {
-                inventory.addProduct(material);
+                inventoryController.addProduct(material);
                 add.btnOther.setVisible(true);
                 add.btnRegistry.setVisible(false);
             } catch (UnknownHostException ex) {
@@ -133,7 +133,7 @@ public class AddProductController implements ActionListener, MouseListener{
         }
         if(e.getSource()==add.btnOther){
             AddProduct add = new AddProduct();
-            AddProductController addController = new AddProductController(add,inventory);
+            AddProductController addController = new AddProductController(add,inventoryController);
             this.add.dispose();
         }
         if(e.getSource()==add.btnReturn){

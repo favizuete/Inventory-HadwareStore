@@ -22,11 +22,11 @@ import javax.swing.JOptionPane;
  */
 public class DeleteProductController implements ActionListener, MouseListener{
     DeleteProduct delete;
-    Inventory inventory;
+    InventoryController inventoryController;
 
-    public DeleteProductController(DeleteProduct delete, Inventory inventory) {
+    public DeleteProductController(DeleteProduct delete, InventoryController inventoryController) {
         this.delete = delete;
-        this.inventory = inventory;
+        this.inventoryController = inventoryController;
         this.delete.setLocationRelativeTo(null);
         this.delete.setVisible(true);
         this.delete.btnExit.addActionListener(this);

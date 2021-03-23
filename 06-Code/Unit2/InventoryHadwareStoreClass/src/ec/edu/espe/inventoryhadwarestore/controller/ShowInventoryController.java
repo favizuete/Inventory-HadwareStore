@@ -19,11 +19,11 @@ import java.awt.event.MouseListener;
  */
 public class ShowInventoryController implements ActionListener, MouseListener{
     ShowInventory show;
-    Inventory inventory;
+    InventoryController inventoryController;
 
-    public ShowInventoryController(ShowInventory show, Inventory inventory) {
+    public ShowInventoryController(ShowInventory show, InventoryController inventoryController) {
         this.show = show;
-        this.inventory = inventory;
+        this.inventoryController = inventoryController;
         this.show.setLocationRelativeTo(null);
         this.show.setVisible(true);
         this.show.btnExit.addActionListener(this);

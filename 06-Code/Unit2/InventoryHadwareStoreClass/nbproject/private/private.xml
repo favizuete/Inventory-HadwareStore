@@ -3,7 +3,6 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
             <file>file:/C:/Users/CHRISTOPHER/Desktop/CHRIS/DEBERES/SEMESTRE%20II%202020-2021/POO-3248/Inventory-HadwareStore/06-Code/Unit2/InventoryHadwareStoreClass/src/ec/edu/espe/inventoryhadwarestore/model/ElectricTool.java</file>
             <file>file:/C:/Users/CHRISTOPHER/Desktop/CHRIS/DEBERES/SEMESTRE%20II%202020-2021/POO-3248/Inventory-HadwareStore/06-Code/Unit2/InventoryHadwareStoreClass/src/ec/edu/espe/inventoryhadwarestore/view/MainMenu.java</file>
             <file>file:/C:/Users/CHRISTOPHER/Desktop/CHRIS/DEBERES/SEMESTRE%20II%202020-2021/POO-3248/Inventory-HadwareStore/06-Code/Unit2/InventoryHadwareStoreClass/src/ec/edu/espe/inventoryhadwarestore/model/Tool.java</file>
@@ -52,16 +51,6 @@
             <file>file:/C:/Users/CHRISTOPHER/Desktop/CHRIS/DEBERES/SEMESTRE%20II%202020-2021/POO-3248/Inventory-HadwareStore/06-Code/Unit2/InventoryHadwareStoreClass/src/ec/edu/espe/inventoryhadwarestore/controller/DeleteProductController.java</file>
             <file>file:/C:/Users/CHRISTOPHER/Desktop/CHRIS/DEBERES/SEMESTRE%20II%202020-2021/POO-3248/Inventory-HadwareStore/06-Code/Unit2/InventoryHadwareStoreClass/test/ec/edu/espe/inventoryhadwarestore/model/SalesRegistryTest.java</file>
             <file>file:/C:/Users/CHRISTOPHER/Desktop/CHRIS/DEBERES/SEMESTRE%20II%202020-2021/POO-3248/Inventory-HadwareStore/06-Code/Unit2/InventoryHadwareStoreClass/src/ec/edu/espe/inventoryhadwarestore/controller/SellProductController.java</file>
-=======
-<<<<<<< HEAD
-            <file>file:/C:/Users/f10_p/Desktop/Tito%20U/noviembre-abril2021/POO/Hello%20World/GitHub/CodeMaster/InventoryHardwareStore/06-Code/Unit2/InventoryHadwareStoreClass/src/InventorySimulator/InventorySystem.java</file>
-            <file>file:/C:/Users/f10_p/Desktop/Tito%20U/noviembre-abril2021/POO/Hello%20World/GitHub/CodeMaster/InventoryHardwareStore/06-Code/Unit2/InventoryHadwareStoreClass/test/ec/edu/espe/inventoryhadwarestore/model/InventoryTest.java</file>
-            <file>file:/C:/Users/f10_p/Desktop/Tito%20U/noviembre-abril2021/POO/Hello%20World/GitHub/CodeMaster/InventoryHardwareStore/06-Code/Unit2/InventoryHadwareStoreClass/src/ec/edu/espe/inventoryhadwarestore/view/AddProduct.java</file>
-=======
-            <file>file:/C:/Users/HP/OneDrive/Escritorio/Projec%206/InventoryHardwareStore/06-Code/Unit2/InventoryHadwareStoreClass/src/InventorySimulator/InventorySystem.java</file>
-            <file>file:/C:/Users/HP/OneDrive/Escritorio/Projec%206/InventoryHardwareStore/06-Code/Unit2/InventoryHadwareStoreClass/test/ec/edu/espe/inventoryhadwarestore/model/InventoryTest.java</file>
->>>>>>> refs/remotes/origin/main
->>>>>>> a7f370d919e01987e72db6118bdc31554f6f32a9
         </group>
     </open-files>
 </project-private>

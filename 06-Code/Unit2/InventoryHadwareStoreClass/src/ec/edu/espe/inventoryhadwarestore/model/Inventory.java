@@ -43,43 +43,6 @@ public class Inventory {
         return "Stock { products=" + products + "}";
     }
 
-    public void readProducts(){
-        Gson gson = new Gson();
-        MongoClientURI uri = new MongoClientURI(
-        "mongodb+srv://dbChris:inventory123@proyect1.jfdts.mongodb.net/Proyect1?retryWrites=true&w=majority");   
-        MongoClient mongoClient = new MongoClient(uri);
-        MongoDatabase database = mongoClient.getDatabase("test");
-        MongoCollection<Document> collection = database.getCollection("Example");
-        ArrayList<Product> productlist = new ArrayList<>();
-        ArrayList<Document> productDList = new ArrayList<>();
-        productDList = collection.find().into(new ArrayList<>());
-        for (Document product : productDList) {
-            String category = (String) product.get("category");
-            String productString = product.toJson();
-            if("Herramienta".equals(category)){
-                Tool tool = gson.fromJson(productString, Tool.class);
-                productlist.add(tool);
-            }else if("Material".equals(category)){
-                ConstructionMaterial material = gson.fromJson(productString, ConstructionMaterial.class);
-                productlist.add(material);
-            }else if("Herramienta electrica".equals(category)){
-                ElectricTool Etool = gson.fromJson(productString, ElectricTool.class);
-                productlist.add(Etool);
-            }             
-        }
-        setProducts(productlist);
-        mongoClient.close();
-    }
-
-    public void addProduct(Product product) throws UnknownHostException {
-        Persistence persistence = new MongoManager();
-        Gson gson = new Gson();
-        getProducts().add(product);
-        String jsonProduct = gson.toJson(product);
-        System.out.println(jsonProduct);
-        boolean saved = persistence.save("Example",jsonProduct);
-    }
-
     public ArrayList<Product> getProducts() {
         return products;
     }

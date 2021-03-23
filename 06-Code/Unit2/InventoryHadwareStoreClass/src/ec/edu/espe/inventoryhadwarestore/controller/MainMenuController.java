@@ -39,16 +39,16 @@ public class MainMenuController implements ActionListener, MouseListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        Inventory inventory = new Inventory();
+        InventoryController inventoryController = new InventoryController();
         if(e.getSource()==menu.mniAdd){
             AddProduct add = new AddProduct();
-            AddProductController addController = new AddProductController(add,inventory);
+            AddProductController addController = new AddProductController(add,inventoryController);
             this.menu.dispose();
             
         }
         if(e.getSource()==menu.mniDelete){
             DeleteProduct delete = new DeleteProduct();
-            DeleteProductController deleteController = new DeleteProductController(delete,inventory);
+            DeleteProductController deleteController = new DeleteProductController(delete,inventoryController);
             this.menu.dispose();
         }
         if(e.getSource()==menu.mniModify){
@@ -56,17 +56,17 @@ public class MainMenuController implements ActionListener, MouseListener{
         }
         if(e.getSource()==menu.mniShow){
             ShowInventory show = new ShowInventory();
-            ShowInventoryController showController = new ShowInventoryController(show,inventory);
+            ShowInventoryController showController = new ShowInventoryController(show,inventoryController);
             this.menu.dispose();
         }
         if(e.getSource()==menu.mniAddQuantity){
             EnterQuantity enterquan = new EnterQuantity();
-            EnterQuantityController quanController = new EnterQuantityController(enterquan,inventory);
+            EnterQuantityController quanController = new EnterQuantityController(enterquan,inventoryController);
             this.menu.dispose();
         }
         if(e.getSource()==menu.mniSell){
             SellProduct sell = new SellProduct();
-            SellProductController sellController = new SellProductController(sell,inventory);
+            SellProductController sellController = new SellProductController(sell,inventoryController);
             this.menu.dispose();
         }
         
