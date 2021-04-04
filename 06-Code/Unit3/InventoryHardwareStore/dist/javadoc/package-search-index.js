@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"ec.edu.espe.inventoryhadwarestore.controller"},{"l":"ec.edu.espe.inventoryhadwarestore.model"},{"l":"ec.edu.espe.inventoryhadwarestore.utils"},{"l":"ec.edu.espe.inventoryhadwarestore.view"},{"l":"InventorySimulator"}];updateSearchResults();

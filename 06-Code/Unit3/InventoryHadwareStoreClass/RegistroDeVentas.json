@@ -1,0 +1,30 @@
+{"customer":"Fausto","date":"Feb 28, 2021, 11:39:15 PM","id":"[F, a]128","selledProducts":[{"id":553,"name":"Martillo","brand":"fv","quantity":198,"price":7.2,"category":"Herramienta"},{"id":778,"name":"Taladro","brand":"BOCH","quantity":118,"price":30.0,"category":"Herramienta El�ctrica"}]}
+{"customer":"Marco Hernandez","date":"Feb 28, 2021, 11:40:32 PM","id":"[M, a]228","selledProducts":[{"id":553,"name":"Martillo","brand":"fv","quantity":195,"price":7.2,"category":"Herramienta"}]}
+{"customer":"Juan","date":"Mar 1, 2021, 6:21:55 PM","id":"[J, u]11","selledProducts":[]}
+{"customer":"Marco","date":"Mar 1, 2021, 6:22:42 PM","id":"[M, a]21","selledProducts":[{"id":553,"name":"Martillo","brand":"fv","quantity":197,"price":7.2,"category":"Herramienta"}]}
+{"customer":"Mario","date":"Mar 1, 2021, 6:25:31 PM","id":"[M, a]11","selledProducts":[{"id":553,"name":"Martillo","brand":"fv","quantity":197,"price":7.2,"category":"Herramienta"}]}
+{"customer":"Vanessa","date":"Mar 2, 2021 6:10:16 PM","id":"[V, a]12","selledProducts":[]}
+{"customer":"Daysi","date":"Mar 2, 2021 7:24:05 PM","id":"[D, a]12","selledProducts":[]}
+{"customer":"Gloria","date":"Mar 2, 2021 7:34:59 PM","id":"[G, l]12","selledProducts":[]}
+{"customer":"Chris","date":"Mar 3, 2021, 9:00:23 AM","id":"[C, h]13","selledProducts":[],"profitInDollars":0.0}
+{"customer":"Chris","date":"Mar 3, 2021, 9:01:30 AM","id":"[C, h]13","selledProducts":[],"profitInDollars":0.0}
+{"customer":"chris","date":"Mar 3, 2021, 9:02:42 AM","id":"[c, h]13","selledProducts":[],"profitInDollars":0.0}
+{"customer":"chris","date":"Mar 3, 2021, 9:03:36 AM","id":"[c, h]13","selledProducts":[{"id":778,"name":"Taladro","brand":"BOCH","quantity":118,"price":30.0,"category":"Herramienta El�ctrica"},{"id":778,"name":"Taladro","brand":"BOCH","quantity":118,"price":30.0,"category":"Herramienta El�ctrica"}],"profitInDollars":7200.0}
+{"customer":"chris","date":"Mar 3, 2021, 9:03:42 AM","id":"[c, h]23","selledProducts":[{"id":778,"name":"Taladro","brand":"BOCH","quantity":118,"price":30.0,"category":"Herramienta El�ctrica"},{"id":778,"name":"Taladro","brand":"BOCH","quantity":118,"price":30.0,"category":"Herramienta El�ctrica"}],"profitInDollars":7200.0}
+{"customer":"chris","date":"Mar 3, 2021, 9:03:44 AM","id":"[c, h]33","selledProducts":[{"id":778,"name":"Taladro","brand":"BOCH","quantity":118,"price":30.0,"category":"Herramienta El�ctrica"},{"id":778,"name":"Taladro","brand":"BOCH","quantity":118,"price":30.0,"category":"Herramienta El�ctrica"}],"profitInDollars":7200.0}
+{"customer":"chris","date":"Mar 3, 2021, 9:03:50 AM","id":"[c, h]43","selledProducts":[{"id":778,"name":"Taladro","brand":"BOCH","quantity":68,"price":30.0,"category":"Herramienta El�ctrica"},{"id":778,"name":"Taladro","brand":"BOCH","quantity":68,"price":30.0,"category":"Herramienta El�ctrica"}],"profitInDollars":7200.0}
+{"customer":"Chris","date":"Mar 3, 2021, 6:50:41 PM","id":"[C, h]13","selledProducts":[{"quality":"buena","id":0,"name":"Pala","brand":"APM","quantity":50,"price":2.0,"category":"Herramienta"}],"profitInDollars":140.0}
+{"customer":"Chris","date":"Mar 3, 2021, 6:57:25 PM","id":"[C, h]13","selledProducts":[],"profitInDollars":0.0}
+{"customer":"Chris","date":"Mar 3, 2021, 6:58:26 PM","id":"[C, h]13","selledProducts":[{"quality":"buena","id":0,"name":"Pala","brand":"APM","quantity":48,"price":2.0,"category":"Herramienta"}],"profitInDollars":100.0}
+{"customer":"chris","date":"Mar 3, 2021, 7:06:03 PM","id":"[c, h]13","selledProducts":[{"quality":"buena","id":0,"name":"Pala","brand":"APM","quantity":48,"price":2.0,"category":"Herramienta"}],"profitInDollars":100.0}
+{"customer":"Chris","date":"Mar 3, 2021, 7:07:15 PM","id":"[C, h]13","selledProducts":[{"quality":"buena","id":0,"name":"Pala","brand":"APM","quantity":38,"price":2.0,"category":"Herramienta"}],"profitInDollars":96.0}
+{"customer":"Chris","date":"Mar 3, 2021, 7:07:25 PM","id":"[C, h]23","selledProducts":[{"quality":"buena","id":0,"name":"Pala","brand":"APM","quantity":28,"price":2.0,"category":"Herramienta"}],"profitInDollars":76.0}
+{"customer":"Chris","date":"Mar 3, 2021, 7:07:33 PM","id":"[C, h]33","selledProducts":[{"quality":"buena","id":0,"name":"Pala","brand":"APM","quantity":18,"price":2.0,"category":"Herramienta"}],"profitInDollars":56.0}
+{"customer":"Chris","date":"Mar 3, 2021, 7:08:26 PM","id":"[C, h]43","selledProducts":[{"quality":"buena","id":0,"name":"Pala","brand":"APM","quantity":0,"price":2.0,"category":"Herramienta"}],"profitInDollars":36.0}
+{"customer":"Chris","date":"Mar 3, 2021, 7:08:32 PM","id":"[C, h]53","selledProducts":[],"profitInDollars":0.0}
+{"customer":"CHRIS","date":"Mar 3, 2021, 7:40:02 PM","id":"[C, H]13","selledProducts":[{"quality":"buena","id":0,"name":"Pala","brand":"APM","quantity":97,"price":2.0,"category":"Herramienta"}],"profitInDollars":200.0}
+{"customer":"CHRIS","date":"Mar 3, 2021, 7:40:10 PM","id":"[C, H]23","selledProducts":[{"quality":"buena","id":0,"name":"Pala","brand":"APM","quantity":94,"price":2.0,"category":"Herramienta"}],"profitInDollars":194.0}
+{"customer":"Chris","date":"Mar 3, 2021, 8:06:16 PM","id":"[C, h]13","selledProducts":[{"quality":"buena","id":0,"name":"Pala","brand":"APM","quantity":92,"price":2.0,"category":"Herramienta"}],"profitInDollars":188.0}
+{"customer":"Chris","date":"Mar 3, 2021, 8:08:29 PM","id":"[C, h]13","selledProducts":[{"quality":"buena","id":0,"name":"Pala","brand":"APM","quantity":89,"price":2.0,"category":"Herramienta"}],"profitInDollars":184.0}
+{"customer":"Chris","date":"Mar 3, 2021, 8:09:18 PM","id":"[C, h]13","selledProducts":[{"quality":"buena","id":0,"name":"Pala","brand":"APM","quantity":69,"price":2.0,"category":"Herramienta"}],"profitInDollars":178.0}
+{"customer":"Chris","date":"Mar 3, 2021, 8:12:16 PM","id":"[C, h]13","selledProducts":[{"quality":"buena","id":0,"name":"Pala","brand":"APM","quantity":66,"price":2.0,"category":"Herramienta"}],"profitInDollars":138.0}
