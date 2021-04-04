@@ -60,8 +60,7 @@ public class MongoManagerTest {
     public void testFind() {
         System.out.println("find");
         String nameToFind = "";
-        MongoManager.find(nameToFind);
-        // TODO review the generated test code and remove the default call to fail.
+        
         fail("The test case is a prototype.");
     }
 
@@ -72,7 +71,7 @@ public class MongoManagerTest {
     public void testDelete() {
         System.out.println("delete");
         String name = "Martillo electrico";
-        MongoManager.delete(name);
+       
 
     }
 

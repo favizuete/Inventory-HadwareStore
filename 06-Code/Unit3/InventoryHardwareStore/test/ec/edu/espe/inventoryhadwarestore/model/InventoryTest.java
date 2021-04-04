@@ -66,7 +66,7 @@ public class InventoryTest {
         System.out.println("login");
         Admin admin = null;
         Inventory instance = new Inventory();
-
+        instance.login(admin);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
@@ -78,7 +78,7 @@ public class InventoryTest {
     public void testReadProducts() {
         System.out.println("readProducts");
         Inventory instance = new Inventory();
-        
+        instance.readProducts();
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
@@ -91,7 +91,7 @@ public class InventoryTest {
         System.out.println("addProduct");
         Product product = null;
         Inventory instance = new Inventory();
-        
+        instance.addProduct(product);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
@@ -127,7 +127,7 @@ public class InventoryTest {
     @Test
     public void testReadFromMongoDb(){
         Inventory inventory = new Inventory();        
-                
+        inventory.readProducts();        
     }
     
 }
