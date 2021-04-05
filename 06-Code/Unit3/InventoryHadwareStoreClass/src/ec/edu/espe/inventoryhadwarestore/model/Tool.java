@@ -22,42 +22,9 @@ public class Tool extends Product{
     public Tool(int id, String name, String brand, int quantity, float price, String category) {
         super(id, name, brand, quantity, price, category);
     }
-    @Override
-    public void add(int quantityToAdd){
-        int quantityx = getQuantity();
-        int totalquantity= quantityx + quantityToAdd;
-        setQuantity(totalquantity);
-       
-    }
-    @Override
-    public float sell(int quantityToSell){
-        
-        int quantity = getQuantity();
-        int totalquantity = quantity - quantityToSell;
 
-        if(totalquantity<0){
-            System.out.println("No hay stock suficiente para la cantidad solicitada");
-            return -1F;
- 
-        }
-        else{
-            float price = getPrice();
-            float totalPrice = price*quantity;
-            if("Alta".equals(getQuality())){
-                totalPrice = (float) (totalPrice*1.5F);
-            }
-            else if("Baja".equals(getQuality())){
-                totalPrice = (float) (totalPrice*0.8F);
-            }
-            else{
-                System.out.println("Ninguna calidad reconocida");
-            }            
-            setQuantity(totalquantity);
-            return totalPrice;
-        }
-        
-    }
 
+    
     @Override
     public String toString() {
         return super.toString(); 

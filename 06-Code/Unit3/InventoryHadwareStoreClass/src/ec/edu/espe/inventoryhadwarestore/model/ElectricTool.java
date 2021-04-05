@@ -21,45 +21,7 @@ public class ElectricTool extends Product{
         this.energySource = energySource;
     }
 
-    @Override
-    public void add(int quantityToAdd){
-        int quantity = getQuantity();
-        int totalquantity= quantity + quantityToAdd;
-        setQuantity(totalquantity);
-       
-    }
-    @Override
-    public float sell(int quantityToSell){
-        int quantity = getQuantity();
-        int totalquantity = quantity - quantityToSell;
-        if(totalquantity<0){
-            System.out.println("No hay stock suficiente para la cantidad solicitada");
-            return -1F; 
-        }
-        else{
-            float price = getPrice();
-            float totalPrice = price*quantity;
-            if("Alta".equals(getQuality())){
-                totalPrice = (float) (totalPrice*1.5F);
-            }
-            else if("Baja".equals(getQuality())){
-                totalPrice = (float) (totalPrice*0.8F);
-            }
-            else{
-                System.out.println("Ninguna calidad reconocida");
-            }
-            if("Inalámbrica".equals(getEnergySource())){
-                totalPrice = totalPrice + 5F;
-            }else if("Alambrica".equals(getEnergySource())){
-                totalPrice = totalPrice +1F;
-            }else{
-                System.out.println("Ningun tipo de corriente reconocido");
-            }
-            setQuantity(totalquantity);
-            return totalPrice;
-        }
-        
-    }
+
 
     @Override
     public String toString() {

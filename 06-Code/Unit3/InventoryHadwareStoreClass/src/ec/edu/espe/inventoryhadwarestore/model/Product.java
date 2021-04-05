@@ -31,14 +31,7 @@ public abstract class Product {
         this.price = price;
         this.category = category;
     }
-  
-    public abstract void add(int quantityToAdd);
-    public abstract float sell(int quantityToSell);
     
-    public void modify(){
-       
-    }
-
     public int getId() {
         return _id;
     }

@@ -108,42 +108,26 @@ public class MongoManager implements Persistence {
                System.out.println("No funciono el delete"); 
                return false;
         }
-    }
-    public void updateName(String nameToChange,String nameToUpdate){
-            try{
-            MongoClientURI uri = new MongoClientURI(
-            "mongodb+srv://dbChris:inventory123@proyect1.jfdts.mongodb.net/Proyect1?retryWrites=true&w=majority"); 
-            MongoClient mongoClient = new MongoClient(uri);
-            MongoDatabase database = mongoClient.getDatabase("test");
-            MongoCollection<Document> collection = database.getCollection("Example"); 
-            Document firstDocument;
-            firstDocument = collection.find().filter(Filters.eq("name", nameToChange)).first();           
-            firstDocument.replace("name",nameToUpdate);
-            collection.replaceOne(Filters.gte("name",nameToChange), firstDocument);
-            mongoClient.close();
-            }
-            catch(Exception e){
-                System.out.println("Update name ERROR");
-            }
-            
-    }
-    public static void updateBrand(String name,String newBrand){
+    }   
+    @Override
+    public boolean update(String table, String dataToUpdate, String finder) {
         try{
             MongoClientURI uri = new MongoClientURI(
             "mongodb+srv://dbChris:inventory123@proyect1.jfdts.mongodb.net/Proyect1?retryWrites=true&w=majority"); 
             MongoClient mongoClient = new MongoClient(uri);
             MongoDatabase database = mongoClient.getDatabase("test");
-            MongoCollection<Document> collection = database.getCollection("Example"); 
-            Document firstDocument;
-            firstDocument = collection.find().filter(Filters.eq("name", name)).first();           
-            firstDocument.replace("brand",newBrand);           
-            collection.replaceOne(Filters.gte("name",name), firstDocument);
-            mongoClient.close();
+            MongoCollection<Document> collection = database.getCollection("Example");
+            Document productRegistry;
+            productRegistry = collection.find().filter(Filters.eq("name",finder)).first();
+            Document updateRegistry;
+            updateRegistry = Document.parse(dataToUpdate);
+            collection.replaceOne(productRegistry, updateRegistry);
+            mongoClient.close();    
+            return true;
         }
         catch(Exception e){
-            System.out.println("Update brand error");
-        }
-
+            return false;
+        }                      
     }
      public static void updateQuantity(String name,int newQuantity){
         try{
@@ -162,12 +146,6 @@ public class MongoManager implements Persistence {
             System.out.println("Update Quantity error");
         }
 
-    }   
-
-    @Override
-    public boolean update(String table, String dataToUpdate, String finder) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
 
 }

@@ -10,6 +10,7 @@ import ec.edu.espe.inventoryhadwarestore.view.AddProduct;
 import ec.edu.espe.inventoryhadwarestore.view.DeleteProduct;
 import ec.edu.espe.inventoryhadwarestore.view.EnterQuantity;
 import ec.edu.espe.inventoryhadwarestore.view.MainMenu;
+import ec.edu.espe.inventoryhadwarestore.view.ModifyProduct;
 import ec.edu.espe.inventoryhadwarestore.view.SellProduct;
 import ec.edu.espe.inventoryhadwarestore.view.ShowInventory;
 import java.awt.event.ActionEvent;
@@ -52,7 +53,9 @@ public class MainMenuController implements ActionListener, MouseListener{
             this.menu.dispose();
         }
         if(e.getSource()==menu.mniModify){
-            JOptionPane.showMessageDialog(null,"Modificar en mantenimiento"); 
+            ModifyProduct modify = new ModifyProduct();
+            ModifyProductController modifyController = new ModifyProductController(modify,inventoryController);
+            this.menu.dispose();
         }
         if(e.getSource()==menu.mniShow){
             ShowInventory show = new ShowInventory();

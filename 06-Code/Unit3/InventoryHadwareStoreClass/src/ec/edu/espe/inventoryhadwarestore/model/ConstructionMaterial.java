@@ -19,49 +19,11 @@ public class ConstructionMaterial extends Product{
         this.weight = weight;
     }
 
-
-      @Override
-    public void add(int quantityToAdd){
-        int quantity = getQuantity();
-        int totalquantity= quantity + quantityToAdd;
-        setQuantity(totalquantity);
-       
-    }
-      @Override
-    public float sell(int quantityToSell){
-        int quantity = getQuantity();
-        int totalquantity = quantity - quantityToSell;
-        if(totalquantity<0){
-            System.out.println("No hay stock suficiente para la cantidad solicitada");
-            return -1F;
-        }
-        else{
-            float price = getPrice();
-            float totalPrice = price*quantity;
-            if(getWeight()>=100){
-                totalPrice = totalPrice + 5F;     
-                
-            }else if(getWeight()>50){
-                
-                totalPrice = totalPrice + 3F;
-                
-            }else if(getWeight()>10){
-            
-                totalPrice = totalPrice + 1F;
-            }            
-            setQuantity(totalquantity);
-            return totalPrice;
-        }
-        
-    }
-
     @Override
     public String toString() {
         return super.toString(); 
     }
-    
-    
-
+       
     public float getWeight() {
         return weight;
     }

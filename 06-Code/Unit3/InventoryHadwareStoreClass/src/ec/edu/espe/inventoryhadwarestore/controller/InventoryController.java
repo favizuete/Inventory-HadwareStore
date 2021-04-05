@@ -72,7 +72,14 @@ public class InventoryController {
         System.out.println(jsonProduct);
         boolean saved = persistence.save("Example",jsonProduct);   
     }
-        
+        public void updateProduct(Product product, String name){
+            Persistence persistence = new MongoManager();
+            Gson gson = new Gson();
+            String jsonProduct = gson.toJson(product);
+            System.out.println(jsonProduct);
+            boolean updated = persistence.update("Example", jsonProduct, name);
+        }
+
     public Inventory getInventory() {
         return inventory;
     }

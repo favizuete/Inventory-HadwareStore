@@ -51,7 +51,18 @@ public class EnterQuantityController implements ActionListener, MouseListener{
                 int quantityToAdd = (int) quan.spnQuantityOfProduct.getValue();
                 int oldQuantity = product.getQuantity();
                 String name = product.getName();
-                product.add(quantityToAdd);
+                if ("Material".equals(product.getCategory())){
+                    ProductController productController = new MaterialController(product);
+                    productController.addQuantity(quantityToAdd);
+                }
+                if("Herramienta".equals(product.getCategory())){
+                    ProductController productController = new ToolController(product);
+                    productController.addQuantity(quantityToAdd);
+                    
+                }if("Herramienta electrica".equals(product.getCategory())){
+                    ProductController productController = new ElectricToolController(product);
+                    productController.addQuantity(quantityToAdd);
+                }
                 quant = product.getQuantity();
                 gson.toJson(product);
                 MongoManager.updateQuantity(name, quant);

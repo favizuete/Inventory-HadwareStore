@@ -45,6 +45,7 @@ public class SellProductController implements ActionListener, MouseListener{
         @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==sell.btnSell){
+
         ArrayList<Product> productsToSell = new ArrayList<>();
         Gson gson = new Gson();
         inventoryController.readProducts();
@@ -57,11 +58,22 @@ public class SellProductController implements ActionListener, MouseListener{
             if(product.getName().equals(sell.txtProductToSell.getText())){
                 quantityToSell = (int) sell.spinQuantity.getValue();
                 int OldQuantity = product.getQuantity();
-                addedPrice = product.sell(quantityToSell);
-                    if(addedPrice==-1F){
+                if ("Material".equals(product.getCategory())){
+                    ProductController productController = new MaterialController(product);
+                    addedPrice = productController.sellQuantity(quantityToSell);
+                }
+                if("Herramienta".equals(product.getCategory())){
+                    ProductController productController = new ToolController(product);
+                    addedPrice = productController.sellQuantity(quantityToSell);
+                    
+                }if("Herramienta electrica".equals(product.getCategory())){
+                    ProductController productController = new ElectricToolController(product);
+                    addedPrice = productController.sellQuantity(quantityToSell);
+                }
+                if(addedPrice==-1F){
                         JOptionPane.showMessageDialog(null,"Producto no Vendido");
                     }
-                    else{
+                else{
                         found = true;
                         totalPrice = totalPrice + addedPrice;
                         productsToSell.add(product);
