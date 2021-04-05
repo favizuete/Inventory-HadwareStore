@@ -63,9 +63,12 @@ public class EnterQuantityController implements ActionListener, MouseListener{
                     ProductController productController = new ElectricToolController(product);
                     productController.addQuantity(quantityToAdd);
                 }
+                
                 quant = product.getQuantity();
-                gson.toJson(product);
-                MongoManager.updateQuantity(name, quant);
+                
+                System.out.println(gson.toJson(product));
+                System.out.println(quant);
+                MongoManager.updateQuantity(name,quant);
             }
         }
         if(found==true){

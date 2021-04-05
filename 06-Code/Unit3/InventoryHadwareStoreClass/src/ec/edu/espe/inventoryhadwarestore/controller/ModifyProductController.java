@@ -66,7 +66,6 @@ public class ModifyProductController implements ActionListener, MouseListener{
         if(e.getSource()==modify.btnUpdate){
             
             IController.readProducts();
-            
             String brand = modify.txtBrand.getText();
             String name = modify.txtName.getText();
             int price1 =  (int) modify.spnPrice.getValue(); 
@@ -77,6 +76,7 @@ public class ModifyProductController implements ActionListener, MouseListener{
                     product.setName(name);
                     product.setPrice(price);  
                     IController.updateProduct(product,nameToModify);
+                    modify.btnUpdate.setVisible(false);
                 }
 
             }

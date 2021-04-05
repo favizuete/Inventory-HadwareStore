@@ -10,6 +10,7 @@ import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+import ec.edu.espe.inventoryhadwarestore.model.AdditionalValue;
 import ec.edu.espe.inventoryhadwarestore.model.ConstructionMaterial;
 import ec.edu.espe.inventoryhadwarestore.model.ElectricTool;
 import ec.edu.espe.inventoryhadwarestore.model.Inventory;
@@ -29,14 +30,19 @@ import org.bson.Document;
  */
 public class InventoryController {
     private Inventory inventory = new Inventory();
+    private static InventoryController instance;
 
     public InventoryController(Inventory inventory) {
         this.inventory = inventory;
     }
-
-    public InventoryController() {
+    public InventoryController(){        
     }
-    
+    public static InventoryController getInstance(Inventory inventory) {
+        if (instance == null) {
+            instance = new InventoryController(inventory);
+        }
+        return instance;
+    }
     public void readProducts(){
         Gson gson = new Gson();
         MongoClientURI uri = new MongoClientURI(

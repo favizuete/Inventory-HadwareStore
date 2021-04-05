@@ -17,6 +17,7 @@ public abstract class ProductController {
     public abstract void addQuantity(int quantityToAdd);
     public abstract float sellQuantity(int quantityToSell);
 
+    
     public Product getProduct() {
         return product;
     }

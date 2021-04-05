@@ -32,3 +32,4 @@
 {"customer":"Juan","date":"Mar 18, 2021, 10:01:02 AM","id":"[J, u]118","selledProducts":[{"weight":14.0,"id":0,"name":"Cementina","brand":"Rival","quantity":14,"price":8.0,"category":"Material"}],"profitInDollars":129.0}
 {"customer":"chris","date":"Mar 22, 2021, 10:29:56 PM","id":"[c, h]122","selledProducts":[],"profitInDollars":0.0}
 {"customer":"Marco","date":"Apr 4, 2021, 1:45:19 PM","id":"[M, a]14","selledProducts":[{"quality":"Alta","energySource":"Inalambrica","_id":1234,"name":"Cortadora","brand":"Evolution","quantity":196,"price":205.0,"category":"Herramienta electrica"}],"profitInDollars":61500.0}
+{"customer":"Christopher","date":"Apr 4, 2021, 9:00:28 PM","id":"[C, h]14","selledProducts":[{"quality":"Baja","energySource":"Alambrica","_id":444,"name":"Destornillador Electrico","brand":"Evolution","quantity":1114,"price":4.0,"category":"Herramienta electrica"}],"profitInDollars":3949.8}

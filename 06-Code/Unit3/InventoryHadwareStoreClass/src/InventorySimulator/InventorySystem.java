@@ -5,8 +5,10 @@
  */
 package InventorySimulator;
 
+import ec.edu.espe.inventoryhadwarestore.controller.InventoryController;
 import ec.edu.espe.inventoryhadwarestore.controller.LoginController;
 import ec.edu.espe.inventoryhadwarestore.model.Admin;
+import ec.edu.espe.inventoryhadwarestore.model.Inventory;
 import ec.edu.espe.inventoryhadwarestore.view.LogIn;
 
 /**
@@ -19,7 +21,10 @@ public class InventorySystem {
         LoginController loginController;
         login = new LogIn();
         Admin admin = new Admin("Richard","codemaster23","codemaster");
+        Inventory inventory = new Inventory();
+        InventoryController IController = InventoryController.getInstance(inventory);
         loginController = new LoginController(login,admin);
+
     }
 
 }

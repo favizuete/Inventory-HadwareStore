@@ -137,9 +137,12 @@ public class MongoManager implements Persistence {
             MongoDatabase database = mongoClient.getDatabase("test");
             MongoCollection<Document> collection = database.getCollection("Example"); 
             Document firstDocument;
-            firstDocument = collection.find().filter(Filters.eq("name",name)).first();           
-            firstDocument.replace("quantity",newQuantity);           
-            collection.replaceOne(Filters.gte("name",name), firstDocument);
+            firstDocument = collection.find().filter(Filters.eq("name",name)).first();
+            System.out.println(firstDocument.toString());
+            firstDocument.replace("quantity",newQuantity);
+            System.out.println(firstDocument.toString());
+            //collection.replaceOne(Filters.gte("name",name), firstDocument);
+            collection.replaceOne(Filters.eq("name",name), firstDocument);
             mongoClient.close();
         }
         catch(Exception e){
